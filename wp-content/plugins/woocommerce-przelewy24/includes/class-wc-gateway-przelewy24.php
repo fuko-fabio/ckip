@@ -36,8 +36,8 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
         } else {
             include_once( 'includes/class-wc-gateway-przelewy24-notification-handler.php' );
             include_once( 'includes/class-wc-gateway-przelewy24-return-handler.php' );
-            new WC_Gateway_Przelewy24_Notification_Handler($this->get_option('sandbox'));
-            new WC_Gateway_Przelewy24_Return_Handler($this->get_option('sandbox'));
+            new WC_Gateway_Przelewy24_Notification_Handler($this);
+            new WC_Gateway_Paypal_Return_Handler($this);
         }
     } // End __construct()
 
@@ -87,6 +87,12 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
                 'title'     => __( 'CRC Key', 'nps-przelewy24' ),
                 'type'      => 'password',
                 'desc_tip'  => __( 'This is the CRC Key provided by Przelewy24 when you signed up for an account.', 'nps-przelewy24' ),
+            ),
+            'service_email' => array(
+                'title'     => __( 'Payment service admin email', 'nps-przelewy24' ),
+                'type'      => 'text',
+                'desc_tip'  => __( 'Email address to payment service administrator. All errors will be reported to this email.', 'nps-przelewy24' ),
+                'default'   => __( 'Przelewy24', 'nps-przelewy24' ),
             ),
             'sandbox' => array(
                 'title'     => __( 'Test Mode', 'nps-przelewy24' ),
@@ -152,6 +158,11 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
         return $this->call_service('/trnRegister', $payload);
     }
 
+    public function transaction_verify($payload) {
+        self::log('Verifying Przelewy24 transaction:'.implode(' | ', $payload));
+        return $this->call_service('/trnVerify', $payload);
+    }
+
     private function call_service($method, $payload) {
         $response = wp_remote_post($this->gateway_url().$method, array(
             'method'    => 'POST',
@@ -200,6 +211,7 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
     }
 
     public static function report_error($data) {
+        self::log($data[0]);
         //TODO
     }
 }

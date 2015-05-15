@@ -14,7 +14,7 @@ function nps_przelewy24_init() {
     // it means WooCommerce is not installed on the site
     // so do nothing
     if ( ! class_exists( 'WC_Payment_Gateway' ) ) return;
-     
+
     // If we made it this far, then include our Gateway Class
     include_once( 'includes/class-wc-gateway-przelewy24.php' );
  
@@ -33,7 +33,7 @@ function nps_przelewy24_action_links( $links ) {
     $plugin_links = array(
         '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=checkout' ) . '">' . __( 'Settings', 'nps-przelewy24' ) . '</a>',
     );
- 
+
     // Merge our new link with the default ones
-    return array_merge( $plugin_links, $links );    
+    return array_merge( $plugin_links, $links );
 }

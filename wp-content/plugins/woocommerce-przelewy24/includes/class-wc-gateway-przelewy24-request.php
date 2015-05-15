@@ -45,7 +45,7 @@ class WC_Gateway_Przelewy24_Request {
         $p24_id = $this->gateway->get_option('merchant_id');
         $amount = $order->get_total() * 100; // From float to int: 10.50 -> 1050
         $timestamp = time();
-        $session_id = $order->id.'|'.$timestamp;
+        $session_id = base64_encode(serialize(array($order->id, $order->order_key, $timestamp)));
         $p24_sign = md5($session_id.'|'.$p24_id.'|'.$amount.'|'.$order->get_order_currency().'|'.$this->gateway->get_option('crc_key'));
 
         $payload = array(

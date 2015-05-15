@@ -18,7 +18,7 @@ abstract class WC_Gateway_Przelewy24_Response {
 
         if (is_array($custom)) {
 
-            list($order_id, $order_key) = $custom;
+            list($order_id, $order_key, $timestamp) = $custom;
 
             if (!$order = wc_get_order($order_id)) {
                 // We have an invalid $order_id, probably because invoice_prefix has changed
@@ -32,7 +32,7 @@ abstract class WC_Gateway_Przelewy24_Response {
             }
 
         } elseif (!$order = apply_filters('woocommerce_get_przelewy24_order', false, $custom)) {
-            WC_Gateway_Przelewy24::log('Error: Order ID and key were not found in "custom".');
+            WC_Gateway_Przelewy24::log('Error: Order ID and key were not found in "p24_session_id".');
             return false;
         }
 
