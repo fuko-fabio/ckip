@@ -13,7 +13,7 @@ include_once ('class-wc-gateway-przelewy24-response.php');
 class WC_Gateway_Przelewy24_Notification_Handler extends WC_Gateway_Przelewy24_Response {
 
     /** @var WC_Gateway_Przelewy24 Payment service gateway */
-    private $gateway;
+    protected $gateway;
 
     /**
      * Constructor
@@ -27,6 +27,7 @@ class WC_Gateway_Przelewy24_Notification_Handler extends WC_Gateway_Przelewy24_R
      * Check for Przelewy24 IPN Response
      */
     public function check_response() {
+        $success = false;
         if (!empty($_POST)) {
             $posted = wp_unslash($_POST);
             if (!empty($posted['p24_session_id'])) {
@@ -38,7 +39,7 @@ class WC_Gateway_Przelewy24_Notification_Handler extends WC_Gateway_Przelewy24_R
                         $this->validate_sign($order, $posted);
                         $this->validate_currency($order, $posted['p24_currency']);
                         $this->validate_amount($order, $posted['p24_amount'] / 100);
-                        $this->verify_transaction($order, $posted);
+                        $success = $this->verify_transaction($order, $posted);
                     } else {
                         $this->report_failure(
                             $order,
@@ -60,10 +61,15 @@ class WC_Gateway_Przelewy24_Notification_Handler extends WC_Gateway_Przelewy24_R
                     array('Request: '.print_r($posted, true))
                 );
             }
-            exit;
+            if ($this->gateway->get_option('sandbox') != 'yes') {
+                exit;
+            }
         }
-
-        wp_die("Przelewy24 IPN Request Failure", "Przelewy24 IPN", array('response' => 200));
+        if ($this->gateway->get_option('sandbox') == 'yes') {
+            return $success;
+        } else {
+            wp_die("Przelewy24 IPN Request Failure", "Przelewy24 IPN", array('response' => 200));
+        }
     }
 
     /** Verify transaction by sending response to Przelewy24
@@ -86,12 +92,14 @@ class WC_Gateway_Przelewy24_Notification_Handler extends WC_Gateway_Przelewy24_R
         
         if (isset($result) && $result['error'] == 0) {
             $this->payment_complete($order, $posted['p24_order_id'], __('Payment complete', 'nps-przelewy24'));
+            return true;
         } else {
             $this->report_failure(
                 $order,
                 sprintf(__('Validation error: Unable to verify transaction. %s', 'nps-przelewy24'), $result['errorMessage'])
             );
         }
+        return false;
     }
 
     /** Reports payment error to system and administrator

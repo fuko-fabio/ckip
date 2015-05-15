@@ -31,13 +31,11 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
             add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
         }
 
-        if ( ! $this->is_valid_for_use() ) {
+        if (!$this->is_valid_for_use()) {
             $this->enabled = 'no';
         } else {
-            include_once( 'includes/class-wc-gateway-przelewy24-notification-handler.php' );
-            include_once( 'includes/class-wc-gateway-przelewy24-return-handler.php' );
+            include_once( 'class-wc-gateway-przelewy24-notification-handler.php' );
             new WC_Gateway_Przelewy24_Notification_Handler($this);
-            new WC_Gateway_Paypal_Return_Handler($this);
         }
     } // End __construct()
 
@@ -92,7 +90,7 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
                 'title'     => __( 'Payment service admin email', 'nps-przelewy24' ),
                 'type'      => 'text',
                 'desc_tip'  => __( 'Email address to payment service administrator. All errors will be reported to this email.', 'nps-przelewy24' ),
-                'default'   => __( 'Przelewy24', 'nps-przelewy24' ),
+                'default'   => __( 'admin@example.com', 'nps-przelewy24' ),
             ),
             'sandbox' => array(
                 'title'     => __( 'Test Mode', 'nps-przelewy24' ),
@@ -100,7 +98,13 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
                 'type'      => 'checkbox',
                 'description' => __( 'Place the payment gateway in test mode.', 'nps-przelewy24' ),
                 'default'   => 'no',
-            )
+            ),
+            'test_error' => array(
+                'title'     => __( 'Test error code', 'nps-przelewy24' ),
+                'type'      => 'text',
+                'desc_tip'  => __( 'Special przelewy24 error code which allows to test error response.', 'nps-przelewy24' ),
+                'default'   => __( '', 'nps-przelewy24' ),
+            ),
         );
     }
 
@@ -150,10 +154,10 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
     public function transaction_register($payload) {
         self::log('Registering Przelewy24 payment:'.implode(' | ', $payload));
         if ($this->get_option('sandbox') == 'yes') {
-            #$sandbox_descr = Configuration::get('NPS_P24_SANDBOX_ERROR');
-            #if(!empty($sandbox_descr)) {
-            #    $data['p24_description'] = $sandbox_descr;
-            #}
+            $test_error = $this->get_option('test_error');
+            if (isset($test_error) && !empty($test_error)) {
+                $payload['p24_description'] = $test_error;
+            }
         }
         return $this->call_service('/trnRegister', $payload);
     }
@@ -212,6 +216,18 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
 
     public static function report_error($data) {
         self::log($data[0]);
-        //TODO
+        $mailer = WC()->mailer();
+        $subject = _('Error reporting from Przelewy24 gateway.', 'nps-przelewy24');
+        $message = $mailer->wrap_message($subject, implode('<br />', $data));
+
+        $mailer->send($this->get_option('service_email'), $subject, $message);
+    }
+
+    public function do_ssl_check() {
+        if( $this->enabled == "yes" ) {
+            if( get_option( 'woocommerce_force_ssl_checkout' ) == "no" ) {
+                echo "<div class=\"error\"><p>". sprintf( __( "<strong>%s</strong> is enabled and WooCommerce is not forcing the SSL certificate on your checkout page. Please ensure that you have a valid SSL certificate and that you are <a href=\"%s\">forcing the checkout pages to be secured.</a>" ), $this->method_title, admin_url( 'admin.php?page=wc-settings&tab=checkout' ) ) ."</p></div>";
+            }
+        }
     }
 }
