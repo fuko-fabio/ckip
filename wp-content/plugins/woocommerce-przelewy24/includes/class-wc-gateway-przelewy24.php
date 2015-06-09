@@ -44,12 +44,8 @@ class WC_Gateway_Przelewy24 extends WC_Payment_Gateway {
      * @param  string $message
      */
     public static function log( $message ) {
-        if ( $this->debug ) {
-            if ( empty( $this->log ) ) {
-                $this->log = new WC_Logger();
-            }
-            $this->log->add( 'przelewy24', $message );
-        }
+        $log = new WC_Logger();
+        $log->add( 'przelewy24', $message );
     }
 
     /**
