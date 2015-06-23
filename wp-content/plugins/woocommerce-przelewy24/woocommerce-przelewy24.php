@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Przelewy24
 Description: Extends WooCommerce by Adding the Przelewy24 payment Gateway.
-Version: 1.0
+Version: 1.0.0
 Author: Norbert Pabian
 Author URI: http://npsoftware.pl
 */
