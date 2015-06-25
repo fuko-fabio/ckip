@@ -65,6 +65,7 @@ wp-content/plugins/akismet/*
 wp-content/plugins/woocommerce/*
 wp-content/plugins/wootickets/*
 wp-content/plugins/the-events-calendar/*
+wp-content/plugins/wordpress-social-login/*
  
 # ignore specific themes
 wp-content/themes/twenty*/

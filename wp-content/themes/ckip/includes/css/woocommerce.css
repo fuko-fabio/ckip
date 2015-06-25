@@ -1,0 +1,13 @@
+.site-header-opts {
+    float: right;
+}
+
+.cart-parent {
+    color: #121212;
+    font-size: 24px;
+}
+
+.cart-parent:hover {
+    text-decoration: none;
+    color: #D50000;
+}
