@@ -66,6 +66,9 @@ wp-content/plugins/woocommerce/*
 wp-content/plugins/wootickets/*
 wp-content/plugins/the-events-calendar/*
 wp-content/plugins/wordpress-social-login/*
+wp-content/plugins/debug-bar-console/*
+wp-content/plugins/debug-bar/*
+wp-content/plugins/gallery-bank/*
  
 # ignore specific themes
 wp-content/themes/twenty*/
