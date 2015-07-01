@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package _tk
+ * @package nps
  */
 global $woocommerce;
 ?><!DOCTYPE html>
@@ -63,10 +63,7 @@ global $woocommerce;
 				      <span class="icon-bar"></span>
 				      <span class="icon-bar"></span>
 				    </button>
-				
-				    <!-- Your site title as branding in the menu -->
-				    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				    
+
 				    <!-- The WordPress Menu goes here -->
 				       <?php wp_nav_menu(
 			                array(

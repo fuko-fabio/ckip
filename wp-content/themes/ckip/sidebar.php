@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package _tk
+ * @package nps
  */
 ?>
 	
@@ -17,14 +17,14 @@
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 	
 				<aside id="archives" class="widget widget_archive">
-					<h3 class="widget-title"><?php _e( 'Archives', '_tk' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Archives', 'nps' ); ?></h3>
 					<ul>
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</aside>
 	
 				<aside id="meta" class="widget widget_meta"> 
-					<h3 class="widget-title"><?php _e( 'Meta', '_tk' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Meta', 'nps' ); ?></h3>
 					<ul>
 						<?php wp_register(); ?>
 						<li><?php wp_loginout(); ?></li>
