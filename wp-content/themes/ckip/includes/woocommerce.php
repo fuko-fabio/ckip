@@ -20,9 +20,9 @@ function woocommerce_cart_link() {
 
 function woocommerce_my_account_link() {
      if ( is_user_logged_in() ) { ?>
-        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','npstheme'); ?>"><?php _e('My Account','npstheme'); ?></a>
+        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','npstheme'); ?>" class="my-account"><i class="glyphicon glyphicon-user"></i></a>
      <?php } 
      else { ?>
-        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','npstheme'); ?>"><?php _e('Login / Register','npstheme'); ?></a>
+        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','npstheme'); ?>" class="my-account"><i class="glyphicon glyphicon-user"></i></a>
      <?php }
 }

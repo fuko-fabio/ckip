@@ -22,15 +22,26 @@ global $woocommerce;
 	<?php do_action( 'before' ); ?>
 	
 <header id="masthead" class="site-header" role="banner">
-	<div class="container">
+    <div class="container">
         <div class="site-header-opts">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-home" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php _e('Home','npstheme'); ?></a>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container_class' => 'navbar-sticky',
+                'menu_class' => 'nav navbar-nav',
+                'fallback_cb' => '',
+                'menu_id' => 'main-menu-sticky',
+                'walker' => new wp_bootstrap_navwalker()
+             )); ?>
+            <div class="user-nav">
             <?php
                 if ( class_exists( 'woocommerce' ) ) {
+                    woocommerce_my_account_link();
                     woocommerce_cart_link();
                     echo get_search_form();
-                    woocommerce_my_account_link();
                 }
             ?>
+            </div>
         </div>
 		<div class="row">
 			<div class="site-header-inner col-12">

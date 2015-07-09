@@ -70,6 +70,8 @@ wp-content/plugins/debug-bar-console/*
 wp-content/plugins/debug-bar/*
 wp-content/plugins/gallery-bank/*
 wp-content/plugins/json-rest-api/*
+wp-content/plugins/json-rest-api/*
+wp-content/plugins/newsletter/*
  
 # ignore specific themes
 wp-content/themes/twenty*/

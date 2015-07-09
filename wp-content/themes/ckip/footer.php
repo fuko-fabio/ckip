@@ -13,20 +13,85 @@
 </div><!-- close .main-content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="container">
-		<div class="row">
-			<div class="site-footer-inner col-12">
-			
-				<div class="site-info">
-					<?php do_action( 'nps_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'nps' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'nps' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'nps' ), 'nps', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-				</div><!-- close .site-info -->
-			
-			</div>	
-		</div>
-	</div><!-- close .container -->
+    <div class="container">
+        <div class="partners">
+            <div class="header">
+                <?php _e( 'Our partners', 'nps' ); ?>
+            </div>
+            <div class="row list">
+                <div class="col-2 item">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/gminamich2.gif" /></a>
+                </div>
+                <div class="col-2 item">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                </div>
+                <div class="col-2 item">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/gminamich2.gif" /></a>
+                </div>
+                <div class="col-2 item">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                </div>
+                <div class="col-2 item">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/gminamich2.gif" /></a>
+                </div>
+                <div class="col-2 item">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsletter newsletter-subscription">
+            <form method="post" action="<?php echo get_site_url(); ?>/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)">
+                <div class="header">
+                    <?php _e( 'Newsletter', 'nps' ); ?>
+                </div>
+                <div class="info">
+                    <?php _e( 'Submit your email to get updates from us.', 'nps' ); ?>
+                </div>
+                <div class="actions">
+                    <input class="newsletter-email" type="email" name="ne" placeholder="my.email@example.com" required>
+                    <input class="newsletter-submit" type="submit" value="<?php _e( 'Subscribe!', 'nps' ); ?>"/>
+                </div>
+            </form>
+        </div>
+        <div class="site-footer-inner">
+            <div class="row">
+                <div class="col-3 logo">
+                    <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                </div>
+                <div class="col-3 footer-sidebar1">
+                <?php
+                    if(is_active_sidebar('footer-sidebar-1')){
+                        dynamic_sidebar('footer-sidebar-1');
+                    }
+                ?>
+                </div>
+                <div class="col-3 footer-sidebar2">
+                <?php
+                    if(is_active_sidebar('footer-sidebar-2')){
+                    dynamic_sidebar('footer-sidebar-2');
+                    }
+                ?>
+                </div>
+                <div class="col-3 footer-sidebar3">
+                <?php
+                    if(is_active_sidebar('footer-sidebar-3')){
+                        dynamic_sidebar('footer-sidebar-3');
+                    }
+                ?>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-8">
+                    Copyright &copy; 2015 <a href="<?php echo get_site_url(); ?>" title="<?php _e( 'Centrum kultury i promocji w Michałowicach', 'nps' ); ?>"><?php _e( 'Centrum kultury i promocji w Michałowicach', 'nps' ); ?></a>
+                </div>
+            
+                <div class="col-4">
+                    <a target="_blank" href="http://npsoftware.pl" title="nps software" class="author"><span class="cname">nps</span><span class="csoftware"> software</span></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- close .container -->
 </footer><!-- close #colophon -->
 
 <?php wp_footer(); ?>

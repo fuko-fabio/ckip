@@ -18,19 +18,18 @@ jQuery(document).ready(function() {
     
     fetchHomePosts().done(function() {
         renderHomePosts();
-        initHomePostsControls();
     });
 });
 
 function fetchHomePosts() {
     return jQuery.when(
-        ckipPosts.fetch({ data: { filter: {cat: ckipCategoryId, posts_per_page: 4} } }),
-        libraryPosts.fetch({ data: { filter: {cat: libraryCategoryId, posts_per_page: 4} } }),
-        marathonPosts.fetch({ data: { filter: {cat: marathonCategoryId, posts_per_page: 4} } })
+        ckipPosts.fetch({ data: { filter: {cat: ckipCategoryId, posts_per_page: 3} } }),
+        libraryPosts.fetch({ data: { filter: {cat: libraryCategoryId, posts_per_page: 3} } }),
+        marathonPosts.fetch({ data: { filter: {cat: marathonCategoryId, posts_per_page: 3} } })
     );
 }
 
-function initHomePostsControls() {
+function renderHomePosts() {
     var mainBtn = jQuery('.posts-main-btn');
     var mainBlock = jQuery('.block-posts-categories');
     var ckipBlock = jQuery('.block-ckip');
@@ -52,9 +51,9 @@ function initHomePostsControls() {
     initBlockBtn('.block-ckip-btn', ckipBlock);
     initBlockBtn('.block-library-btn', libraryBlock);
     initBlockBtn('.block-marathon-btn', marathonBlock);
-}
 
-function renderHomePosts() {
-    
+    ckipBlock.append(tmpl("home-posts-tmpl", ckipPosts.toArray()));
+    libraryBlock.append(tmpl("home-posts-tmpl", libraryPosts.toArray()));
+    marathonBlock.append(tmpl("home-posts-tmpl", marathonPosts.toArray()));
 }
 

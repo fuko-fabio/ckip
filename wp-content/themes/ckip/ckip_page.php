@@ -6,6 +6,15 @@ Template Name: CKiP Home Page
 
 <?php get_header(); ?>
 
+<script type="text/x-tmpl" id="home-posts-tmpl">
+    {% for (var i=0; i < o.length; i++) { %}
+        <div class="col-4">
+            <p class="title">{%=o[i]['attributes']['title']%}</p>
+            <span class="content">{%#o[i]['attributes']['content']%}</span>
+        </div>
+    {% } %}
+</script>
+
 <h1 class="home-head posts-main-btn">Aktualności</h1>
 
 <div class="block-posts-categories">
@@ -21,8 +30,8 @@ Template Name: CKiP Home Page
         </div>
     </div>
 </div>
-<div class="block-posts block-ckip background-ckip" style="display: none;">Sample ckip</div>
-<div class="block-posts block-library background-library" style="display: none;">Sample library</div>
-<div class="block-posts block-marathon background-marathon" style="display: none;">Sample marathon</div>
+<div class="block-posts block-ckip background-ckip" style="display: none;"></div>
+<div class="block-posts block-library background-library" style="display: none;"></div>
+<div class="block-posts block-marathon background-marathon" style="display: none;"></div>
 
 <?php get_footer(); ?>

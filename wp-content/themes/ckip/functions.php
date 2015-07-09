@@ -69,6 +69,7 @@ function nps_setup() {
         'primary'  => __( 'Header bottom menu', 'nps' ),
     ) );
 
+    show_admin_bar(false);
 }
 endif; // nps_setup
 add_action( 'after_setup_theme', 'nps_setup' );
@@ -77,14 +78,41 @@ add_action( 'after_setup_theme', 'nps_setup' );
  * Register widgetized area and update sidebar with default widgets
  */
 function nps_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'nps' ),
-		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'nps' ),
+        'id'            => 'sidebar-1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 1',
+        'id' => 'footer-sidebar-1',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 2',
+        'id' => 'footer-sidebar-2',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 3',
+        'id' => 'footer-sidebar-3',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
 }
 add_action( 'widgets_init', 'nps_widgets_init' );
 
@@ -112,7 +140,11 @@ function nps_scripts() {
 
 	wp_enqueue_script( 'nps-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+    wp_enqueue_script( 'nps-sticky', get_template_directory_uri() . '/includes/js/sticky.js', array('jquery') );
+
+    wp_enqueue_script( 'nps-tmpl', get_template_directory_uri() . '/includes/js/tmpl.min.js', array('jquery') );
     wp_enqueue_script( 'nps-ckip', get_template_directory_uri() . '/includes/js/ckip.js', array('jquery') );
+    wp_enqueue_script( 'nps-newsletter', get_template_directory_uri() . '/includes/js/newsletter.js', array() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
