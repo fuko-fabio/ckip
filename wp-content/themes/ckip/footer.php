@@ -20,22 +20,22 @@
             </div>
             <div class="row list">
                 <div class="col-2 item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/gminamich2.gif" /></a>
+                    <a href="http://www.michalowice.malopolska.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/gmina_michalowice.png" /></a>
                 </div>
                 <div class="col-2 item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                    <a href="http://czasdzieci.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/czas_dzieci.png" /></a>
                 </div>
                 <div class="col-2 item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/gminamich2.gif" /></a>
+                    <a href="http://mik.krakow.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/mik.png" /></a>
                 </div>
                 <div class="col-2 item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                    <a href="www.koronakrakowa.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/korona.png" /></a>
                 </div>
                 <div class="col-2 item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/gminamich2.gif" /></a>
+                    <a href="http://www.agencjaspm.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/spm.png" /></a>
                 </div>
                 <div class="col-2 item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                    <a href="http://www.wieniawa.eu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wieniawa.png" /></a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                     <?php _e( 'Newsletter', 'nps' ); ?>
                 </div>
                 <div class="info">
-                    <?php _e( 'Submit your email to get updates from us.', 'nps' ); ?>
+                    <span><?php _e( 'Submit', 'nps' ); ?> </span><?php _e( 'your email to get updates from us.', 'nps' ); ?>
                 </div>
                 <div class="actions">
                     <input class="newsletter-email" type="email" name="ne" placeholder="my.email@example.com" required>

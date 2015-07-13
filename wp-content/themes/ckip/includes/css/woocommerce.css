@@ -68,7 +68,6 @@
 
 .site-footer .newsletter {
     text-align: center;
-    background: #DDDDDD;
     padding: 25px;
 }
 
@@ -80,22 +79,44 @@
 
 .site-footer .newsletter .info {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.site-footer .newsletter .info span {
+    color: #e32b50;
 }
 
 .site-footer .newsletter .newsletter-email {
-    border: none;
+    border: 1px solid #ccc;
     height: 40px;
     padding: 15px;
     text-align: center;
+    border-radius: 3px;
+    margin-right: 10px;
+    outline: none
+}
+.site-footer .newsletter .newsletter-email:active,
+.site-footer .newsletter .newsletter-email:focus {
+    border: 1px solid #e32b50;
 }
 
 .site-footer .newsletter .newsletter-submit {
-  border: none;
-  background-color: #AAA;
-  height: 40px;
-  padding: 10px;
+    border: 1px solid #e32b50;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    background: none;
+    color: #e32b50;
+    min-width: 100px;
 }
+
+.site-footer .newsletter .newsletter-submit:hover,
+.site-footer .newsletter .newsletter-submit:focus {
+    background: #e32b50;
+    color: #eee;
+}
+
 .site-footer .partners .header {
     margin-bottom: 15px;
 }
@@ -107,10 +128,20 @@
 .site-footer .partners .item {
     max-height: 200px;
 }
+.site-footer .partners .item img {
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+}
+
+.site-footer .partners .item img:hover {
+    filter: none;
+    -webkit-filter: none;
+}
 
 .site-footer .site-footer-inner {
     width: 100%;
-    background-color: #CCCCCC;
+    background-color: #e32b50;
     padding: 15px;
 }
 

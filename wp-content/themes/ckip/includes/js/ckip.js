@@ -6,6 +6,7 @@ var marathonCategoryId = 9;
 var ckipPosts;
 var libraryPosts;
 var marathonPosts;
+var events;
 
 jQuery(document).ready(function() {
     if (jQuery('.sidebar').length == 0) {
@@ -15,17 +16,19 @@ jQuery(document).ready(function() {
     ckipPosts = new wp.api.collections.Posts();
     libraryPosts = new wp.api.collections.Posts();
     marathonPosts = new wp.api.collections.Posts();
+    events = new wp.api.collections.Posts();
     
-    fetchHomePosts().done(function() {
+    fetchHomeData().done(function() {
         renderHomePosts();
     });
 });
 
-function fetchHomePosts() {
+function fetchHomeData() {
     return jQuery.when(
         ckipPosts.fetch({ data: { filter: {cat: ckipCategoryId, posts_per_page: 3} } }),
         libraryPosts.fetch({ data: { filter: {cat: libraryCategoryId, posts_per_page: 3} } }),
-        marathonPosts.fetch({ data: { filter: {cat: marathonCategoryId, posts_per_page: 3} } })
+        marathonPosts.fetch({ data: { filter: {cat: marathonCategoryId, posts_per_page: 3} } }),
+        events.fetch({ data: { filter: {type: 'tribe_events', posts_per_page: 4} } })
     );
 }
 
