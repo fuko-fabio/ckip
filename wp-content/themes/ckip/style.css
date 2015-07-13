@@ -29,6 +29,10 @@ Twitter Bootstrap
 
 /* My Minimal WordPress Styling comes here */
 
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -195,45 +199,3 @@ object {
     color: #EEE;
 }
 
-.background-ckip {
-    background-color: #FF9800;
-}
-
-.background-library {
-    background-color: #4CAF50;
-}
-
-.background-events {
-    background-color: #2196F3;
-}
-
-.background-marathon {
-    background-color: #9C27B0;
-}
-
-.block-title {
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #EEE;
-}
-
-.block-ckip-btn {
-    text-align: center;
-    min-height: 200px;
-    padding-top: 90px;
-}
-
-.block-library-btn, .block-marathon-btn {
-    text-align: center;
-    min-height: 100px;
-    padding-top: 40px;
-}
-
-.block-posts-categories .block:hover {
-    background-color: #121212;
-    cursor: pointer; 
-}
-
-.block-posts {
-    min-height: 200px;
-}

@@ -24,15 +24,11 @@ global $woocommerce;
 <header id="masthead" class="site-header" role="banner">
     <div class="container">
         <div class="site-header-opts">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-home" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php _e('Home','npstheme'); ?></a>
-            <?php wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container_class' => 'navbar-sticky',
-                'menu_class' => 'nav navbar-nav',
-                'fallback_cb' => '',
-                'menu_id' => 'main-menu-sticky',
-                'walker' => new wp_bootstrap_navwalker()
-             )); ?>
+            <?php
+                if(is_active_sidebar('top-bar')){
+                    dynamic_sidebar('top-bar');
+                }
+            ?>
             <div class="user-nav">
             <?php
                 if ( class_exists( 'woocommerce' ) ) {

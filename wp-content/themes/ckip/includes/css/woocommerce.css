@@ -2,7 +2,90 @@
 
 @font-face {
   font-family: 'Danube';
-  src: url("../font/DANUBE__.TTF");
+  src: url("../font/danube.ttf");
+}
+
+@font-face {
+  font-family: 'Track';
+  src: url("../font/track.ttf");
+}
+
+.block-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #EEE;
+}
+
+.block-ckip-btn, .block-library-btn, .block-cinema-btn, .block-marathon-btn {
+    text-align: center;
+    min-height: 250px;
+    padding-top: 120px;
+    text-transform: uppercase;
+}
+
+.block-ckip-btn {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/news_ckip.jpg") no-repeat center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+.block-ckip-btn:hover {
+     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../img/news_ckip.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.block-library-btn {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/news_library.jpg") no-repeat center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+.block-library-btn:hover {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../img/news_library.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.block-cinema-btn {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/news_cinema.jpg") no-repeat center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+.block-cinema-btn:hover {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../img/news_cinema.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.block-marathon-btn {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/news_marathon.jpg") no-repeat center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+.block-marathon-btn:hover {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../img/news_marathon.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.block-posts-categories .block:hover {
+    cursor: pointer; 
+}
+
+.block-posts {
+    min-height: 200px;
 }
 
 .site-header-opts {
@@ -10,7 +93,7 @@
     background-color: #EEEEEE;
     width: 100%;
     position: fixed;
-    border-bottom: 1px solid #121212;
+    border-bottom: 1px solid #333;
 }
 
 @media (min-width: 768px) {
@@ -43,24 +126,24 @@
 }
 
 .site-header-opts .cart-parent {
-    color: #121212;
+    color: #333;
     font-size: 24px;
 }
 
 .site-header-opts .cart-parent:hover {
     text-decoration: none;
-    color: #D50000;
+    color: #e32b50;
 }
 
 .site-header-opts .my-account {
-    color: #121212;
+    color: #333;
     font-size: 24px;
     margin-right: 10px;
 }
 
 .site-header-opts .my-account:hover {
     text-decoration: none;
-    color: #D50000;
+    color: #e32b50;
 }
 .site-footer .partners {
     text-align: center;
@@ -78,9 +161,8 @@
 }
 
 .site-footer .newsletter .info {
-    font-weight: bold;
     margin: 15px 0;
-    text-transform: uppercase;
+    font-family: "Track";
 }
 
 .site-footer .newsletter .info span {
@@ -145,20 +227,39 @@
     padding: 15px;
 }
 
+.site-footer .site-footer-inner .fsidebar h3 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.site-footer .site-footer-inner .fsidebar .nav li a {
+    padding: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.site-footer .site-footer-inner .fsidebar .nav li a:focus,
+.site-footer .site-footer-inner .fsidebar .nav li a:hover {
+    background-color: transparent;
+    color: #eee;
+}
+
+.site-footer .site-footer-inner .copyright {
+    margin-top: 60px;
+    color: #333;
+}
 .site-footer .site-footer-inner .copyright .col-4{
     text-align: right;
 }
 
-.site-footer .site-footer-inner .author {
-    color: #121212;
+.site-footer .site-footer-inner a {
+    color: #333;
 }
 
-.site-footer .site-footer-inner .author:hover {
-    color: #D50000;
-    text-decoration: none;
-}
-
-.site-footer .site-footer-inner .author:focus {
+.site-footer .site-footer-inner a:hover,
+.site-footer .site-footer-inner a:focus {
+    color: #eee;
     text-decoration: none;
 }
 

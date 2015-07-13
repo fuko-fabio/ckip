@@ -79,6 +79,12 @@ add_action( 'after_setup_theme', 'nps_setup' );
  */
 function nps_widgets_init() {
     register_sidebar( array(
+        'name'          => __( 'Top menu bar', 'nps' ),
+        'id'            => 'top-bar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+    ) );
+    register_sidebar( array(
         'name'          => __( 'Sidebar', 'nps' ),
         'id'            => 'sidebar-1',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',

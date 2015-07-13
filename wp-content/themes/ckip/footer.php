@@ -57,23 +57,23 @@
         <div class="site-footer-inner">
             <div class="row">
                 <div class="col-3 logo">
-                    <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/mik.gif" /></a>
+                    <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wieniawa.png" /></a>
                 </div>
-                <div class="col-3 footer-sidebar1">
+                <div class="col-3 footer-sidebar1 fsidebar">
                 <?php
                     if(is_active_sidebar('footer-sidebar-1')){
                         dynamic_sidebar('footer-sidebar-1');
                     }
                 ?>
                 </div>
-                <div class="col-3 footer-sidebar2">
+                <div class="col-3 footer-sidebar2 fsidebar">
                 <?php
                     if(is_active_sidebar('footer-sidebar-2')){
                     dynamic_sidebar('footer-sidebar-2');
                     }
                 ?>
                 </div>
-                <div class="col-3 footer-sidebar3">
+                <div class="col-3 footer-sidebar3 fsidebar">
                 <?php
                     if(is_active_sidebar('footer-sidebar-3')){
                         dynamic_sidebar('footer-sidebar-3');
