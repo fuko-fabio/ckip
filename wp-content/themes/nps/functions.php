@@ -60,7 +60,10 @@ function nps_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	*/ 
     register_nav_menus( array(
-        'primary'  => __( 'Header bottom menu', 'nps' ),
+        'home'  => __( 'Main home menu', 'nps' ),
+        'ckip'  => __( 'Main ckip menu', 'nps' ),
+        'library'  => __( 'Main library menu', 'nps' ),
+        'marathon'  => __( 'Main marathon menu', 'nps' ),
     ) );
 
     show_admin_bar(false);
@@ -141,9 +144,12 @@ function nps_scripts() {
 	wp_enqueue_script( 'nps-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
     wp_enqueue_script( 'nps-sticky', get_template_directory_uri() . '/includes/js/sticky.js', array('jquery') );
+    wp_enqueue_script( 'nps-slickjs', get_template_directory_uri() . '/includes/resources/slick/slick.js', array('jquery') );
+    wp_enqueue_style( 'nps-slick-css', get_template_directory_uri() . '/includes/resources/slick/slick.css' );
+    wp_enqueue_style( 'nps-slick-css-theme', get_template_directory_uri() . '/includes/resources/slick/slick-theme.css' );
 
     wp_enqueue_script( 'nps-tmpl', get_template_directory_uri() . '/includes/js/tmpl.min.js', array('jquery') );
-    wp_enqueue_script( 'nps-ckip', get_template_directory_uri() . '/includes/js/ckip.js', array('jquery') );
+    wp_enqueue_script( 'nps-main', get_template_directory_uri() . '/includes/js/main.js', array('jquery') );
     wp_enqueue_script( 'nps-newsletter', get_template_directory_uri() . '/includes/js/newsletter.js', array() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -189,4 +195,4 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 /**
  * Load woocommerce functions file.
  */
-require get_template_directory() . '/includes/woocommerce.php';
+require get_template_directory() . '/includes/nps.php';

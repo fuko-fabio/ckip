@@ -22,13 +22,12 @@ echo get_template_part('head');
     </div><!-- .container -->
     <div class="site-header-image">
         <div class="container">
-            <?php get_header_inner_image(); ?>
+            <?php get_header_inner_image('ckip'); ?>
         </div>
     </div>
 </header><!-- #masthead -->
 
 <?php
-    #get_site_header_navigation();
+    get_site_header_navigation('ckip');
     get_before_body();
 ?>
-

@@ -18,24 +18,42 @@
             <div class="header">
                 <?php _e( 'Our partners', 'nps' ); ?>
             </div>
-            <div class="row list">
-                <div class="col-2 item">
+            <div class="slick-list">
+                <div class="item">
                     <a href="http://www.michalowice.malopolska.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/gmina_michalowice.png" /></a>
                 </div>
-                <div class="col-2 item">
+                <div class="item">
                     <a href="http://czasdzieci.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/czas_dzieci.png" /></a>
                 </div>
-                <div class="col-2 item">
+                <div class="item">
                     <a href="http://mik.krakow.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/mik.png" /></a>
                 </div>
-                <div class="col-2 item">
+                <div class="item">
                     <a href="www.koronakrakowa.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/korona.png" /></a>
                 </div>
-                <div class="col-2 item">
+                <div class="item">
                     <a href="http://www.agencjaspm.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/spm.png" /></a>
                 </div>
-                <div class="col-2 item">
+                <div class="item">
                     <a href="http://www.wieniawa.eu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wieniawa.png" /></a>
+                </div>
+                <div class="item">
+                    <a href="http://www.bn.org.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bn.png" /></a>
+                </div>
+                <div class="item">
+                    <a href="http://bookto.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bookto.png" /></a>
+                </div>
+                <div class="item">
+                    <a href="https://wolnelektury.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wolnelektury.png" /></a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/narodowy_program_rozwoju_czyt.png" /></a>
+                </div>
+                <div class="item">
+                    <a href="http://fundacja.orange.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/orange.png" /></a>
+                </div>
+                <div class="item">
+                    <a href="http://strumillo.org.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/strumilla.png" /></a>
                 </div>
             </div>
         </div>
@@ -54,44 +72,49 @@
                 </div>
             </form>
         </div>
-        <div class="site-footer-inner">
-            <div class="row">
-                <div class="col-3 logo">
-                    <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/logo.png" /></a>
+    </div><!-- close .container -->
+    
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="row">
+                    <div class="col-3 logo">
+                        <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/logo.png" /></a>
+                    </div>
+                    <div class="col-3 footer-sidebar1 fsidebar">
+                    <?php
+                        if(is_active_sidebar('footer-sidebar-1')){
+                            dynamic_sidebar('footer-sidebar-1');
+                        }
+                    ?>
+                    </div>
+                    <div class="col-3 footer-sidebar2 fsidebar">
+                    <?php
+                        if(is_active_sidebar('footer-sidebar-2')){
+                        dynamic_sidebar('footer-sidebar-2');
+                        }
+                    ?>
+                    </div>
+                    <div class="col-3 footer-sidebar3 fsidebar">
+                    <?php
+                        if(is_active_sidebar('footer-sidebar-3')){
+                            dynamic_sidebar('footer-sidebar-3');
+                        }
+                    ?>
+                    </div>
                 </div>
-                <div class="col-3 footer-sidebar1 fsidebar">
-                <?php
-                    if(is_active_sidebar('footer-sidebar-1')){
-                        dynamic_sidebar('footer-sidebar-1');
-                    }
-                ?>
-                </div>
-                <div class="col-3 footer-sidebar2 fsidebar">
-                <?php
-                    if(is_active_sidebar('footer-sidebar-2')){
-                    dynamic_sidebar('footer-sidebar-2');
-                    }
-                ?>
-                </div>
-                <div class="col-3 footer-sidebar3 fsidebar">
-                <?php
-                    if(is_active_sidebar('footer-sidebar-3')){
-                        dynamic_sidebar('footer-sidebar-3');
-                    }
-                ?>
-                </div>
-            </div>
-            <div class="row copyright">
-                <div class="col-8">
-                    Copyright &copy; 2015 <a href="<?php echo get_site_url(); ?>" title="<?php _e( 'CKiP', 'nps' ); ?>"><?php _e( 'CKiP', 'nps' ); ?></a>
-                </div>
-            
-                <div class="col-4">
-                    <a target="_blank" href="http://npsoftware.pl" title="nps software" class="author"><span class="cname">nps</span><span class="csoftware"> software</span></a>
+                <div class="row copyright">
+                    <div class="col-8">
+                        Copyright &copy; 2015 <a href="<?php echo get_site_url(); ?>" title="<?php _e( 'CKiP', 'nps' ); ?>"><?php _e( 'CKiP', 'nps' ); ?></a>
+                    </div>
+                
+                    <div class="col-4">
+                        <a target="_blank" href="http://npsoftware.pl" title="nps software" class="author"><span class="cname">nps</span><span class="csoftware"> software</span></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div><!-- close .container -->
+    </div>
 </footer><!-- close #colophon -->
 
 <?php wp_footer(); ?>
