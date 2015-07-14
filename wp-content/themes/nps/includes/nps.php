@@ -31,8 +31,8 @@ function get_main_user_bar() {
     if ( class_exists( 'woocommerce' ) ) {?>
         <div class="user-nav"> <?php
         woocommerce_my_account_link();
-        woocommerce_cart_link();
-        get_search_form(); ?>
+        woocommerce_cart_link();?>
+        <button id="trigger-search-overlay" type="button" class="glyphicon glyphicon-search search-btn"></button>
         </div> <?php
     }
 }
@@ -51,10 +51,14 @@ function get_main_sticky_menu() { ?>
 function get_header_inner_image($context = '') { ?>
     <div class="row">
         <div class="site-header-inner col-12"> <?php
-    $header_image = get_header_image();
+    if (!empty($context)) {
+        $header_image = get_template_directory_uri().'/includes/img/header/'.$context.'.jpg';
+    } else {
+        $header_image = get_header_image();
+    }
     if ( ! empty( $header_image ) ) { ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+            <img src="<?php echo esc_url($header_image); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
         </a>
     <?php } ?>
       </div>

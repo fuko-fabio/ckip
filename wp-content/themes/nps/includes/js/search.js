@@ -1,4 +1,4 @@
-(function() {
+jQuery(document).ready(function() {
 	var triggerBttn = document.getElementById( 'trigger-search-overlay' ),
 		overlay = document.querySelector( 'div.overlay' ),
 		closeBttn = overlay.querySelector( 'button.overlay-close' ),
@@ -39,4 +39,4 @@
 	triggerBttn.addEventListener( 'click', toggleOverlay );
 	closeBttn.addEventListener( 'click', toggleOverlay );
 	searchForm.addEventListener( 'submit', toggleOverlay );
-})();
+});

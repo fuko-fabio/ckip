@@ -5,41 +5,60 @@ var cinemaCategoryId = 10;
 
 jQuery(document).ready(function() {
 
-    var partnersSlick;
-
     function initPartnersSlider() {
         jQuery('.slick-list').slick({
             dots: true,
             infinite: true,
-            slidesToShow: countImagesToShow(),
+            slidesToShow: 6,
             slidesToScroll: 1,
             arrows: true,
             autoplay: true,
             autoplaySpeed: 2000,
-            swipeToSlide: true
+            swipeToSlide: true,
+            variableWidth: true,
+            responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                }
+              ]
         });
-        partnersSlick = jQuery('.slick-list').slick("getSlick");
-    }
-    
-    function countImagesToShow() {
-        var viewport = jQuery( window ).width();
-        var count = 1;
-        if (viewport >= 1200) {
-            count = 6;
-        } else if (viewport >= 992) {
-            count = 5;
-        } else if (viewport >= 768) {
-            count = 4;
-        } else {
-            count = 2;
-        }
-        return count;
     }
 
+    initStickyMenu(0);
     initPartnersSlider();
-    jQuery(window).resize(function () {
-        partnersSlick.setOption("slidesToShow", countImagesToShow(), true);
-    });
 });
 
 function initPagePosts(postsCategory, blockSelector) {
@@ -53,5 +72,19 @@ function initPagePosts(postsCategory, blockSelector) {
         } else {
             block.append(tmpl("home-posts-tmpl", posts.toArray()));
         }
+    });
+}
+
+function initStickyMenu(offset) {
+    jQuery('.site-header-opts').stickyNavbar({
+        animDuration: 250,              // Duration of jQuery animation
+        startAt: offset,                // Stick the menu at XXXpx from the top of the this() (nav container)
+        easing: "linear",               // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
+        animateCSS: true,               // AnimateCSS effect on/off
+        animateCSSRepeat: false,        // Repeat animation everytime user scrolls
+        jqueryAnim: "slideDown",        // jQuery animation type: fadeIn, show or slideDown
+        mobile: false,                  // If false nav will not stick under 480px width of window
+        mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
+        zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
     });
 }

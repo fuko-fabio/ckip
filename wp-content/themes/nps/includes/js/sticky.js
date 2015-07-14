@@ -10,7 +10,7 @@ jQuery(function() {
         // if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
         if (scroll_top > sticky_navigation_offset_top + offset) { 
             if (el.css('position') != 'fixed') {
-                el.hide().css({ 'position': 'fixed', 'top' : 0}).slideDown(300);
+                el.hide().css({ 'position': 'fixed', 'top' : 0}).slideDown();
             } else {
                 el.css({ 'position': 'fixed', 'top' : 0});
             }

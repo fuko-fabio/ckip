@@ -26,6 +26,9 @@
                     <a href="http://czasdzieci.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/czas_dzieci.png" /></a>
                 </div>
                 <div class="item">
+                    <a href="http://www.wieniawa.eu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wieniawa.png" /></a>
+                </div>
+                <div class="item">
                     <a href="http://mik.krakow.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/mik.png" /></a>
                 </div>
                 <div class="item">
@@ -33,9 +36,6 @@
                 </div>
                 <div class="item">
                     <a href="http://www.agencjaspm.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/spm.png" /></a>
-                </div>
-                <div class="item">
-                    <a href="http://www.wieniawa.eu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wieniawa.png" /></a>
                 </div>
                 <div class="item">
                     <a href="http://www.bn.org.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bn.png" /></a>
@@ -78,24 +78,24 @@
         <div class="container">
             <div class="site-footer-inner">
                 <div class="row">
-                    <div class="col-3 logo">
+                    <div class="col-md-3 logo">
                         <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/logo.png" /></a>
                     </div>
-                    <div class="col-3 footer-sidebar1 fsidebar">
+                    <div class="col-md-3 footer-sidebar1 fsidebar">
                     <?php
                         if(is_active_sidebar('footer-sidebar-1')){
                             dynamic_sidebar('footer-sidebar-1');
                         }
                     ?>
                     </div>
-                    <div class="col-3 footer-sidebar2 fsidebar">
+                    <div class="col-md-3 footer-sidebar2 fsidebar">
                     <?php
                         if(is_active_sidebar('footer-sidebar-2')){
                         dynamic_sidebar('footer-sidebar-2');
                         }
                     ?>
                     </div>
-                    <div class="col-3 footer-sidebar3 fsidebar">
+                    <div class="col-md-3 footer-sidebar3 fsidebar">
                     <?php
                         if(is_active_sidebar('footer-sidebar-3')){
                             dynamic_sidebar('footer-sidebar-3');
@@ -104,11 +104,11 @@
                     </div>
                 </div>
                 <div class="row copyright">
-                    <div class="col-8">
+                    <div class="col-sm-8">
                         Copyright &copy; 2015 <a href="<?php echo get_site_url(); ?>" title="<?php _e( 'CKiP', 'nps' ); ?>"><?php _e( 'CKiP', 'nps' ); ?></a>
                     </div>
                 
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <a target="_blank" href="http://npsoftware.pl" title="nps software" class="author"><span class="cname">nps</span><span class="csoftware"> software</span></a>
                     </div>
                 </div>

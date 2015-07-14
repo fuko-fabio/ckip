@@ -21,7 +21,7 @@ global $woocommerce;
 
 <script type="text/x-tmpl" id="home-posts-tmpl">
     {% for (var i=0; i < o.length; i++) { %}
-        <div class="col-3">
+        <div class="col-md-3 col-xs-6">
             <h4 class="title">{%=o[i]['attributes']['title']%}</h4>
             {% if (o[i]['attributes']['featured_image'] != null ) { %}
                 {%#o[i]['attributes']['featured_image']['content']%}
@@ -33,10 +33,12 @@ global $woocommerce;
 </script>
 
 <script type="text/x-tmpl" id="no-home-posts-tmpl">
-    <div class="col-12">
+    <div class="col-xs-12">
         <div class="alert alert-info"><?php _e( 'No posts in this category.', 'nps' ); ?></div>
     </div>
 </script>
 
 <body <?php body_class(); ?>>
-    <?php do_action( 'before' ); ?>
+    <?php
+        do_action( 'before' );
+        get_search_form(); ?>

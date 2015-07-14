@@ -10,7 +10,7 @@ Template Name: Main Home Page
 
 <h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'News', 'nps' ); ?></h3>
 <div class="block-posts-categories">
-    <div class="col-6">
+    <div class="col-sm-6 col-xs-12">
         <div class="row block block-ckip-btn">
             <span class="block-title"><?php _e( 'Culture center', 'nps' ); ?></span>
         </div>
@@ -18,7 +18,7 @@ Template Name: Main Home Page
             <span class="block-title"><?php _e( 'Library', 'nps' ); ?></span>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-6 col-xs-12">
         <div class="row block block-cinema-btn">
             <span class="block-title"><?php _e( 'Cinema', 'nps' ); ?></span>
         </div>
