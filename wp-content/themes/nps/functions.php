@@ -123,18 +123,21 @@ add_action( 'widgets_init', 'nps_widgets_init' );
  * Enqueue scripts and styles
  */
 function nps_scripts() {
-	// load bootstrap css
-	wp_enqueue_style( 'nps-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.min.css' );
-	
-	// load bootstrap js
-	wp_enqueue_script('nps-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
+    // Import the necessary TK Bootstrap WP CSS additions
+    wp_enqueue_style( 'nps-bootstrap-wp', get_template_directory_uri() . '/includes/css/bootstrap-wp.css' );
 
-	// load the glyphicons
-	wp_enqueue_style( 'nps-glyphicons', get_template_directory_uri() . '/includes/resources/glyphicons/css/bootstrap-glyphicons.css' );
+    // load bootstrap css
+    wp_enqueue_style( 'nps-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.min.css' );
+
+    // load Font Awesome css
+    wp_enqueue_style( 'nps-font-awesome', get_template_directory_uri() . '/includes/css/font-awesome.min.css', false, '4.1.0' );
 
     wp_enqueue_style( 'nps-style', get_stylesheet_uri() );
 
-	// load bootstrap wp js
+    // load bootstrap js
+    wp_enqueue_script('nps-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
+
+    // load bootstrap wp js
     wp_enqueue_script( 'nps-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
 
     wp_enqueue_script( 'nps-modernizer', get_template_directory_uri() . '/includes/js/modernizr.custom.js', array() );

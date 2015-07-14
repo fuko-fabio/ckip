@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: 'Danube';
-  src: url("../font/danube.ttf");
+  src: url("../fonts/danube.ttf");
 }
 
 @font-face {
   font-family: 'Track';
-  src: url("../font/track.ttf");
+  src: url("../fonts/track.ttf");
 }
 
 .block-title {
