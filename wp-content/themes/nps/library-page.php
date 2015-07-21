@@ -9,7 +9,7 @@ Template Name: Library Home Page
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/library-page.js"></script>
 
 <div class="row library-top">
-    <div class="col-md-4 hours">
+    <div class="col-md-4 col-xs-12 hours">
         <div class="content">
             <div class="row header">
                 <div class="col-xs-12"><?php _e( 'Working hours', 'nps' ); ?></div>
@@ -36,15 +36,23 @@ Template Name: Library Home Page
             </div>
         </div>
     </div>
-    <div class="col-md-5 catalogue">
-        <a href="#" class="content">
-            <span class="icon"></span>
-            <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
-        </a>
+    <div class="col-md-5 col-xs-12 catalogue">
+        <div class="content">
+            <a href="#">
+                <span class="icon"></span>
+                <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
+            </a>
+        </div>
     </div>
-    <div class="col-md-3">
-        <a href="http://www.ibuk.pl/"><img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/partners/ibuk.png') ?>" /></a>
-        <a href="https://www.bip.gov.pl/"><img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/partners/bip.png') ?>" /></a>
+    <div class="col-md-3 links">
+        <div class="row">
+            <div class="col-md-12 col-xs-6 ibuk">
+                <a href="http://www.ibuk.pl/"><img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/partners/ibuk.png') ?>" /></a>
+            </div>
+            <div class="col-md-12 col-xs-6 bip">
+                <a href="https://www.bip.gov.pl/"><img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/partners/bip.png') ?>" /></a>
+            </div>
+        </div>
     </div>
 </div>
 

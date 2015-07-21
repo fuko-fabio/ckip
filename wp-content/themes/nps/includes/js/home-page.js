@@ -56,6 +56,8 @@ jQuery(document).ready(function() {
         fillBlock(libraryBlock, libraryPosts);
         fillBlock(cinemaBlock, cinemaPosts);
         fillBlock(marathonBlock, marathonPosts);
+        jQuery('.fill-box').fillBox(true, isTouchDevice);
+        handeTouchScreen();
     }
 
     fetchHomeData().done(function() {

@@ -58,7 +58,7 @@ function get_header_inner_image($context = '') { ?>
     }
     if ( ! empty( $header_image ) ) { ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <img src="<?php echo esc_url($header_image); ?>" alt="">
+            <img src="<?php echo esc_url($header_image); ?>" width="100%">
         </a>
     <?php } ?>
       </div>
@@ -70,7 +70,7 @@ function get_site_header_navigation($theme_location = '', $depth = 1) { ?>
     <?php // substitute the class "container-fluid" below if you want a wider content area ?>
         <div class="container">
             <div class="row">
-                <div class="site-navigation-inner col-sm-12">
+                <div class="site-navigation-inner">
                     <div class="navbar navbar-default">
                         <div class="navbar-header">
                             <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->

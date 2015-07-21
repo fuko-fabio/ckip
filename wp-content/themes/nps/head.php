@@ -21,13 +21,16 @@ global $woocommerce;
 
 <script type="text/x-tmpl" id="home-posts-tmpl">
     {% for (var i=0; i < o.length; i++) { %}
-        <div class="col-md-3 col-xs-6">
-            <h4 class="title">{%=o[i]['attributes']['title']%}</h4>
-            {% if (o[i]['attributes']['featured_image'] != null ) { %}
-                {%#o[i]['attributes']['featured_image']['content']%}
-            {% } %}
-            <span class="content">{%#o[i]['attributes']['excerpt']%}</span>
-            <a href="{%=o[i]['attributes']['link']%}" class="btn btn-default"><?php _e( 'See more', 'nps' ); ?></a>
+        <div class="col-md-3 col-sm-6 col-xs-12 post">
+            <div class="content">
+                <p class="title">{%=o[i]['attributes']['title']%}</p>
+                {% if (o[i]['attributes']['featured_image'] != null ) { %}
+                    <img class="fill-box" src="{%=o[i]['attributes']['featured_image']['guid']%}" />
+                {% } %}
+                <span class="preview touch-show">{%#o[i]['attributes']['excerpt']%}</span>
+                <a href="{%=o[i]['attributes']['link']%}" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
+                <p class="posted"><?php _e( 'Posted on', 'nps' ); ?>: {%=o[i]['attributes']['date'].toLocaleTimeString()%} {%=o[i]['attributes']['date'].toLocaleDateString()%}</p>
+            </div>
         </div>
     {% } %}
 </script>

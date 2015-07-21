@@ -2,6 +2,7 @@ var libraryCategoryId = 8;
 var ckipCategoryId = 7;
 var marathonCategoryId = 9;
 var cinemaCategoryId = 10;
+var isTouchDevice = 'ontouchstart' in document.documentElement;
 
 jQuery(document).ready(function() {
 
@@ -72,6 +73,8 @@ function initPagePosts(postsCategory, blockSelector) {
         } else {
             block.append(tmpl("home-posts-tmpl", posts.toArray()));
         }
+        jQuery('.fill-box').fillBox(true, isTouchDevice);
+        handeTouchScreen();
     });
 }
 
@@ -87,4 +90,14 @@ function initStickyMenu(offset) {
         mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
         zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
     });
+}
+
+function handeTouchScreen() {
+    if (isTouchDevice) {
+        jQuery('.touch-show').each(function(){
+           jQuery(this).css({
+                'display' : 'block',
+            });
+        });
+    }
 }

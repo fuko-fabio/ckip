@@ -28,16 +28,16 @@ Template Name: Main Home Page
     </div>
 </div>
 
-<h3 class="home-head posts-main-btn posts-title-ckip" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="glyphicon glyphicon-chevron-right"></span> <?php _e( 'Culture center', 'nps' ); ?></h3>
+<h3 class="home-head posts-main-btn posts-title-ckip" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="fa fa-chevron-right"></span> <?php _e( 'Culture center', 'nps' ); ?></h3>
 <div class="row block-posts block-ckip" style="display: none;"></div>
 
-<h3 class="home-head posts-main-btn posts-title-library" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="glyphicon glyphicon-chevron-right"></span> <?php _e( 'Library', 'nps' ); ?></h3>
+<h3 class="home-head posts-main-btn posts-title-library" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="fa fa-chevron-right"></span> <?php _e( 'Library', 'nps' ); ?></h3>
 <div class="row block-posts block-library" style="display: none;"></div>
 
-<h3 class="home-head posts-main-btn posts-title-cinema" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="glyphicon glyphicon-chevron-right"></span> <?php _e( 'Cinema', 'nps' ); ?></h3>
+<h3 class="home-head posts-main-btn posts-title-cinema" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="fa fa-chevron-right"></span> <?php _e( 'Cinema', 'nps' ); ?></h3>
 <div class="row block-posts block-cinema" style="display: none;"></div>
 
-<h3 class="home-head posts-main-btn posts-title-marathon" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="glyphicon glyphicon-chevron-right"></span> <?php _e( 'Marathon', 'nps' ); ?></h3>
+<h3 class="home-head posts-main-btn posts-title-marathon" style="display: none;"><?php _e( 'News', 'nps' ); ?> <span class="fa fa-chevron-right"></span> <?php _e( 'Marathon', 'nps' ); ?></h3>
 <div class="row block-posts block-marathon" style="display: none;"></div>
 
 <?php get_footer(); ?>
