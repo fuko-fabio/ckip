@@ -31,9 +31,3 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
 }
 .dropdown-menu ul { list-style: none; }
-
-/* Some modified padding for the bootstrap container.
- * Now you can make many styles of design easily.
- * Try with giving the .container class just a background colour and have a look. ;)
- */
-.container { padding: 0 15px 15px 15px; }

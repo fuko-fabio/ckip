@@ -260,9 +260,6 @@ display: block;
 .nav:after {
     display: none; 
 }
-.container {
-    padding: 0;
-}
 
 .navbar {
     background: none;

@@ -23,6 +23,12 @@ echo get_template_part('head');
     <div class="site-header-image">
         <div class="container">
             <?php get_header_inner_image('library'); ?>
+            <div class="row">
+                <div class="overlay-header col-12">
+                <img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/library_logo.png'); ?>" />
+                <span><?php _e( 'Library', 'nps' ); ?></span>
+                </div>
+            </div>
             <div class="hours">
                 <div class="content">
                     <div class="row header">

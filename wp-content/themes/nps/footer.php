@@ -15,9 +15,7 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="container">
         <div class="partners">
-            <div class="header">
-                <?php _e( 'Our partners', 'nps' ); ?>
-            </div>
+           
             <div class="slick-list">
                 <div class="item">
                     <a href="http://www.michalowice.malopolska.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/gmina_michalowice.png" /></a>

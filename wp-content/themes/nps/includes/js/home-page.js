@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
             libraryPosts.fetch({ data: { filter: {cat: libraryCategoryId, posts_per_page: 4} } }),
             marathonPosts.fetch({ data: { filter: {cat: marathonCategoryId, posts_per_page: 4} } }),
             cinemaPosts.fetch({ data: { filter: {cat: cinemaCategoryId, posts_per_page: 4} } }),
-            events.fetch({ data: { filter: {type: 'tribe_events', posts_per_page: 4} } })
+            events.fetch({ data: { type: 'tribe_events', filter: {posts_per_page: 4, orderby: 'event_date', order: 'ASC'} } })
         );
     }
 
@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
         initBlockBtn('library', libraryBlock);
         initBlockBtn('marathon', marathonBlock);
         initBlockBtn('cinema', cinemaBlock);
-    
+
         fillBlock(ckipBlock, ckipPosts);
         fillBlock(libraryBlock, libraryPosts);
         fillBlock(cinemaBlock, cinemaPosts);
@@ -62,6 +62,11 @@ jQuery(document).ready(function() {
 
     fetchHomeData().done(function() {
         renderHomePosts();
+        if (events.isEmpty()) {
+            jQuery('.block-events').append(tmpl("no-home-events-tmpl"));
+        } else {
+            jQuery('.block-events').append(tmpl("home-events-tmpl", events.toArray()));
+        }
     });
 });
 

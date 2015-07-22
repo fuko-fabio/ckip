@@ -615,9 +615,16 @@
     overflow: hidden;
 }
 
+.block-posts .post.new {
+    height: 250px;
+}
+
 .block-posts .post .content {
     height: 100%;
     text-align: center;
+}
+.block-posts .post.new .content {
+    border: 1px solid #e32b50;
 }
 
 .block-posts .post .content .title {
@@ -627,6 +634,10 @@
     margin: 0;
     padding: 15px 5px;
     text-align: left;
+}
+.block-posts .post.new .content .title {
+    display: none;
+    font-size: 10px;
 }
 
 .block-posts .post .posted {
@@ -639,6 +650,9 @@
     bottom: 0px;
     left: 15px;
     width: calc(100% - 30px);
+}
+.block-posts .post.new .posted {
+    display: none;
 }
 
 .block-posts .post img {
@@ -671,15 +685,50 @@
     display: none;
     margin: auto;
 }
+.block-posts .post.new .btn-default {
+    margin-top: 50%;
+}
 .block-posts .post .btn-default:hover {
     color: #e32b50;
 }
 .block-posts .post .content:hover .btn-default,
 .block-posts .post .content:focus .btn-default,
-.block-posts .post .content:hover .preview {
+.block-posts .post .content:hover .preview,
+.block-posts .post.new .content:hover .title {
     display: block;
 }
 
 .block-posts .post {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+}
+
+.site-header .overlay-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.site-header .overlay-header img {
+    margin-top: 80px;
+    max-width: 150px;
+}
+.site-header .overlay-header span {
+    display: block;
+    color: #eee;
+    font-family: "Track";
+    font-size: 26px;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.separator {
+    border-color: #e32b50;
 }

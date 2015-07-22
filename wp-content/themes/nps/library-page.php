@@ -48,9 +48,13 @@ Template Name: Library Home Page
         </a>
     </div>
 </div>
-
+<hr class="separator"/>
 <h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'News', 'nps' ); ?></h3>
 <div class="row block-posts block-library"></div>
+<hr class="separator"/>
+<h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'New books', 'nps' ); ?></h3>
+<div class="row block-posts block-library-books"></div>
+<hr class="separator"/>
 
 <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'custom-single' ); ?>

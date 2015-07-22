@@ -1,4 +1,5 @@
 var libraryCategoryId = 8;
+var libraryBooksCategoryId = 13;
 var ckipCategoryId = 7;
 var marathonCategoryId = 9;
 var cinemaCategoryId = 10;
@@ -62,16 +63,16 @@ jQuery(document).ready(function() {
     initPartnersSlider();
 });
 
-function initPagePosts(postsCategory, blockSelector) {
+function initPagePosts(postsCategory, blockSelector, count, tmplName) {
     var posts = new wp.api.collections.Posts();
 
-    posts.fetch({ data: { filter: {cat: postsCategory, posts_per_page: 4} } }).done(function() {
+    posts.fetch({ data: { filter: {category__in: postsCategory, posts_per_page: count} } }).done(function() {
         var block = jQuery(blockSelector);
 
         if (posts.isEmpty()) {
-            block.append(tmpl("no-home-posts-tmpl"));
+            block.append(tmpl("no-" + tmplName + "-tmpl"));
         } else {
-            block.append(tmpl("home-posts-tmpl", posts.toArray()));
+            block.append(tmpl(tmplName + "-tmpl", posts.toArray()));
         }
         jQuery('.fill-box').fillBox(true, isTouchDevice);
         handeTouchScreen();

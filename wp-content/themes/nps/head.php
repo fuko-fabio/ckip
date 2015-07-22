@@ -23,7 +23,7 @@ global $woocommerce;
     {% for (var i=0; i < o.length; i++) { %}
         <div class="col-md-3 col-sm-6 col-xs-12 post">
             <div class="content">
-                <p class="title">{%=o[i]['attributes']['title']%}</p>
+                <p class="title ellipsis">{%=o[i]['attributes']['title']%}</p>
                 {% if (o[i]['attributes']['featured_image'] != null ) { %}
                     <img class="fill-box" src="{%=o[i]['attributes']['featured_image']['guid']%}" />
                 {% } %}
@@ -38,6 +38,28 @@ global $woocommerce;
 <script type="text/x-tmpl" id="no-home-posts-tmpl">
     <div class="col-xs-12">
         <div class="alert alert-info"><?php _e( 'No posts in this category.', 'nps' ); ?></div>
+    </div>
+</script>
+
+<script type="text/x-tmpl" id="news-img-tmpl">
+    {% for (var i=0; i < o.length; i++) { %}
+        <div class="col-md-2 col-sm-3 col-xs-6 post new">
+            <div class="content">
+                <p class="title ellipsis">{%=o[i]['attributes']['title']%}</p>
+                {% if (o[i]['attributes']['featured_image'] != null ) { %}
+                    <img class="fill-box" src="{%=o[i]['attributes']['featured_image']['guid']%}" />
+                {% } %}
+                <span class="preview touch-show">{%#o[i]['attributes']['excerpt']%}</span>
+                <a href="{%=o[i]['attributes']['link']%}" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
+                <p class="posted"><?php _e( 'Posted on', 'nps' ); ?>: {%=o[i]['attributes']['date'].toLocaleTimeString()%} {%=o[i]['attributes']['date'].toLocaleDateString()%}</p>
+            </div>
+        </div>
+    {% } %}
+</script>
+
+<script type="text/x-tmpl" id="no-news-img-tmpl">
+    <div class="col-xs-12">
+        <div class="alert alert-info"><?php _e( 'New books comming soon.', 'nps' ); ?></div>
     </div>
 </script>
 
