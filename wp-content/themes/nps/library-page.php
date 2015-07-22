@@ -17,7 +17,7 @@ Template Name: Library Home Page
             </span>
         </a>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 hidden-xs hidden-sm">
         <a href="#">
             <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
@@ -36,7 +36,7 @@ Template Name: Library Home Page
             </span>
         </a>
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 hidden-md hidden-lg">
         <a href="#">
             <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
@@ -51,5 +51,9 @@ Template Name: Library Home Page
 
 <h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'News', 'nps' ); ?></h3>
 <div class="row block-posts block-library"></div>
+
+<?php while ( have_posts() ) : the_post(); ?>
+    <?php get_template_part( 'content', 'custom-single' ); ?>
+<?php endwhile; // end of the loop. ?>
 
 <?php get_footer(); ?>

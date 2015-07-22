@@ -346,7 +346,7 @@
     text-align: center;
 }
 
-.library-top .col-md-3:last-child .agency {
+.library-top .col-md-3 .agency {
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/filia2.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -356,7 +356,7 @@
     text-align: center;
 }
 
-.library-top .col-md-3:last-child a:hover .agency {
+.library-top .col-md-3 a:hover .agency {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/filia2.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -409,14 +409,46 @@
     text-align: center;
 }
 
-.library-top .catalogue .icon {
+.library-top a:hover .catalogue {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/library_catalogue.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 150px;
+    text-align: center;
+}
+.library-top a .catalogue .icon {
     background: url("../img/ebook_white.png") no-repeat center center;
     display: block;
     width: 50px;
     height: 50px;
     background-size: 100%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.library-top a:hover .catalogue .icon {
+    background: url("../img/ebook_pink.png") no-repeat center center;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.library-top .catalogue .name {
+    color: #eee;
+    font-family: "Track";
+    padding: 10px;
+}
+
+.library-top a:hover .catalogue .name {
+    border-top: 1px solid #e32b50;
+    border-bottom: 1px solid #e32b50;
+    padding: 10px;
 }
 
 .library-top .ibuk {
@@ -433,27 +465,149 @@
     margin-top: 15px;
 }
 
-.library-top .catalogue .name {
+
+@media (max-width: 992px) {
+    .library-top .col-xs-12:last-of-type {
+        margin-top: 15px;
+    }
+}
+
+.marathon-top .form {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/form.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 250px;
+    text-align: center;
+}
+.marathon-top a:hover .form {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/form.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 250px;
+    text-align: center;
+}
+
+.marathon-top .map {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/map.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 250px;
+    text-align: center;
+}
+.marathon-top a:hover .map {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/map.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 250px;
+    text-align: center;
+}
+
+.marathon-top .scores {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/scores.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 250px;
+    text-align: center;
+}
+.marathon-top a:hover .scores {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/scores.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 250px;
+    text-align: center;
+}
+.marathon-top .name {
     color: #eee;
     font-family: "Track";
+    padding: 10px;
+}
+
+.marathon-top a:hover .name {
+    border-top: 1px solid #e32b50;
+    border-bottom: 1px solid #e32b50;
+    padding: 10px;
+}
+
+.marathon-top a .form .icon {
+    background: url("../img/register_white.png") no-repeat center center;
     display: block;
-    padding-top: 30px;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
-@media (min-width: 992px) {
-    .library-top .links .ibuk {
-        margin-bottom: 50px;
-        padding: 0 20px;
-    }
+.marathon-top a:hover .form .icon {
+    background: url("../img/register_pink.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
-@media (max-width: 991px) {
-    .library-top .hours {
-        margin-bottom: 30px;
-    }
-    .library-top .catalogue {
-        margin-bottom: 30px;
-    }
+.marathon-top a .map .icon {
+    background: url("../img/map_white.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.marathon-top a:hover .map .icon {
+    background: url("../img/map_pink.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.marathon-top a .scores .icon {
+    background: url("../img/awards_white.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.marathon-top a:hover .scores .icon {
+    background: url("../img/awards_pink.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.marathon-top .col-md-4 {
+    margin-bottom: 15px;
 }
 
 .block-posts .post {
