@@ -79,16 +79,31 @@ function initPagePosts(postsCategory, blockSelector) {
 }
 
 function initStickyMenu(offset) {
+    window.scrollTo(0, 0);
     jQuery('.site-header-opts').stickyNavbar({
         animDuration: 250,              // Duration of jQuery animation
         startAt: offset,                // Stick the menu at XXXpx from the top of the this() (nav container)
-        easing: "linear",               // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
-        animateCSS: true,               // AnimateCSS effect on/off
-        animateCSSRepeat: false,        // Repeat animation everytime user scrolls
-        jqueryAnim: "slideDown",        // jQuery animation type: fadeIn, show or slideDown
+        animateCSS: false,               // AnimateCSS effect on/off
+        jqueryEffects: false,
         mobile: false,                  // If false nav will not stick under 480px width of window
         mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
         zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
+    });
+}
+
+function initSecondStickyMenu() {
+    var topMenu = jQuery('.site-header-opts');
+    var secondMenu = jQuery('.site-navigation');
+    secondMenu.stickyNavbar({
+        startAt: topMenu.height(),                // Stick the menu at XXXpx from the top of the this() (nav container)
+        animateCSS: false,               // AnimateCSS effect on/off
+        jqueryEffects: false,
+        mobile: false,                  // If false nav will not stick under 480px width of window
+        mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
+        zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
+    });
+    secondMenu.css({
+        'top' : topMenu.height() - 2
     });
 }
 

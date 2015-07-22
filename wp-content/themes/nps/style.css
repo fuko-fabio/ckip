@@ -256,7 +256,10 @@ display: block;
     display: block;
 }
 */
-
+.nav:before,
+.nav:after {
+    display: none; 
+}
 .container {
     padding: 0;
 }
@@ -277,6 +280,7 @@ display: block;
     margin: 0;
     padding: 0;
     float: none;
+    border: 2px solid #121212;
 }
  
 .navbar .nav .menu-item {
@@ -286,24 +290,26 @@ display: block;
 }
 
 .navbar .nav .menu-item a:hover {
-    color: #e32b50;
+    background: #e32b50;
+    color: #eee;
 }
 
 .navbar .nav .menu-item a {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-transform: uppercase;
-    font-size: 18px;
-    color: #eee;
-    background: transparent;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #121212;
+    background: #fff;
+    font-family: "Track";
 }
 
 .navbar .nav .main-ckip a {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("includes/img/menu_ckip.jpg") no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("includes/img/menu_ckip.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-library a {
@@ -312,6 +318,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-events a {
@@ -320,6 +327,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-cinema a {
@@ -328,6 +336,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-marathon a {
@@ -336,6 +345,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-ckip a:hover {
@@ -344,6 +354,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-library a:hover {
@@ -352,6 +363,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-events a:hover {
@@ -360,6 +372,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-cinema a:hover {
@@ -368,6 +381,7 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .main-marathon a:hover {
@@ -376,51 +390,112 @@ display: block;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #eee;
 }
 
 .navbar .nav .ckip {
-    background: url("includes/img/ckip.png") no-repeat center center;
+    background: url("includes/img/ck_white.png") no-repeat center center;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background-size: 100%;
     margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.navbar .nav a:hover .ckip {
+    background: url("includes/img/ck_pink.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .navbar .nav .events {
-    background: url("includes/img/calendar.png") no-repeat center center;
+    background: url("includes/img/calendar_white.png") no-repeat center center;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background-size: 100%;
     margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.navbar .nav a:hover .events {
+    background: url("includes/img/calendar_pink.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .navbar .nav .library {
-    background: url("includes/img/book.png") no-repeat center center;
+    background: url("includes/img/book_white.png") no-repeat center center;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background-size: 100%;
     margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.navbar .nav a:hover .library {
+    background: url("includes/img/book_pink.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .navbar .nav .cinema {
-    background: url("includes/img/cinema.png") no-repeat center center;
+    background: url("includes/img/camera_white.png") no-repeat center center;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background-size: 100%;
     margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.navbar .nav a:hover .cinema {
+    background: url("includes/img/camera_pink.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .navbar .nav .marathon {
-    background: url("includes/img/bike.png") no-repeat center center;
+    background: url("includes/img/bike_white.png") no-repeat center center;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background-size: 100%;
     margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.navbar .nav a:hover .marathon {
+    background: url("includes/img/bike_pink.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .home-head {

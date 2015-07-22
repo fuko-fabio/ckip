@@ -9,50 +9,43 @@ Template Name: Library Home Page
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/library-page.js"></script>
 
 <div class="row library-top">
-    <div class="col-md-4 col-xs-12 hours">
-        <div class="content">
-            <div class="row header">
-                <div class="col-xs-12"><?php _e( 'Working hours', 'nps' ); ?></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 day"><?php _e( 'Monday', 'nps' ); ?></div>
-                <div class="col-xs-6 hour">10:00 - 18:00</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 day"><?php _e( 'Thursday', 'nps' ); ?></div>
-                <div class="col-xs-6 hour">08:00 - 15:03</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 day"><?php _e( 'Wensday', 'nps' ); ?></div>
-                <div class="col-xs-6 hour">08:00 - 16:00</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 day"><?php _e( 'Tuesday', 'nps' ); ?></div>
-                <div class="col-xs-6 hour">10:00 - 18:00</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 day"><?php _e( 'Friday', 'nps' ); ?></div>
-                <div class="col-xs-6 hour">08:00 - 15:30</div>
-            </div>
-        </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <a href="#">
+            <span class="col-xs-12 agency">
+                <span class="icon"></span>
+                <span class="name"><?php _e( 'Raciborowice', 'nps' ); ?></span>
+            </span>
+        </a>
     </div>
-    <div class="col-md-5 col-xs-12 catalogue">
-        <div class="content">
-            <a href="#">
+    <div class="col-md-6">
+        <a href="#">
+            <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
-            </a>
-        </div>
+            </span>
+        </a>
+        <a href="http://www.ibuk.pl/">
+            <span class="col-xs-12 ibuk"><span class="icon"></span></span>
+        </a>
     </div>
-    <div class="col-md-3 links">
-        <div class="row">
-            <div class="col-md-12 col-xs-6 ibuk">
-                <a href="http://www.ibuk.pl/"><img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/partners/ibuk.png') ?>" /></a>
-            </div>
-            <div class="col-md-12 col-xs-6 bip">
-                <a href="https://www.bip.gov.pl/"><img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/partners/bip.png') ?>" /></a>
-            </div>
-        </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <a href="#">
+            <span class="col-xs-12 agency">
+                <span class="icon"></span>
+                <span class="name"><?php _e( 'Więcławice', 'nps' ); ?></span>
+            </span>
+        </a>
+    </div>
+    <div class="col-xs-12">
+        <a href="#">
+            <span class="col-xs-12 catalogue">
+                <span class="icon"></span>
+                <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
+            </span>
+        </a>
+        <a href="http://www.ibuk.pl/">
+            <span class="col-xs-12 ibuk"><span class="icon"></span></span>
+        </a>
     </div>
 </div>
 

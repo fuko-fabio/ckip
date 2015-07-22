@@ -15,7 +15,6 @@ echo get_template_part('head');
     <div class="site-header-opts">
         <div class="container">
             <?php
-                get_main_sticky_menu();
                 get_main_user_bar();
             ?>
         </div>

@@ -29,17 +29,18 @@ function woocommerce_my_account_link() {
 
 function get_main_user_bar() {
     if ( class_exists( 'woocommerce' ) ) {?>
-        <div class="user-nav"> <?php
-        woocommerce_my_account_link();
-        woocommerce_cart_link();?>
+        <div class="user-nav">
+        <a href="http://facebook.com"><i class="fa fa-facebook"></i></a>
+        <a href="http://youtube.com"><i class="fa fa-youtube-play"></i></a>
+        <?php woocommerce_cart_link(); ?>
         <button id="trigger-search-overlay" type="button" class="fa fa-search search-btn"></button>
+        <?php woocommerce_my_account_link(); ?>
         </div> <?php
     }
 }
 
 function get_main_sticky_menu() { ?>
     <div class="sticky-menu">
-        <img src="<?php echo get_template_directory_uri(); ?>/includes/img/logo.png" class="logo"/>
         <?php
             if(is_active_sidebar('top-bar')){
                 dynamic_sidebar('top-bar');

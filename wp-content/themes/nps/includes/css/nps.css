@@ -12,8 +12,8 @@
 
 .block-title {
     font-size: 18px;
-    text-transform: uppercase;
-    color: #EEE;
+    font-family: "Track";
+    color: #eee;
 }
 
 .block-ckip-btn, .block-library-btn, .block-cinema-btn, .block-marathon-btn {
@@ -84,6 +84,9 @@
     cursor: pointer; 
 }
 
+.site-navigation {
+    width: 100%
+}
 .site-header-opts {
     z-index: 99999;
     background-color: rgba(0,0,0,0.8);
@@ -95,7 +98,14 @@
     float: right;
     margin-top: 5px;
 }
-
+.site-header-opts .user-nav a {
+    color: #eee;
+    font-size: 28px;
+    margin-right: 10px;
+}
+.site-header-opts .user-nav a:hover {
+    color: #e32b50;
+}
 .site-header-opts .navbar-sticky {
     float: left;
 }
@@ -133,13 +143,16 @@
 .site-header-opts .widget .nav .menu-item {
     float: left;
 }
-
-.site-header-opts .logo {
-    float: left;
-    max-height: 40px;
-    margin: 5px;
+.site-header-opts .widget .nav .menu-item a {
+    font-family: "Track";
+    font-size: 12px;
+    color: #eee;
 }
 
+.site-header-opts .widget .nav .menu-item a:hover {
+    background: none;
+    color: #e32b50;
+}
 .site-footer .partners {
     text-align: center;
 }
@@ -153,6 +166,8 @@
 .site-footer .partners .header {
     text-transform: uppercase;
     font-size: 24px;
+    font-weight: bolder;
+    color: #e32b50;
 }
 
 .site-footer .newsletter .info {
@@ -272,42 +287,48 @@
   text-align: center;
 }
 
-.library-top .hours .content {
+.site-header-image .container {
+    position: relative
+}
+
+.site-header-image .hours {
+    width: 350px;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/library_time.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
-    padding: 15px;
-    min-height: 300px;
+    padding: 5px;
+    position: absolute;
+    top: 70px;
+    right: 15px;
 }
 
-.library-top .hours .header {
+.site-header-image .hours .header {
     font-size: 22px;
     text-transform: uppercase;
     text-align: center;
     color: #eee;
     margin-bottom: 15px;
 }
-.library-top .hours .content {
+.site-header-image .hours .content {
     font-size: 18px;
     text-transform: uppercase;
     color: #eee;
 }
-.library-top .hours .day {
+.site-header-image .hours .day {
     background-color: #e32b50;
     text-align: center;
     margin: 0 -25px 15px 25px;
 }
 
-.library-top .hours .hour {
+.site-header-image .hours .hour {
     text-align: right;
     padding-right: 25px;
     padding-left: 25px;
 }
-
-.library-top .catalogue .content {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/library_catalogue.jpg") no-repeat center center;
+.library-top .col-md-3:first-child .agency {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/filia1.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -315,19 +336,106 @@
     min-height: 300px;
     text-align: center;
 }
-.library-top .catalogue .content .icon {
-    background: url("../img/e_book.png") no-repeat center center;
+.library-top .col-md-3:first-child a:hover .agency {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/filia1.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    min-height: 300px;
+    text-align: center;
+}
+
+.library-top .col-md-3:last-child .agency {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/filia2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    min-height: 300px;
+    text-align: center;
+}
+
+.library-top .col-md-3:last-child a:hover .agency {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/filia2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    min-height: 300px;
+    text-align: center;
+}
+.library-top a:hover .agency .icon {
+    background: url("../img/filia_pink.png") no-repeat center center;
     display: block;
     width: 100px;
     height: 100px;
     background-size: 100%;
     margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.library-top a .agency .icon {
+    background: url("../img/filia_white.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.library-top a .agency {
+    color: #eee;
+    font-family: "Track";
+}
+.library-top a .agency .name {
+    padding: 10px;
 }
 
-.library-top .catalogue .content .name {
-    font-size: 18px;
-    text-transform: uppercase;
+.library-top a:hover .agency .name {
+    border-top: 1px solid #e32b50;
+    border-bottom: 1px solid #e32b50;
+    padding: 10px;
+}
+
+.library-top .catalogue {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/library_catalogue.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: 150px;
+    text-align: center;
+}
+
+.library-top .catalogue .icon {
+    background: url("../img/ebook_white.png") no-repeat center center;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.library-top .ibuk {
+    height: 150px;
+    text-align: center;
+}
+.library-top .ibuk .icon {
+    background: url("../img/ibuk.png") no-repeat center center;
+    display: block;
+   width: 100px;
+    height: 120px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.library-top .catalogue .name {
     color: #eee;
+    font-family: "Track";
     display: block;
     padding-top: 30px;
 }
@@ -361,8 +469,7 @@
 .block-posts .post .content .title {
     background: rgba(0, 0, 0, 0.7);
     color: #eee;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-family: "Track";
     margin: 0;
     padding: 15px 5px;
     text-align: left;

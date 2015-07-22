@@ -63,6 +63,5 @@ jQuery(document).ready(function() {
     fetchHomeData().done(function() {
         renderHomePosts();
     });
-
 });
 
