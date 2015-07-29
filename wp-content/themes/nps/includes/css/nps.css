@@ -610,24 +610,37 @@
     margin-bottom: 15px;
 }
 
+.posts-main-btn {
+    color: #E32B50;
+}
+
 .block-posts .post {
     height: 450px; 
     overflow: hidden;
+}
+
+.block-events .post {
+    height: 350px; 
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .block-posts .post.new {
     height: 250px;
 }
 
-.block-posts .post .content {
+.block-posts .post .content,
+.block-events .post .content {
     height: 100%;
     text-align: center;
 }
+
 .block-posts .post.new .content {
     border: 1px solid #e32b50;
 }
 
-.block-posts .post .content .title {
+.block-posts .post .content .title,
+.block-events .post .content .title {
     background: rgba(0, 0, 0, 0.7);
     color: #eee;
     font-family: "Track";
@@ -651,28 +664,25 @@
     left: 15px;
     width: calc(100% - 30px);
 }
+
 .block-posts .post.new .posted {
     display: none;
 }
 
-.block-posts .post img {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    z-index: -1;
-}
-
-.block-posts .post .preview {
+.block-posts .post .preview,
+.block-events .post .preview {
     display: none;
 }
 
-.block-posts .post .preview p {
+.block-posts .post .preview p,
+.block-events .post .preview p {
     padding: 20px 15px;
     color: #eee;
     text-align: justify;
 }
 
-.block-posts .post .btn-default {
+.block-posts .post .btn-default,
+.block-events .post .btn-default {
     background: none;
     border: none;
     font-weight: bold;
@@ -688,13 +698,18 @@
 .block-posts .post.new .btn-default {
     margin-top: 50%;
 }
-.block-posts .post .btn-default:hover {
+.block-posts .post .btn-default:hover,
+.block-events .post .btn-default:hover {
     color: #e32b50;
 }
 .block-posts .post .content:hover .btn-default,
 .block-posts .post .content:focus .btn-default,
+.block-events .post .content:hover .btn-default,
+.block-events .post .content:focus .btn-default,
 .block-posts .post .content:hover .preview,
-.block-posts .post.new .content:hover .title {
+.block-events .post .content:hover .preview,
+.block-posts .post.new .content:hover .title,
+.block-events .post.new .content:hover .title {
     display: block;
 }
 

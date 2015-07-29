@@ -49,11 +49,15 @@ Template Name: Library Home Page
     </div>
 </div>
 <hr class="separator"/>
-<h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'News', 'nps' ); ?></h3>
-<div class="row block-posts block-library"></div>
+<h3 class="home-head"><?php _e( 'News', 'nps' ); ?></h3>
+<div class="row block-posts block-library">
+    <?php get_category_posts('library_category', __( 'No posts about library.', 'nps' ) ) ?>
+</div>
 <hr class="separator"/>
-<h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'New books', 'nps' ); ?></h3>
-<div class="row block-posts block-library-books"></div>
+<h3 class="home-head"><?php _e( 'New books', 'nps' ); ?></h3>
+<div class="row block-posts block-library-books">
+    <?php get_category_posts('library_books_category', __( 'No posts about new books.', 'nps' )) ?>
+</div>
 <hr class="separator"/>
 
 <?php while ( have_posts() ) : the_post(); ?>

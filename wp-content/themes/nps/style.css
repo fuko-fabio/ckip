@@ -273,7 +273,9 @@ display: block;
 
 .navbar .nav {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     margin: 0;
     padding: 0;
     float: none;
@@ -282,7 +284,8 @@ display: block;
  
 .navbar .nav .menu-item {
     list-style: none;
-    flex-grow: 1;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
     text-align: center;
 }
 
@@ -497,4 +500,8 @@ display: block;
 
 .home-head {
     text-transform: uppercase;
+}
+
+.site-footer {
+    margin-top: 30px;
 }

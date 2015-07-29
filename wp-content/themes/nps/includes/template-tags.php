@@ -209,6 +209,16 @@ function nps_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'nps_short_posted_on' ) ) :
+/**
+ * Prints HTML with short meta information for the current post-date/time.
+ */
+function nps_short_posted_on() {
+    printf(__('<p class="posted">Posted on: %1$s </p>'), esc_html( get_the_date()));
+}
+endif;
+
+
 /**
  * Returns true if a blog has more than 1 category
  */

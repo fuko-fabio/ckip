@@ -35,8 +35,10 @@ Template Name: Marathon Home Page
     </div>
 </div>
 
-<h3 class="home-head posts-main-btn posts-title-all"><?php _e( 'News', 'nps' ); ?></h3>
-<div class="row block-posts block-marathon"></div>
+<h3 class="home-head"><?php _e( 'News', 'nps' ); ?></h3>
+<div class="row block-posts block-marathon">
+    <?php get_category_posts('marathon_category', __( 'No posts about marathon.', 'nps' ) ) ?>
+</div>
 
 <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'custom-single' ); ?>
