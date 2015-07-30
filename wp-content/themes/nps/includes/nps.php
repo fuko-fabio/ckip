@@ -116,21 +116,21 @@ function get_before_body() { ?>
 function get_category_posts($theme_cat_config_name, $msg, $count = 4) {
     $cat = get_theme_mod($theme_cat_config_name, '0');
     if ($cat != '0') :
-        $get_posts = new WP_Query(array(
+        query_posts(array(
             'category__in'   => $cat,
             'posts_per_page' => $count,
         ));
-        if ($get_posts->have_posts()) : while ($get_posts->have_posts()) : $get_posts->the_post(); ?>
+        if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="col-md-3 col-sm-6 col-xs-12 post">
                 <div class="content">
                     <p class="title ellipsis"><?php the_title(); ?></p>
                     <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>
                     <span class="preview touch-show"><?php the_excerpt(); ?></span>
-                    <a href="<?php get_permalink(get_the_ID()); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
+                    <a href="<?php echo get_permalink(); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
                     <?php nps_short_posted_on(); ?>
                 </div>
             </div> <?php
-        endwhile;
+            endwhile;
         else : ?>
             <div class="col-xs-12">
                 <div class="alert alert-info"><?php echo $msg; ?></div>

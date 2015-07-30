@@ -120,6 +120,50 @@ function nps_widgets_init() {
 }
 add_action( 'widgets_init', 'nps_widgets_init' );
 
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+  register_post_type( 'nps_library',
+    array(
+      'labels' => array(
+        'name' => __( 'Library' ),
+        'singular_name' => __( 'Library' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+  register_post_type( 'nps_marathon',
+    array(
+      'labels' => array(
+        'name' => __( 'Marathon' ),
+        'singular_name' => __( 'Marathon' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+  register_post_type( 'nps_ck',
+    array(
+      'labels' => array(
+        'name' => __( 'Culture Center' ),
+        'singular_name' => __( 'Culture Center' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+  register_post_type( 'nps_ck',
+    array(
+      'labels' => array(
+        'name' => __( 'Cinema' ),
+        'singular_name' => __( 'Cinema' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
 /**
  * Enqueue scripts and styles
  */
