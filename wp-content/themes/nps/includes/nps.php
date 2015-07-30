@@ -113,11 +113,13 @@ function get_before_body() { ?>
 }
 
 
-function get_category_posts($theme_cat_config_name, $msg) {
+function get_category_posts($theme_cat_config_name, $msg, $count = 4) {
     $cat = get_theme_mod($theme_cat_config_name, '0');
     if ($cat != '0') :
-        $get_posts = new WP_Query();
-        $get_posts->query('cat='.$cat.',posts_per_page=4');
+        $get_posts = new WP_Query(array(
+            'category__in'   => $cat,
+            'posts_per_page' => $count,
+        ));
         if ($get_posts->have_posts()) : while ($get_posts->have_posts()) : $get_posts->the_post(); ?>
             <div class="col-md-3 col-sm-6 col-xs-12 post">
                 <div class="content">
@@ -137,7 +139,7 @@ function get_category_posts($theme_cat_config_name, $msg) {
         wp_reset_query();
     else : ?>
         <div class="col-xs-12">
-            <div class="alert alert-danger"><?php _( 'Theme not configured.', 'nps' ); ?></div>
+            <div class="alert alert-danger"><?php __( 'Theme not configured.', 'nps' ); ?></div>
         </div> <?php
     endif;
 }

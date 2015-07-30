@@ -64,6 +64,7 @@ function nps_setup() {
         'ckip'  => __( 'Main ckip menu', 'nps' ),
         'library'  => __( 'Main library menu', 'nps' ),
         'marathon'  => __( 'Main marathon menu', 'nps' ),
+        'cinema'  => __( 'Main cinema menu', 'nps' ),
     ) );
 
     show_admin_bar(false);
