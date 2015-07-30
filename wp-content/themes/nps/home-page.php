@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Main Home Page
+Template Name: Strona główna
 */
 ?>
 
@@ -87,6 +87,8 @@ Template Name: Main Home Page
 <div class="row block-posts block-marathon" style="display: none;">
     <?php get_category_posts('marathon_category', __( 'No posts about marathon.', 'nps' ) ) ?>
 </div>
+
+<hr class="separator"/>
 
 <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'custom-single' ); ?>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Library Home Page
+Template Name: Biblioteka strona główna
 */
 ?>
 

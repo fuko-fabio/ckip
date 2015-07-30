@@ -1,16 +1,16 @@
 <?php
 /*
-Template Name: CKiP strona główna
+Template Name: Kino strona główna
 */
 ?>
 
-<?php get_header('ckip'); ?>
+<?php get_header('cinema'); ?>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/ckip-page.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/cinema-page.js"></script>
 
 <h3 class="home-head"><?php _e( 'News', 'nps' ); ?></h3>
 <div class="row block-posts block-ckip">
-    <?php get_category_posts('ck_category', __( 'No posts about culture center.', 'nps' ) ) ?>
+    <?php get_category_posts('cinema_category', __( 'No posts about cinema.', 'nps' ) ) ?>
 </div>
 <hr class="separator"/>
 <?php while ( have_posts() ) : the_post(); ?>

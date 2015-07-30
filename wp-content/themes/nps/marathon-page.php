@@ -39,7 +39,7 @@ Template Name: Marathon Home Page
 <div class="row block-posts block-marathon">
     <?php get_category_posts('marathon_category', __( 'No posts about marathon.', 'nps' ) ) ?>
 </div>
-
+<hr class="separator"/>
 <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'custom-single' ); ?>
 <?php endwhile; // end of the loop. ?>
