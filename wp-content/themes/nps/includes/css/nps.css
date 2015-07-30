@@ -747,3 +747,125 @@
 .separator {
     border-color: #e32b50;
 }
+
+.tribe-single-event .event-img {
+    height: 500px;
+    margin-top: 20px;
+}
+
+.tribe-single-event .tribe-event-title {
+    text-transform: uppercase;
+    color: #E32B50;
+    font-weight: bold;
+    
+}
+.tribe-single-event .tribe-event-main-info {
+    margin-bottom: 10px;
+}
+
+.tribe-single-event .tribe-events-term {
+    font-size: 18px;
+    font-weight: bold;
+}
+.tribe-single-event .tribe-events-cost {
+    float: right;
+    font-size: 20px;
+    color: #E32B50;
+    font-weight: bold;
+}
+
+.tribe-single-event .tribe-events-cal-links {
+    text-align: right;
+}
+.tribe-single-event .tribe-events-cal-links .tribe-events-button {
+    border: 1px solid #e32b50 !important;
+    border-radius: 3px !important;
+    height: 40px !important;
+    padding: 10px !important;
+    background: none !important;
+    color: #e32b50 !important;
+    min-width: 100px !important;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+    line-height: 16px !important;
+}
+.tribe-single-event .tribe-events-cal-links .tribe-events-button:hover {
+    color: #eee !important;
+    background-color: #E32B50 !important;
+}
+
+.tribe-single-event .add-to-cart .button {
+    border: 1px solid #e32b50;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    background-color: transparent !important;
+    font-weight: normal;
+    color: #e32b50 !important;
+
+}
+.tribe-single-event .add-to-cart .button:hover {
+    color: #eee !important;
+    background-color: #E32B50 !important;
+}
+
+.tribe-events-page-title {
+    font-family: 'Track';
+}
+
+.tribe-events-list-separator-month {
+    background: none;
+    color: #E32B50;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Track';
+    text-align: center;
+}
+
+.list-event .event-head {
+    border-bottom: 1px solid #e32b50;
+    padding: 10px;
+}
+
+.list-event .event-title {
+    color: #E32B50;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list-event .event-time {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.list-event .event-img {
+    height: 200px;
+    margin-top:15px;
+}
+
+.list-event .event-cost {
+    color: #E32B50;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.list-event .btn-default {
+    border: 1px solid #e32b50;
+    border-radius: 3px;
+    color: #e32b50;
+    float: right;
+}
+
+.list-event .btn-default:hover {
+    color: #EEEEEE;
+    background-color: #e32b50;
+}
+
+.list-event .event-excerpt {
+    text-align: justify;
+}
