@@ -124,7 +124,7 @@ function get_category_posts($theme_cat_config_name, $msg) {
                     <p class="title ellipsis"><?php the_title(); ?></p>
                     <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>
                     <span class="preview touch-show"><?php the_excerpt(); ?></span>
-                    <a href="<?php get_permalink(); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
+                    <a href="<?php get_permalink(get_the_ID()); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
                     <?php nps_short_posted_on(); ?>
                 </div>
             </div> <?php
