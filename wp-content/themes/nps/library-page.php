@@ -56,7 +56,7 @@ Template Name: Biblioteka strona główna
 <hr class="separator"/>
 <h3 class="home-head"><?php _e( 'New books', 'nps' ); ?></h3>
 <div class="row block-posts block-library-books">
-    <?php get_category_posts('library_books_category', __( 'No posts about new books.', 'nps' )) ?>
+    <?php get_category_posts('library_books_category', __( 'No posts about new books.', 'nps' ), 6) ?>
 </div>
 <hr class="separator"/>
 

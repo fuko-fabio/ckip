@@ -505,3 +505,15 @@ display: block;
 .site-footer {
     margin-top: 30px;
 }
+
+a {
+    color: #E32B50;
+}
+
+input, button, select, textarea {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  outline: none;
+}

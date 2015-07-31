@@ -39,11 +39,11 @@ $organizer = tribe_get_organizer();
         </div>
     </div>
     <div class="pull-right">
+        <div class="event-cost">
         <?php if ( tribe_get_cost() ) : ?>
-            <div class="event-cost">
-                <span><?php echo tribe_get_cost( null, true ); ?></span>
-            </div>
+            <span><?php echo tribe_get_cost( null, true ); ?></span>
         <?php endif; ?>
+        </div>
     </div>
     
     <div class="row">

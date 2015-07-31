@@ -33,9 +33,11 @@ $event_id = get_the_ID();
             <?php the_title( '<h3 class="tribe-event-title">', '</h3>' ); ?>
             <div class="tribe-event-main-info">
                 <?php echo tribe_events_event_schedule_details( $event_id, '<span class="tribe-events-term">', '</span>' ); ?>
+                 <span class="tribe-events-cost">
                 <?php if ( tribe_get_cost() ) : ?>
-                    <span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
+                   <?php echo tribe_get_cost( null, true ) ?>
                 <?php endif; ?>
+                </span>
             </div>
             <?php while ( have_posts() ) :  the_post(); ?>
                 <?php the_content(); ?>
@@ -43,7 +45,6 @@ $event_id = get_the_ID();
             <?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
         </div>
     </div>
-    <hr class="separator"/>
     <?php while ( have_posts() ) :  the_post(); ?>
         <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
         <hr class="separator"/>

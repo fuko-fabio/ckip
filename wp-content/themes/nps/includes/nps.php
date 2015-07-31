@@ -120,8 +120,12 @@ function get_category_posts($theme_cat_config_name, $msg, $count = 4) {
             'category__in'   => $cat,
             'posts_per_page' => $count,
         ));
-        if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="col-md-3 col-sm-6 col-xs-12 post">
+        if (have_posts()) : while (have_posts()) : the_post();
+            if ($count == 6) { ?>
+                <div class="col-md-2 col-sm-4 col-xs-6 post">
+            <?php } else { ?>
+                <div class="col-md-3 col-sm-6 col-xs-12 post">
+            <?php } ?>
                 <div class="content">
                     <p class="title ellipsis"><?php the_title(); ?></p>
                     <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>

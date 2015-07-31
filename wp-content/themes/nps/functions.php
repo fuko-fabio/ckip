@@ -91,6 +91,14 @@ function nps_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
+        'name'          => __( 'Posts Sidebar', 'nps' ),
+        'id'            => 'posts-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
         'name' => 'Footer Sidebar 1',
         'id' => 'footer-sidebar-1',
         'description' => 'Appears in the footer area',
@@ -120,50 +128,6 @@ function nps_widgets_init() {
 }
 add_action( 'widgets_init', 'nps_widgets_init' );
 
-add_action( 'init', 'create_post_type' );
-
-function create_post_type() {
-  register_post_type( 'nps_library',
-    array(
-      'labels' => array(
-        'name' => __( 'Library' ),
-        'singular_name' => __( 'Library' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
-  register_post_type( 'nps_marathon',
-    array(
-      'labels' => array(
-        'name' => __( 'Marathon' ),
-        'singular_name' => __( 'Marathon' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
-  register_post_type( 'nps_ck',
-    array(
-      'labels' => array(
-        'name' => __( 'Culture Center' ),
-        'singular_name' => __( 'Culture Center' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
-  register_post_type( 'nps_ck',
-    array(
-      'labels' => array(
-        'name' => __( 'Cinema' ),
-        'singular_name' => __( 'Cinema' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
-}
 /**
  * Enqueue scripts and styles
  */
@@ -213,6 +177,24 @@ function nps_scripts() {
     wp_enqueue_style( 'nps-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'nps_scripts', 15 );
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '<section id="main">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</section>';
+}
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
 
 /**
  * Implement the Custom Header feature.

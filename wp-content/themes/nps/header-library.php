@@ -19,7 +19,7 @@ echo get_template_part('head');
                 get_main_user_bar();
             ?>
         </div>
-    </div><!-- .container -->
+    </div>
     <div class="site-header-image">
         <div class="container">
             <?php get_header_inner_image('library'); ?>
