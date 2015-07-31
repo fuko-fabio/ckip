@@ -8,7 +8,7 @@
 function woocommerce_cart_link() {
     global $woocommerce;
     ?>
-    <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'npstheme'); ?>" class="cart-parent">
+    <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'nps'); ?>" class="cart-parent">
         <!--
             <span class="contents"><?php echo $woocommerce->cart->get_cart_contents_count() ?></span>
             <span class="total"><?php echo $woocommerce->cart->get_cart_total() ?></span>
@@ -20,10 +20,10 @@ function woocommerce_cart_link() {
 
 function woocommerce_my_account_link() {
      if ( is_user_logged_in() ) { ?>
-        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','npstheme'); ?>" class="my-account"><i class="fa fa-user"></i></a>
+        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','nps'); ?>" class="my-account"><i class="fa fa-user"></i></a>
      <?php } 
      else { ?>
-        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','npstheme'); ?>" class="my-account"><i class="fa fa-user"></i></a>
+        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','nps'); ?>" class="my-account"><i class="fa fa-user"></i></a>
      <?php }
 }
 
@@ -76,7 +76,7 @@ function get_site_header_navigation($theme_location = '', $depth = 1) { ?>
                         <div class="navbar-header">
                             <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
+                                <span class="sr-only"><?php _e('Toggle navigation','nps') ?> </span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>

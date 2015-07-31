@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _tk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-26 19:22+0100\n"
-"PO-Revision-Date: 2015-07-14 02:25+0100\n"
+"PO-Revision-Date: 2015-07-31 07:15+0100\n"
 "Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -388,3 +388,120 @@ msgstr "Maraton"
 
 msgid "No posts in this category."
 msgstr "Brak wpisów w tej kategorii."
+
+msgid "Events"
+msgstr "Wydarzenia"
+
+msgid "See more"
+msgstr "Zobacz"
+
+msgid "No posts about culture center."
+msgstr "Brak aktualności dla centrum kultury"
+
+msgid "Online library catalogue"
+msgstr "Katalog online"
+
+msgid "Working hours"
+msgstr "Godziny otwarcia"
+
+msgid "Monday"
+msgstr "Poniedziałek"
+
+msgid "Thursday"
+msgstr "Wtorek"
+
+msgid "Wensday"
+msgstr "Środa"
+
+msgid "Tuesday"
+msgstr "Czwartek"
+
+msgid "Friday"
+msgstr "Piatek"
+
+msgid "Raciborowice"
+msgstr "Filia Raciborowice"
+
+msgid "Więcławice"
+msgstr "Filia Więcławice"
+
+msgid "New books"
+msgstr "Nowości"
+
+msgid "Application form"
+msgstr "Formularz zgłoszeniowy"
+
+msgid "Marathon map"
+msgstr "Trasa maratonu"
+
+msgid "Results"
+msgstr "Wyniki"
+
+msgid "No posts about cinema."
+msgstr "Brak aktualności na temat kina"
+
+msgid "No posts about marathon."
+msgstr "Brak aktualności na temat maratonu"
+
+msgid "Root posts categories"
+msgstr "Główne kategorie dla stron"
+
+msgid "Culture center category"
+msgstr "Centrum Kultury"
+
+msgid "Library category"
+msgstr "Biblioteka"
+
+msgid "Library new books category"
+msgstr "Nowości biblioteka"
+
+msgid "Marathon category"
+msgstr "Maraton"
+
+msgid "Cinema category"
+msgstr "Kino"
+
+msgid "Top menu bar"
+msgstr "Górne menu"
+
+msgid "Posts Sidebar"
+msgstr "Manu boczne dla wpisów"
+
+msgid "Footer Sidebar 1"
+msgstr "Menu stopki 1"
+
+msgid "Footer Sidebar 2"
+msgstr "Menu stopki 2"
+
+msgid "Footer Sidebar 3"
+msgstr "Menu stopki 3"
+
+msgid "Main home menu"
+msgstr "Menu dla strony głównej"
+
+msgid "Main ckip menu"
+msgstr "Menu dla centrum kultury"
+
+msgid "Main library menu"
+msgstr "Menu dla biblioteki"
+
+msgid "Main marathon menu"
+msgstr "Menu dla maratonu"
+
+msgid "Main cinema menu"
+msgstr "Menu dla kina"
+
+msgid "Theme not configured."
+msgstr "Motyw nie skonfigurowany"
+
+msgid "Toggle navigation"
+msgstr "Pokaż/Ukryj nawigację"
+
+msgid "My Account"
+msgstr "Moje konto"
+
+msgid "Login / Register"
+msgstr "Zaloguj się / Zarejestruj się"
+
+msgid "View your shopping cart"
+msgstr "Zobacz swój koszyk"
