@@ -267,21 +267,40 @@ display: block;
     border: none;
 }
 
-.navbar .navbar-collapse {
-    padding: 0;
+.navbar .navbar-header {
+    background: #121212;
+}
+.navbar .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background: none;
+    border-color: #E32B50;
 }
 
+.navbar .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #E32B50;
+}
+.navbar-toggle {
+    padding: 15px;
+}
+.navbar .navbar-collapse {
+    padding: 0;
+    border: none;
+}
 .navbar .nav {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    -webkit-flex-direction: row;
     margin: 0;
     padding: 0;
-    float: none;
     border: 2px solid #121212;
+    float: none;
 }
- 
+@media (min-width: 768px) {
+    .navbar .nav {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+    }
+}
 .navbar .nav .menu-item {
     list-style: none;
     -webkit-flex: 1 0 0;
@@ -301,8 +320,24 @@ display: block;
     color: #121212;
     background: #fff;
     font-family: "Track";
+    background-color: #FFFFFF;
 }
-
+@media (max-width: 992px) {
+    .navbar .nav .menu-item a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar .nav .menu-item a {
+        font-size: 16px;
+        background-color: #121212;
+        color: #EEEEEE;
+    }
+    .navbar .nav .menu-item a:hover {
+        background: #121212;
+        color: #e32b50;
+    }
+}
 .navbar .nav .main-ckip a {
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("includes/img/menu_ckip.jpg") no-repeat center center;
     -webkit-background-size: cover;

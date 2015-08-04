@@ -14,15 +14,15 @@ jQuery(document).ready(function() {
         function initBlockBtn(name, block) {
             jQuery('.block-' + name + '-btn').click(function() {
                 mainBlock.slideUp(speed);
-                //mainTitle.slideUp(speed);
                 block.slideDown(speed);
                 jQuery('.posts-title-' + name).slideDown(speed);
+                jQuery(".posts-title-all").scrollintoview();
             });
             mainBtn.click(function() {
                 jQuery('.block-' + name).slideUp(speed);
                 jQuery('.posts-title-' + name).slideUp(speed);
                 mainBlock.slideDown(speed);
-                //mainTitle.slideDown(speed);
+                jQuery(".posts-title-all").scrollintoview();
             });
         }
 

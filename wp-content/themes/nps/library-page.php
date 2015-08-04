@@ -10,7 +10,7 @@ Template Name: Biblioteka strona główna
 
 <div class="row library-top">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#">
+        <a href="http://83.12.172.82/cgi-bin/LibraOpac.dll">
             <span class="col-xs-12 agency">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Raciborowice', 'nps' ); ?></span>
@@ -18,33 +18,39 @@ Template Name: Biblioteka strona główna
         </a>
     </div>
     <div class="col-md-6 hidden-xs hidden-sm">
-        <a href="#">
+        <a href="http://80.55.179.139/cgi-bin/libraopac.dll">
             <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
             </span>
         </a>
-        <a href="http://www.ibuk.pl/">
-            <span class="col-xs-12 ibuk"><span class="icon"></span></span>
+        <a href="http://www.ibuk.pl">
+            <span class="col-xs-6 ibuk"><span class="icon"></span></span>
+        </a>
+        <a href="http://www.bip.pl">
+            <span class="col-xs-6 bip"><span class="icon"></span></span>
         </a>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#">
-            <span class="col-xs-12 agency">
+        <a href="http://83.17.19.121:8080/cgi-bin/LibraOpac.dll">
+            <span class="col-xs-12 agency second">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Więcławice', 'nps' ); ?></span>
             </span>
         </a>
     </div>
     <div class="col-xs-12 hidden-md hidden-lg">
-        <a href="#">
+        <a href="http://80.55.179.139/cgi-bin/libraopac.dll">
             <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
             </span>
         </a>
         <a href="http://www.ibuk.pl/">
-            <span class="col-xs-12 ibuk"><span class="icon"></span></span>
+            <span class="col-xs-6 ibuk"><span class="icon"></span></span>
+        </a>
+        <a href="http://www.bip.pl">
+            <span class="col-xs-6 bip"><span class="icon"></span></span>
         </a>
     </div>
 </div>

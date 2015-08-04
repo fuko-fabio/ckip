@@ -58,9 +58,7 @@ function get_header_inner_image($context = '') { ?>
         $header_image = get_header_image();
     }
     if ( ! empty( $header_image ) ) { ?>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <img src="<?php echo esc_url($header_image); ?>" width="100%">
-        </a>
+        <img src="<?php echo esc_url($header_image); ?>" class="fill-box">
     <?php } ?>
       </div>
     </div><?php

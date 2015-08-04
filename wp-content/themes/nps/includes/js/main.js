@@ -68,9 +68,10 @@ function initStickyMenu(offset) {
         animateCSS: false,               // AnimateCSS effect on/off
         jqueryEffects: false,
         mobile: false,                  // If false nav will not stick under 480px width of window
-        mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
+        mobileWidth: 992,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
         zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
     });
+    jQuery('.sticky-menu ul').slicknav();
 }
 
 function initSecondStickyMenu() {
@@ -81,7 +82,7 @@ function initSecondStickyMenu() {
         animateCSS: false,               // AnimateCSS effect on/off
         jqueryEffects: false,
         mobile: false,                  // If false nav will not stick under 480px width of window
-        mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
+        mobileWidth: 992,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
         zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
     });
     secondMenu.css({

@@ -16,6 +16,15 @@
     color: #eee;
 }
 
+.block-ckip-btn:hover .block-title,
+.block-library-btn:hover .block-title,
+.block-cinema-btn:hover .block-title,
+.block-marathon-btn:hover .block-title {
+    border-top: 1px solid #E32B50;
+    padding: 10px 25px;
+    border-bottom: 1px solid #E32B50;
+}
+
 .block-ckip-btn, .block-library-btn, .block-cinema-btn, .block-marathon-btn {
     text-align: center;
     min-height: 250px;
@@ -88,10 +97,10 @@
     width: 100%
 }
 .site-header-opts {
-    z-index: 99999;
+    position: absolute;
     background-color: rgba(0,0,0,0.8);
     width: 100%;
-    display: none;
+    z-index: 9999;
 }
 
 .site-header-opts .user-nav {
@@ -290,7 +299,9 @@
 .site-header-image .container {
     position: relative
 }
-
+.site-header-image .container .site-header-inner {
+  height: 350px;
+}
 .site-header-image .hours {
     width: 350px;
     background: rgba(0, 0, 0, 0.6);
@@ -405,7 +416,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
-    height: 150px;
+    height: 200px;
     text-align: center;
 }
 
@@ -415,7 +426,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
-    height: 150px;
+    height: 200px;
     text-align: center;
 }
 .library-top a .catalogue .icon {
@@ -425,7 +436,7 @@
     height: 50px;
     background-size: 100%;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 45px;
     margin-bottom: 20px;
 }
 .library-top a:hover .catalogue .icon {
@@ -435,7 +446,7 @@
     height: 50px;
     background-size: 100%;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 45px;
     margin-bottom: 20px;
 }
 
@@ -451,24 +462,35 @@
     padding: 10px;
 }
 
-.library-top .ibuk {
-    height: 150px;
+.library-top .ibuk,
+.library-top .bip {
+    height: 100px;
     text-align: center;
+    display: block;
+    padding-top: 15px;
 }
 .library-top .ibuk .icon {
-    background: url("../img/ibuk.png") no-repeat center center;
+    background-image: url("../img/ibuk.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: block;
-   width: 100px;
-    height: 120px;
-    background-size: 100%;
-    margin: auto;
-    margin-top: 15px;
+    height: 100%;
 }
 
+.library-top .bip .icon {
+    background-image: url("../img/bip.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    height: 100%;
+}
 
 @media (max-width: 992px) {
-    .library-top .col-xs-12:last-of-type {
-        margin-top: 15px;
+    .library-top .agency.second,
+    .library-top .col-xs-12.hidden-md .catalogue {
+        margin-top: 30px;
     }
 }
 
@@ -610,6 +632,10 @@
     margin-bottom: 15px;
 }
 
+.block-posts-categories .block {
+    margin-bottom: 30px;
+}
+
 .posts-main-btn {
     color: #E32B50;
 }
@@ -647,11 +673,21 @@
     margin: 0;
     padding: 15px 5px;
     text-align: left;
+    width: 100%;
 }
 .block-library-books .post .content .title {
     font-size: 10px;
 }
 
+.block-events .post .content .title div {
+    display: inline-block;
+    width: 65%;
+}
+.block-events .post .content .title div:last-of-type {
+    width: 34%;
+    float: right;
+    text-align: right;
+}
 .block-posts .post .posted {
     background: rgba(0, 0, 0, 0.7);
     color: #eee;
@@ -1031,4 +1067,53 @@ a.url {
 
 .woocommerce-checkout #payment {
     background-color: #fff;
+}
+
+.slicknav_menu {
+    background: none;
+    position: absolute;
+    z-index: 99999;
+}
+
+.slicknav_btn {
+    float: left;
+    margin: 0;
+}
+
+.slicknav_menu a {
+    font-family: "Track";
+}
+.slicknav_menu .slicknav_menutxt {
+    line-height: 20px;
+}
+
+.slicknav_nav .slicknav_row, .slicknav_nav a {
+    padding: 10px;
+}
+
+.slicknav_menu a:hover,
+.slicknav_menu a:hover span {
+    background: none;
+    color: #E32B50;
+}
+
+.slicknav_menu a:hover,
+.slicknav_menu a:hover span {
+    background: none;
+    color: #E32B50;
+}
+.slicknav_menu  a:hover .slicknav_icon-bar {
+    background: #E32B50;
+}
+
+.slicknav_menu {
+    display: none;
+}
+@media (max-width: 992px) {
+    .slicknav_menu {
+        display: block;
+    }
+    .sticky-menu {
+        display: none
+    }
 }

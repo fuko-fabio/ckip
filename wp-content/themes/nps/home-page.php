@@ -25,12 +25,12 @@ Template Name: Strona główna
     $get_posts = new WP_Query();
     $get_posts->query($args);
     if($get_posts->have_posts()) : while($get_posts->have_posts()) : $get_posts->the_post(); ?>
-    
         <div class="col-sm-6 col-xs-12 post">
             <div class="content">
-                <p class="title ellipsis"><?php the_title(); ?>
-                    <span class="date pull-right"><?php echo tribe_get_start_date(); ?></span>
-                </p>
+                <div class="title">
+                    <div class="ellipsis"><?php the_title(); ?></div>
+                    <div><?php echo tribe_get_start_date(); ?></div>
+                </div>
                 <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>
                 <span class="preview touch-show"><?php the_excerpt(); ?></span>
                 <a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
@@ -50,20 +50,26 @@ Template Name: Strona główna
 
 <h3 class="home-head posts-title-all"><?php _e( 'News', 'nps' ); ?></h3>
 <div class="block-posts-categories">
-    <div class="col-sm-6 col-xs-12">
-        <div class="row block block-ckip-btn">
-            <span class="block-title"><?php _e( 'Culture center', 'nps' ); ?></span>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="block block-ckip-btn">
+                <span class="block-title"><?php _e( 'Culture center', 'nps' ); ?></span>
+            </div>
         </div>
-        <div class="row block block-library-btn">
-            <span class="block-title"><?php _e( 'Library', 'nps' ); ?></span>
+        <div class="col-sm-6">
+            <div class="block block-library-btn">
+                <span class="block-title"><?php _e( 'Library', 'nps' ); ?></span>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-xs-12">
-        <div class="row block block-cinema-btn">
-            <span class="block-title"><?php _e( 'Cinema', 'nps' ); ?></span>
+        <div class="col-sm-6">
+            <div class="block block-cinema-btn">
+                <span class="block-title"><?php _e( 'Cinema', 'nps' ); ?></span>
+            </div>
         </div>
-        <div class="row block block-marathon-btn">
-            <span class="block-title"><?php _e( 'Marathon', 'nps' ); ?></span>
+        <div class="col-sm-6">
+            <div class="block block-marathon-btn">
+                <span class="block-title"><?php _e( 'Marathon', 'nps' ); ?></span>
+            </div>
         </div>
     </div>
 </div>
