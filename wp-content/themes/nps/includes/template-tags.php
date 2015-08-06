@@ -214,7 +214,7 @@ if ( ! function_exists( 'nps_short_posted_on' ) ) :
  * Prints HTML with short meta information for the current post-date/time.
  */
 function nps_short_posted_on() {
-    printf(__('<p class="posted">Posted on: %1$s </p>'), esc_html( get_the_date()));
+    echo '<p class="posted">'.__('Posted on', 'nps').': '.esc_html( get_the_date()).'</p>';
 }
 endif;
 

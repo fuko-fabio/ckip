@@ -80,10 +80,10 @@ if ( post_password_required() )
 			  'cancel_reply_link' => __( 'Cancel Reply' ),  // that's the wordpress default value! delete it or edit it ;)
 			  'label_submit'      => __( 'Post Comment' ),  // that's the wordpress default value! delete it or edit it ;)
 			
-			  'comment_field' =>  '<p><textarea placeholder="Start typing..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>', 
+			  'comment_field' =>  '<p><textarea placeholder="'.__('Start typing...', 'nps').'" id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>', 
 			
 			  'comment_notes_after' => '<p class="form-allowed-tags">' .
-			   	__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:' ) .
+			   	__( 'You may use these', 'nps').' <abbr title="HyperText Markup Language">HTML</abbr> '.__('tags and attributes:', 'nps') .
 			  	'</p><div class="alert alert-info">' . allowed_tags() . '</div>' 
 
 			  // So, that was the needed stuff to have bootstrap basic styles for the form elements and buttons 

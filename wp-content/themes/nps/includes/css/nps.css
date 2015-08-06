@@ -747,6 +747,9 @@
 .block-library-books .post .content:hover .title {
     display: block;
 }
+.block-library-books .content:hover .preview {
+    display: none !important;
+}
 
 .block-posts .post {
     margin-bottom: 30px;

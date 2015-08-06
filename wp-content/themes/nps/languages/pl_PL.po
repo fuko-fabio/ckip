@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _tk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-26 19:22+0100\n"
-"PO-Revision-Date: 2015-07-31 07:15+0100\n"
+"PO-Revision-Date: 2015-08-06 22:57+0100\n"
 "Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -95,12 +95,11 @@ msgid "Post Comment"
 msgstr "Komentarze"
 
 #: comments.php:86
-msgid ""
-"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
-"and attributes:"
-msgstr ""
-"Możesz użyć tych tagów i atrybutów <abbr title=\"HyperText Markup Language"
-"\">HTML</abbr> :"
+msgid "You may use these"
+msgstr "Możesz użyć tych tagów"
+
+msgid "tags and attributes:"
+msgstr "i atrybutów:"
 
 #: content-page.php:18 content-single.php:21 content.php:36 image.php:60
 msgid "Pages:"
@@ -293,7 +292,7 @@ msgstr "Twój komentarz oczekuje na zatwierdzenie"
 
 #: includes/template-tags.php:210
 msgid ", updated on "
-msgstr ", zaktualizowano"
+msgstr ", zaktualizowano "
 
 #: includes/template-tags.php:213
 #, php-format
@@ -505,3 +504,9 @@ msgstr "Zaloguj się / Zarejestruj się"
 
 msgid "View your shopping cart"
 msgstr "Zobacz swój koszyk"
+
+msgid "Posted on"
+msgstr "Opublikowano"
+
+msgid "Start typing..."
+msgstr "Wpisz swój komentarz..."
