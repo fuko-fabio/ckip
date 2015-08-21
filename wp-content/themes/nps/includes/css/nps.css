@@ -238,6 +238,22 @@
     -webkit-filter: none;
 }
 
+.site-footer .partners .item-static {
+    max-height: 100px;
+}
+
+.site-footer .partners .item-static img {
+    width: 100%;
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+}
+
+.site-footer .partners .item-static img:hover {
+    filter: none;
+    -webkit-filter: none;
+}
+
 .site-footer .site-footer-bottom {
     background-color: #e32b50;
 }

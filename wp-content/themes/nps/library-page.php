@@ -70,4 +70,4 @@ Template Name: Biblioteka strona główna
     <?php get_template_part( 'content', 'custom-single' ); ?>
 <?php endwhile; // end of the loop. ?>
 
-<?php get_footer(); ?>
+<?php get_footer('library'); ?>
