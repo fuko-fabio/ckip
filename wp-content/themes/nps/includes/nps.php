@@ -27,14 +27,22 @@ function woocommerce_my_account_link() {
      <?php }
 }
 
-function get_main_user_bar() {
+function get_main_user_bar($context = '') {
     if ( class_exists( 'woocommerce' ) ) {?>
         <div class="user-nav">
-        <a href="http://facebook.com"><i class="fa fa-facebook"></i></a>
-        <a href="http://youtube.com"><i class="fa fa-youtube-play"></i></a>
-        <?php woocommerce_cart_link(); ?>
-        <button id="trigger-search-overlay" type="button" class="fa fa-search search-btn"></button>
-        <?php woocommerce_my_account_link(); ?>
+            <?php if ($context == 'ckip') {?>
+                <a href="http://bip.malopolska.pl/ckipwmichalowicach/Article/id,11332.html"><i class="fa fa-info"></i></a>
+                <a href="https://www.facebook.com/centrumkulturyipromocji"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCP7JemMUisMOiyNWirDEbXg"><i class="fa fa-youtube-play"></i></a>
+            <?php } else if ($context == 'library') {?>
+                <a href="http://bip.malopolska.pl/bpwmichalowicach/Article/id,11299.html"><i class="fa fa-info"></i></a>
+                <a href="https://www.facebook.com/pages/Biblioteka-Publiczna-Gminy-Micha%C5%82owice/1651147045115439"><i class="fa fa-facebook"></i></a>
+            <?php } else {?>
+                
+            <?php } ?>
+            <?php woocommerce_cart_link(); ?>
+            <button id="trigger-search-overlay" type="button" class="fa fa-search search-btn"></button>
+            <?php woocommerce_my_account_link(); ?>
         </div> <?php
     }
 }

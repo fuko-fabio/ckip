@@ -24,11 +24,8 @@ Template Name: Biblioteka strona główna
                 <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
             </span>
         </a>
-        <a href="http://www.ibuk.pl">
-            <span class="col-xs-6 ibuk"><span class="icon"></span></span>
-        </a>
-        <a href="http://www.bip.pl">
-            <span class="col-xs-6 bip"><span class="icon"></span></span>
+        <a href="http://libra.ibuk.pl">
+            <span class="col-xs-12 ibuk"><span class="icon"></span></span>
         </a>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
@@ -48,9 +45,6 @@ Template Name: Biblioteka strona główna
         </a>
         <a href="http://www.ibuk.pl/">
             <span class="col-xs-6 ibuk"><span class="icon"></span></span>
-        </a>
-        <a href="http://www.bip.pl">
-            <span class="col-xs-6 bip"><span class="icon"></span></span>
         </a>
     </div>
 </div>

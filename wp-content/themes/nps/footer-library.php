@@ -38,14 +38,14 @@
                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/narodowy_program_rozwoju_czyt.png" />
                </div>
            </a>
-           <a href="https://wolnelektury.pl" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wolnelektury.png" />
-               </div>
-           </a>
            <a href="http://bookto.pl" target="_blank">
                <div class="col-xs-2 item-static">
                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bookto.png" />
+               </div>
+           </a>
+           <a href="https://wolnelektury.pl" target="_blank">
+               <div class="col-xs-2 item-static">
+                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wolnelektury.png" />
                </div>
            </a>
         </div>

@@ -16,7 +16,7 @@ echo get_template_part('head');
         <div class="container">
             <?php
                 get_main_sticky_menu();
-                get_main_user_bar();
+                get_main_user_bar('ckip');
             ?>
         </div>
     </div><!-- .container -->

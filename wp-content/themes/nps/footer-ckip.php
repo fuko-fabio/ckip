@@ -18,8 +18,11 @@
            <div class="header">
               <?php _e( 'Partnesr', 'nps' ); ?>
            </div>
-           <div class="col-xs-2 item-static">
-           </div>
+           <a href="http://www.koronakrakowa.pl" target="_blank">
+               <div class="col-xs-2 item-static">
+                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/korona.png" />
+               </div>
+           </a>
            <a href="http://www.e-michalowice.pl" target="_blank">
                <div class="col-xs-2 item-static">
                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/gmina_michalowice.png" />
@@ -35,13 +38,16 @@
                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/idealy.png" />
                </div>
            </a>
-           <a href="http://www.wieniawa.eu/" target="_blank">
+           <a href="http://www.wieniawa.eu" target="_blank">
                <div class="col-xs-2 item-static">
                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wieniawa.png" />
                </div>
            </a>
-           <div class="col-xs-2 item-static">
-           </div>
+           <a href="http://mik.krakow.pl" target="_blank">
+               <div class="col-xs-2 item-static">
+                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/mik.png" />
+               </div>
+           </a>
         </div>
 
         <?php get_newsletter_form() ?>
