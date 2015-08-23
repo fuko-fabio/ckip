@@ -16,7 +16,7 @@
     <div class="container">
         <div class="partners">
             <div class="header">
-                <?php _e( 'Partnesr', 'nps' ); ?>
+                <?php _e( 'Partners', 'nps' ); ?>
             </div>
             <div class="slick-list">
                 <div class="item">

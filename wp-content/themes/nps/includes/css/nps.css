@@ -9,6 +9,17 @@
   font-family: 'Track';
   src: url("../fonts/track.ttf");
 }
+.section-heading {
+    color:#121212;
+}
+.section-heading:hover {
+    color:#E32B50;
+    text-decoration: none;
+}
+
+.section-heading span {
+    font-size: 18px;
+}
 
 .block-title {
     font-size: 18px;
@@ -107,6 +118,10 @@
     float: right;
     margin-top: 5px;
 }
+.site-header-opts .user-nav a img {
+    height: 35px;
+}
+
 .site-header-opts .user-nav a {
     color: #eee;
     font-size: 28px;
@@ -648,8 +663,24 @@
     margin-bottom: 30px;
 }
 
-.posts-main-btn {
+.posts-cat-title {
     color: #E32B50;
+}
+
+.posts-cat-title a {
+    padding-left: 10px;
+}
+
+.posts-cat-title a,
+.posts-cat-title span {
+    font-size: 18px
+}
+
+.posts-cat-title a:hover,
+.posts-cat-title span:hover {
+    text-decoration: none;
+    color: #121212;
+    cursor: pointer;
 }
 
 .block-posts .post {

@@ -23,12 +23,21 @@ function nps_customize_register( $wp_customize ) {
     $wp_customize->add_section('root_categories_section' , array(
         'title' => __('Root posts categories','nps'),
     ));
+    $wp_customize->add_setting('rac_page', array());
+    $wp_customize->add_setting('wie_page', array());
+    $wp_customize->add_section('root_pages_section' , array(
+        'title' => __('Root pages','nps'),
+    ));
     $categories = get_categories(array(
         'hide_empty' => 0,
     ));
     $choices = array();
+    $pages = array();
     foreach ($categories as $category) {
         $choices[$category->cat_ID] = $category->cat_name;
+    }
+    foreach (get_pages() as $page) {
+        $pages[$page->ID] = $page->post_title;
     }
     $wp_customize->add_control('root_category_ck', array(
       'label'      => __('Culture center category', 'nps'),
@@ -64,6 +73,20 @@ function nps_customize_register( $wp_customize ) {
       'settings'   => 'cinema_category',
       'type'       => 'select',
       'choices'    => $choices
+    ));
+    $wp_customize->add_control('root_page_rac', array(
+      'label'      => __('Raciborowice page', 'nps'),
+      'section'    => 'root_pages_section',
+      'settings'   => 'rac_page',
+      'type'       => 'select',
+      'choices'    => $pages
+    ));
+    $wp_customize->add_control('root_page_wie', array(
+      'label'      => __('Więcławice page', 'nps'),
+      'section'    => 'root_pages_section',
+      'settings'   => 'wie_page',
+      'type'       => 'select',
+      'choices'    => $pages
     ));
 }
 add_action( 'customize_register', 'nps_customize_register' );

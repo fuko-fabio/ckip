@@ -10,7 +10,7 @@ Template Name: Biblioteka strona główna
 
 <div class="row library-top">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="http://83.12.172.82/cgi-bin/LibraOpac.dll">
+        <a href="<?php echo get_page_link( get_theme_mod('rac_page', '0') )?>">
             <span class="col-xs-12 agency">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Raciborowice', 'nps' ); ?></span>
@@ -29,7 +29,7 @@ Template Name: Biblioteka strona główna
         </a>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="http://83.17.19.121:8080/cgi-bin/LibraOpac.dll">
+        <a href="<?php echo get_page_link( get_theme_mod('wie_page', '0') )?>">
             <span class="col-xs-12 agency second">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Więcławice', 'nps' ); ?></span>
@@ -49,12 +49,16 @@ Template Name: Biblioteka strona główna
     </div>
 </div>
 <hr class="separator"/>
-<h3 class="home-head"><?php _e( 'News', 'nps' ); ?></h3>
+<a href="<?php echo get_category_link( get_theme_mod('library_category', '0') ); ?>" class="section-heading">
+    <h3 class="home-head"><?php _e( 'News', 'nps' ); ?><span class="pull-right"><?php _e( 'See all', 'nps' ); ?> <i class="fa fa-chevron-right"></i></span></h3>
+</a>
 <div class="row block-posts block-library">
     <?php get_category_posts('library_category', __( 'No posts about library.', 'nps' ) ) ?>
 </div>
 <hr class="separator"/>
-<h3 class="home-head"><?php _e( 'New books', 'nps' ); ?></h3>
+<a href="<?php echo get_category_link( get_theme_mod('library_books_category', '0') ); ?>" class="section-heading">
+    <h3 class="home-head"><?php _e( 'New books', 'nps' ); ?><span class="pull-right"><?php _e( 'See all', 'nps' ); ?> <i class="fa fa-chevron-right"></i></span></h3>
+</a>
 <div class="row block-posts block-library-books">
     <?php get_category_posts('library_books_category', __( 'No posts about new books.', 'nps' ), 6) ?>
 </div>

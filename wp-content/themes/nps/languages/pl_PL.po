@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _tk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-26 19:22+0100\n"
-"PO-Revision-Date: 2015-08-06 22:57+0100\n"
+"PO-Revision-Date: 2015-08-23 18:42-0400\n"
 "Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -12,12 +12,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Poedit-Basepath: ../\n"
+"X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
+"X-Language: pl\n"
+"X-Source-Language: en\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:14
@@ -130,7 +132,7 @@ msgid ""
 "\">permalink</a>."
 msgstr ""
 "Dodaj <a href=\"%3$s\" title=\"Odnośnik do %4$s\" rel=\"bookmark\">odnośnik</"
-"a> ulubionych"
+"a> ulubionych."
 
 #: content-single.php:46
 #, php-format
@@ -234,7 +236,7 @@ msgstr ""
 
 #: image.php:75
 msgid "Both comments and trackbacks are currently closed."
-msgstr "Komentarze i trackbacki są aktualnie wyłączone"
+msgstr "Komentarze i trackbacki są aktualnie wyłączone."
 
 #: includes/extras.php:66
 #, php-format
@@ -288,7 +290,7 @@ msgstr ""
 
 #: includes/template-tags.php:100
 msgid "Your comment is awaiting moderation."
-msgstr "Twój komentarz oczekuje na zatwierdzenie"
+msgstr "Twój komentarz oczekuje na zatwierdzenie."
 
 #: includes/template-tags.php:210
 msgid ", updated on "
@@ -395,7 +397,7 @@ msgid "See more"
 msgstr "Zobacz"
 
 msgid "No posts about culture center."
-msgstr "Brak aktualności dla centrum kultury"
+msgstr "Brak aktualności dla centrum kultury."
 
 msgid "Online library catalogue"
 msgstr "Katalog online"
@@ -418,6 +420,9 @@ msgstr "Czwartek"
 msgid "Friday"
 msgstr "Piatek"
 
+msgid "Saturday"
+msgstr "Sobota"
+
 msgid "Raciborowice"
 msgstr "Filia Raciborowice"
 
@@ -437,10 +442,10 @@ msgid "Results"
 msgstr "Wyniki"
 
 msgid "No posts about cinema."
-msgstr "Brak aktualności na temat kina"
+msgstr "Brak aktualności na temat kina."
 
 msgid "No posts about marathon."
-msgstr "Brak aktualności na temat maratonu"
+msgstr "Brak aktualności na temat maratonu."
 
 msgid "Root posts categories"
 msgstr "Główne kategorie dla stron"
@@ -491,7 +496,7 @@ msgid "Main cinema menu"
 msgstr "Menu dla kina"
 
 msgid "Theme not configured."
-msgstr "Motyw nie skonfigurowany"
+msgstr "Motyw nie skonfigurowany."
 
 msgid "Toggle navigation"
 msgstr "Pokaż/Ukryj nawigację"
@@ -510,3 +515,15 @@ msgstr "Opublikowano"
 
 msgid "Start typing..."
 msgstr "Wpisz swój komentarz..."
+
+msgid "Partners"
+msgstr "Partnerzy"
+
+msgid "See all"
+msgstr "Wszystkie"
+
+msgid "Back"
+msgstr "Cofnij"
+
+msgid "No posts about new books."
+msgstr "Brak wpisów na temat nowych książek."

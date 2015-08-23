@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row partners">
            <div class="header">
-              <?php _e( 'Partnesr', 'nps' ); ?>
+              <?php _e( 'Partners', 'nps' ); ?>
            </div>
            <a href="http://www.koronakrakowa.pl" target="_blank">
                <div class="col-xs-2 item-static">

@@ -7,8 +7,9 @@ Template Name: Kino strona główna
 <?php get_header('cinema'); ?>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/cinema-page.js"></script>
-
-<h3 class="home-head"><?php _e( 'News', 'nps' ); ?></h3>
+<a href="<?php echo get_category_link( get_theme_mod('cinema_category', '0') ); ?>" class="section-heading">
+    <h3 class="home-head"><?php _e( 'News', 'nps' ); ?><span class="pull-right"><?php _e( 'See all', 'nps' ); ?> <i class="fa fa-chevron-right"></i></span></h3>
+</a>
 <div class="row block-posts block-ckip">
     <?php get_category_posts('cinema_category', __( 'No posts about cinema.', 'nps' ) ) ?>
 </div>

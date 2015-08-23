@@ -34,8 +34,9 @@ Template Name: Marathon Home Page
         </a>
     </div>
 </div>
-
-<h3 class="home-head"><?php _e( 'News', 'nps' ); ?></h3>
+<a href="<?php echo get_category_link( get_theme_mod('marathon_category', '0') ); ?>" class="section-heading">
+    <h3 class="home-head"><?php _e( 'News', 'nps' ); ?><span class="pull-right"><?php _e( 'See all', 'nps' ); ?> <i class="fa fa-chevron-right"></i></span></h3>
+</a>
 <div class="row block-posts block-marathon">
     <?php get_category_posts('marathon_category', __( 'No posts about marathon.', 'nps' ) ) ?>
 </div>
