@@ -88,6 +88,16 @@ function nps_customize_register( $wp_customize ) {
       'type'       => 'select',
       'choices'    => $pages
     ));
+    $wp_customize->add_section('home_slider_section' , array(
+        'title' => __('Home Slider','nps'),
+    ));
+    $wp_customize->add_setting('home_slider_id', array());
+    $wp_customize->add_control('my_home_slider_id', array(
+      'label'      => __('Home page slider ID', 'nps'),
+      'section'    => 'home_slider_section',
+      'settings'   => 'home_slider_id',
+      'type'       => 'input',
+    ));
 }
 add_action( 'customize_register', 'nps_customize_register' );
 
