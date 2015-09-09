@@ -75,6 +75,7 @@ function initStickyMenu(offset) {
 }
 
 function initSecondStickyMenu() {
+    return; //TODO Do we need this?
     var topMenu = jQuery('.site-header-opts');
     var secondMenu = jQuery('.site-navigation');
     secondMenu.stickyNavbar({
@@ -98,4 +99,8 @@ function handeTouchScreen() {
             });
         });
     }
+}
+
+function goTo(url) {
+    window.location = url;
 }

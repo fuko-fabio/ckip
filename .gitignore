@@ -74,6 +74,8 @@ wp-content/plugins/json-rest-api/*
 wp-content/plugins/newsletter/*
 wp-content/plugins/yith-woocommerce-social-login/*
 wp-content/plugins/photo-gallery/*
+wp-content/plugins/cookie-law-info/*
+wp-content/plugins/slider-image/*
 
 
 # ignore specific themes

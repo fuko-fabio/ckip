@@ -72,7 +72,7 @@ function get_header_inner_image($context = '') { ?>
     </div><?php
 }
 
-function get_site_header_navigation($theme_location = '', $depth = 1) { ?>
+function get_site_header_navigation($theme_location = '', $depth = 3) { ?>
     <nav class="site-navigation">
     <?php // substitute the class "container-fluid" below if you want a wider content area ?>
         <div class="container">
@@ -132,7 +132,7 @@ function get_category_posts($theme_cat_config_name, $msg, $count = 4) {
             <?php } else { ?>
                 <div class="col-md-3 col-sm-6 col-xs-12 post">
             <?php } ?>
-                <div class="content">
+                <div class="content" onclick="goTo('<?php echo get_permalink(); ?>')" >
                     <p class="title ellipsis"><?php the_title(); ?></p>
                     <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>
                     <span class="preview touch-show"><?php the_excerpt(); ?></span>

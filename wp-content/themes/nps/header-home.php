@@ -29,6 +29,6 @@ echo get_template_part('head');
 </header><!-- #masthead -->
 
 <?php
-    get_site_header_navigation('home');
+    get_site_header_navigation('home', 1);
     get_before_body();
 ?>
