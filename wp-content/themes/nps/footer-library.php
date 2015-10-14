@@ -53,7 +53,7 @@
         <?php get_newsletter_form() ?>
     </div><!-- close .container -->
     
-    <?php get_bottom_footer() ?>
+    <?php get_bottom_footer('library_logo_white.png') ?>
 </footer><!-- close #colophon -->
 
 <?php wp_footer(); ?>

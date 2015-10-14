@@ -25,8 +25,7 @@ echo get_template_part('head');
             <?php get_header_inner_image('ckip'); ?>
             <div class="row">
                 <div class="overlay-header col-12">
-                <img src="<?php echo esc_url(get_template_directory_uri().'/includes/img/ck_logo.png'); ?>" />
-                <span><?php _e( 'Culture center', 'nps' ); ?></span>
+                <img class="ckip-logo" src="<?php echo esc_url(get_template_directory_uri().'/includes/img/ck_logo.png'); ?>" />
                 </div>
             </div>
         </div>

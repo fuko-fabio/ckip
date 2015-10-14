@@ -812,6 +812,15 @@
     margin-top: 80px;
     max-width: 150px;
 }
+
+.site-header .overlay-header img.library-logo {
+    max-width: 280px;
+}
+
+.site-header .overlay-header img.ckip-logo {
+    max-width: 750px;
+}
+
 .site-header .overlay-header span {
     display: block;
     color: #eee;

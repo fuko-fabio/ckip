@@ -17,12 +17,15 @@ Template Name: Strona główna
       'post_status'=>'publish',
       'post_type'=>array(Tribe__Events__Main::POSTTYPE),
       'posts_per_page'=>4,
-      //order by startdate from newest to oldest
-      'meta_key'=>'_EventStartDate',
-      'orderby'=>'_EventStartDate',
-      'order'=>'DESC',
-      //required in 3.x
-      'eventDisplay'=>'all',
+      'eventDisplay'=>'custom',
+      'meta_query' => array(
+          array(
+              'key' => '_EventStartDate',
+              'value' => date('Y-m-d'),
+              'compare' => '>=',
+              'type'    => 'DATE'
+          )
+      )
     );
     $get_posts = new WP_Query();
     $get_posts->query($args);
