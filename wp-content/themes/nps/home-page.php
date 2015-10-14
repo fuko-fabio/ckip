@@ -22,7 +22,7 @@ Template Name: Strona główna
       'orderby'=>'_EventStartDate',
       'order'=>'DESC',
       //required in 3.x
-      'eventDisplay'=>'custom',
+      'eventDisplay'=>'all',
     );
     $get_posts = new WP_Query();
     $get_posts->query($args);
