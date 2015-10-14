@@ -18,6 +18,7 @@ Template Name: Strona główna
       'post_type'=>array(Tribe__Events__Main::POSTTYPE),
       'posts_per_page'=>4,
       'eventDisplay'=>'custom',
+      'order' => 'ASC',
       'meta_query' => array(
           array(
               'key' => '_EventStartDate',
