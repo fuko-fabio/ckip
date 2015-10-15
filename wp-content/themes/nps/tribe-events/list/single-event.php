@@ -58,7 +58,7 @@ $organizer = tribe_get_organizer();
                 <?php the_excerpt() ?>
                 <?php do_action( 'tribe_events_after_the_content' ); ?>
             </div>
-            <a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="btn btn-default" rel="bookmark"><?php esc_html_e( 'Find out more', 'tribe-events-calendar' ) ?></a>
+            <a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="btn btn-default" rel="bookmark"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?></a>
         </div>
     </div>
 </div>

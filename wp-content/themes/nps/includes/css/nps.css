@@ -343,7 +343,7 @@
     padding: 5px;
     position: absolute;
     top: 30px;
-    right: 0px;
+    right: 10px;
 }
 
 .site-header-image .hours .header {
@@ -1063,10 +1063,6 @@ a.url {
     background-color: #EF5170;
     border: 1px solid #EF5170;
     color: #eee;
-}
-
-.alert {
-    margin: 0px 10px 10px 10px;
 }
 
 .alert-info {
