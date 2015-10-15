@@ -323,6 +323,10 @@
   text-align: center;
 }
 
+.site-header-image {
+    padding-top: 45px;
+}
+
 .site-header-image .container {
     position: relative
 }
@@ -338,7 +342,7 @@
     background-size: cover; 
     padding: 5px;
     position: absolute;
-    top: 50px;
+    top: 30px;
     right: 0px;
 }
 
@@ -515,9 +519,11 @@
 }
 
 @media (max-width: 992px) {
-    .library-top .agency.second,
-    .library-top .col-xs-12.hidden-md .catalogue {
+    .library-top .agency.second{
         margin-top: 30px;
+    }
+    .library-top .col-xs-12.hidden-md .catalogue {
+        margin-bottom: 30px;
     }
 }
 
@@ -814,11 +820,23 @@
 }
 
 .site-header .overlay-header img.library-logo {
-    max-width: 280px;
+    max-width: 200px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.site-header .library-overlay {
+    background: none;
 }
 
 .site-header .overlay-header img.ckip-logo {
-    max-width: 750px;
+      max-width: 450px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.site-header .ckip-overlay {
+    background: none;
 }
 
 .site-header .overlay-header span {
@@ -1047,6 +1065,10 @@ a.url {
     color: #eee;
 }
 
+.alert {
+    margin: 0px 10px 10px 10px;
+}
+
 .alert-info {
     background: none;
     color: #21759B;
@@ -1128,11 +1150,12 @@ a.url {
     background: none;
     position: absolute;
     z-index: 99999;
+    padding: 0px;
 }
 
 .slicknav_btn {
     float: left;
-    margin: 0;
+    margin: 5px;
 }
 
 .slicknav_menu a {
@@ -1140,6 +1163,10 @@ a.url {
 }
 .slicknav_menu .slicknav_menutxt {
     line-height: 20px;
+}
+
+.slicknav_nav {
+    background: rgba(0,0,0,0.8);
 }
 
 .slicknav_nav .slicknav_row, .slicknav_nav a {

@@ -9,6 +9,15 @@ Template Name: Biblioteka strona główna
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/library-page.js"></script>
 
 <div class="row library-top">
+    <div class="col-xs-12 hidden-md hidden-lg">
+        <a href="http://80.55.179.139/cgi-bin/libraopac.dll">
+            <span class="col-xs-12 catalogue">
+                <span class="icon"></span>
+                <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
+            </span>
+        </a>
+    </div>
+    
     <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="<?php echo get_page_link( get_theme_mod('rac_page', '0') )?>">
             <span class="col-xs-12 agency">
@@ -37,14 +46,8 @@ Template Name: Biblioteka strona główna
         </a>
     </div>
     <div class="col-xs-12 hidden-md hidden-lg">
-        <a href="http://80.55.179.139/cgi-bin/libraopac.dll">
-            <span class="col-xs-12 catalogue">
-                <span class="icon"></span>
-                <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
-            </span>
-        </a>
         <a href="http://www.ibuk.pl/">
-            <span class="col-xs-6 ibuk"><span class="icon"></span></span>
+            <span class="col-xs-12 ibuk"><span class="icon"></span></span>
         </a>
     </div>
 </div>

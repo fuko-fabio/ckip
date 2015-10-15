@@ -535,6 +535,7 @@ display: block;
 
 .home-head {
     text-transform: uppercase;
+    margin: 10px;
 }
 
 .site-footer {
