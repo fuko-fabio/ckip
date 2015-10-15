@@ -11,13 +11,11 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+    die( '-1' );
 }
 
 get_header('events');
-?>
-<?php tribe_events_before_html(); ?>
-<?php tribe_get_view(); ?>
-<?php tribe_events_after_html(); ?>
-<?php
+tribe_events_before_html();
+tribe_get_view();
+tribe_events_after_html();
 get_footer();

@@ -47,10 +47,6 @@ body {
     word-wrap: break-word;
 }
 
-.container {
-    padding-left: 25px;
-    padding-right: 25px;
-}
 /* Alignment */
 .alignleft {
     display: inline;
