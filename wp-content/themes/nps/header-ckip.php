@@ -25,7 +25,7 @@ echo get_template_part('head');
             <?php get_header_inner_image('ckip'); ?>
             <div class="row">
                 <div class="overlay-header ckip-overlay col-12">
-                <img class="ckip-logo" src="<?php echo esc_url(get_template_directory_uri().'/includes/img/ck_logo.png'); ?>" />
+                <img class="ckip-logo" src="<?php echo esc_url(get_template_directory_uri().'/includes/img/ck_logo_white.png'); ?>" />
                 </div>
             </div>
         </div>

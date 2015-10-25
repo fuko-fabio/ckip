@@ -834,13 +834,10 @@
 }
 
 .site-header .overlay-header img.ckip-logo {
-      max-width: 450px;
-    float: right;
-    margin-right: 20px;
-    margin-top: 20px;
+    max-width: 450px;
+    margin-top: 130px;
 }
 .site-header .ckip-overlay {
-    background: none;
 }
 
 .site-header .overlay-header span {
