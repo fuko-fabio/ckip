@@ -28,37 +28,7 @@ echo get_template_part('head');
                 <img class="library-logo" src="<?php echo esc_url(get_template_directory_uri().'/includes/img/library_logo.png'); ?>" />
                 </div>
             </div>
-            <div class="hours">
-                <div class="content">
-                    <div class="row header">
-                        <div class="col-xs-12"><?php _e( 'Working hours', 'nps' ); ?></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 day"><?php _e( 'Monday', 'nps' ); ?></div>
-                        <div class="col-xs-6 hour">10:00 - 18:00</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 day"><?php _e( 'Thursday', 'nps' ); ?></div>
-                        <div class="col-xs-6 hour">08:00 - 19:00</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 day"><?php _e( 'Wensday', 'nps' ); ?></div>
-                        <div class="col-xs-6 hour">08:00 - 18:00</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 day"><?php _e( 'Tuesday', 'nps' ); ?></div>
-                        <div class="col-xs-6 hour">08:00 - 19:00</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 day"><?php _e( 'Friday', 'nps' ); ?></div>
-                        <div class="col-xs-6 hour">08:00 - 18:00</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 day"><?php _e( 'Saturday', 'nps' ); ?></div>
-                        <div class="col-xs-6 hour">08:00 - 16:00</div>
-                    </div>
-                </div>
-            </div>
+            <?php get_library_hours('hidden-xs'); ?>
         </div>
     </div>
     </div>

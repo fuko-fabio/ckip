@@ -56,8 +56,9 @@ jQuery(document).ready(function() {
 
     initStickyMenu(0);
     initPartnersSlider();
-    handeTouchScreen();
+    handleTouchScreen();
     jQuery('.fill-box').fillBox(true, isTouchDevice);
+    jQuery('.site-header-opts').show();
 });
 
 function initStickyMenu(offset) {
@@ -91,7 +92,7 @@ function initSecondStickyMenu() {
     });
 }
 
-function handeTouchScreen() {
+function handleTouchScreen() {
     if (isTouchDevice) {
         jQuery('.touch-show').each(function(){
            jQuery(this).css({

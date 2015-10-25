@@ -10,7 +10,7 @@ Template Name: Marathon Home Page
 
 <div class="row marathon-top">
     <div class="col-md-4 col-xs-12">
-        <a href="#">
+        <a href="http://www.pulsarsport.pl/zapisy/portal/zawody.php?zawody=641">
             <span class="col-xs-12 form">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Application form', 'nps' ); ?></span>
@@ -18,7 +18,7 @@ Template Name: Marathon Home Page
         </a>
     </div>
     <div class="col-md-4 col-xs-12">
-        <a href="#">
+        <a href="<?php echo get_page_link( get_theme_mod('mm_page', '0') )?>">
             <span class="col-xs-12 map">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Marathon map', 'nps' ); ?></span>
@@ -26,7 +26,7 @@ Template Name: Marathon Home Page
         </a>
     </div>
     <div class="col-md-4 col-xs-12">
-        <a href="#">
+        <a href="<?php echo get_page_link( get_theme_mod('mr_page', '0') )?>">
             <span class="col-xs-12 scores">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Results', 'nps' ); ?></span>

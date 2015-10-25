@@ -171,7 +171,7 @@ function get_newsletter_form() { ?>
     </div> <?php
 }
 
-function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 'ck_logo_white.png') { ?>
+function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 'ck_logo_black.png') { ?>
     <div class="site-footer-bottom">
         <div class="container">
             <div class="site-footer-inner">
@@ -225,4 +225,38 @@ function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 
             </div>
         </div>
     </div> <?php
+}
+
+function get_library_hours($class = '') {?>
+    <div class="library-hours <?php echo $class; ?>">
+        <div class="content">
+            <div class="row header">
+                 <div class="col-xs-12"><?php _e( 'Working hours', 'nps' ); ?></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Monday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">10:00 - 18:00</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Thursday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">08:00 - 19:00</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Wensday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">08:00 - 18:00</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Tuesday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">08:00 - 19:00</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Friday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">08:00 - 18:00</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Saturday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">08:00 - 16:00</div>
+            </div>
+        </div>
+    </div><?php
 }

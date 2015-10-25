@@ -246,30 +246,29 @@
     height: 80px;
     margin-right: 30px;
 }
-.site-footer .partners .item img {
+.site-footer .partners .item img,
+.site-footer .partners .static-item img {
     /*filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
     filter: grayscale(100%);
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(100%); /* Google Chrome & Safari 6+ */
 }
 
-.site-footer .partners .item img:hover {
+.site-footer .partners .item img:hover,
+.site-footer .partners .static-item img:hover {
     filter: none;
     -webkit-filter: none;
 }
-
-.site-footer .partners .item-static img {
-    height: 60px;
-    filter: grayscale(100%);
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+.site-footer .partners a {
+    display:table-cell;
+    height:80px;
+    vertical-align:middle;
 }
-
-.site-footer .partners .item-static img:hover {
-    filter: none;
-    -webkit-filter: none;
+.site-footer .partners a img {
+    max-width: 100%;
+    max-height: 80px;
+    margin-bottom: 10px;
 }
-
 .site-footer .site-footer-bottom {
     background-color: #e32b50;
 }
@@ -341,7 +340,7 @@
 .site-header-image .container .site-header-inner {
   height: 350px;
 }
-.site-header-image .hours {
+.site-header-image .library-hours {
     width: 350px;
     background: rgba(0, 0, 0, 0.6);
     -webkit-background-size: cover;
@@ -354,25 +353,36 @@
     right: 0px;
 }
 
-.site-header-image .hours .header {
+.library-top .library-hours {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/library_time.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    min-height: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.library-hours .header {
     font-size: 22px;
     text-transform: uppercase;
     text-align: center;
     color: #eee;
     margin-bottom: 15px;
 }
-.site-header-image .hours .content {
+.library-hours .content {
     font-size: 18px;
     text-transform: uppercase;
     color: #eee;
 }
-.site-header-image .hours .day {
+.library-hours .day {
     background-color: #e32b50;
     text-align: center;
     margin: 0 -25px 15px 25px;
 }
 
-.site-header-image .hours .hour {
+.library-hours .hour {
     text-align: right;
     padding-right: 25px;
     padding-left: 25px;
@@ -527,14 +537,15 @@
 }
 
 @media (max-width: 992px) {
-    .library-top .agency.second{
-        margin-top: 30px;
-    }
     .library-top .col-xs-12.hidden-md .catalogue {
         margin-bottom: 30px;
     }
 }
-
+@media (max-width: 767px) {
+    .library-top .agency.second{
+        margin-top: 30px;
+    }
+}
 .marathon-top .form {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/form.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -716,6 +727,7 @@
 .block-events .post .content {
     height: 100%;
     text-align: center;
+    cursor: pointer;
 }
 
 .block-library-books .post .content {

@@ -32,7 +32,7 @@ Template Name: Strona główna
     $get_posts->query($args);
     if($get_posts->have_posts()) : while($get_posts->have_posts()) : $get_posts->the_post(); ?>
         <div class="col-sm-6 col-xs-12 post">
-            <div class="content">
+            <div class="content" onclick="goTo('<?php echo tribe_get_event_link(); ?>')">
                 <div class="title">
                     <div class="ellipsis"><?php the_title(); ?></div>
                     <div><?php echo tribe_get_start_date(); ?></div>

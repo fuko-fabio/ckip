@@ -25,6 +25,8 @@ function nps_customize_register( $wp_customize ) {
     ));
     $wp_customize->add_setting('rac_page', array());
     $wp_customize->add_setting('wie_page', array());
+    $wp_customize->add_setting('mr_page', array());
+    $wp_customize->add_setting('mm_page', array());
     $wp_customize->add_section('root_pages_section' , array(
         'title' => __('Root pages','nps'),
     ));
@@ -85,6 +87,20 @@ function nps_customize_register( $wp_customize ) {
       'label'      => __('Więcławice page', 'nps'),
       'section'    => 'root_pages_section',
       'settings'   => 'wie_page',
+      'type'       => 'select',
+      'choices'    => $pages
+    ));
+    $wp_customize->add_control('root_page_mr', array(
+      'label'      => __('Marathon results', 'nps'),
+      'section'    => 'root_pages_section',
+      'settings'   => 'mr_page',
+      'type'       => 'select',
+      'choices'    => $pages
+    ));
+    $wp_customize->add_control('root_page_mm', array(
+      'label'      => __('Marathon map', 'nps'),
+      'section'    => 'root_pages_section',
+      'settings'   => 'mm_page',
       'type'       => 'select',
       'choices'    => $pages
     ));

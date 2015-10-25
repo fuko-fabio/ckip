@@ -18,38 +18,38 @@
            <div class="header">
               <?php _e( 'Partners', 'nps' ); ?>
            </div>
-           <a href="http://czasdzieci.pl" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/czas_dzieci.png" />
-               </div>
-           </a>
-           <a href="http://www.bn.org.pl" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bn.png" />
-               </div>
-           </a>
-           <a href="http://fundacja.orange.pl" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/orange.png" />
-               </div>
-           </a>
-           <a href="#" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/narodowy_program_rozwoju_czyt.png" />
-               </div>
-           </a>
-           <a href="http://bookto.pl" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bookto.png" />
-               </div>
-           </a>
-           <a href="https://wolnelektury.pl" target="_blank">
-               <div class="col-xs-2 item-static">
-                  <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wolnelektury.png" />
-               </div>
-           </a>
+           
+           <div class="col-xs-4 col-sm-2 static-item">
+               <a href="http://czasdzieci.pl" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/czas_dzieci.png" />
+               </a>
+           </div>
+           <div class="col-xs-4 col-sm-2 static-item">
+               <a href="http://www.bn.org.pl" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bn.png" />
+               </a>
+           </div>
+           <div class="col-xs-4 col-sm-2 static-item">
+               <a href="http://fundacja.orange.pl" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/orange.png" />
+               </a>
+           </div>
+           <div class="col-xs-4 col-sm-2 static-item">
+               <a href="#" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/narodowy_program_rozwoju_czyt.png" />
+               </a>
+           </div>
+           <div class="col-xs-4 col-sm-2 static-item">
+               <a href="http://bookto.pl" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bookto.png" />
+               </a>
+           </div>
+           <div class="col-xs-4 col-sm-2 static-item">
+               <a href="https://wolnelektury.pl" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wolnelektury.png" />
+               </a>
+           </div>
         </div>
-
         <?php get_newsletter_form() ?>
     </div><!-- close .container -->
     
