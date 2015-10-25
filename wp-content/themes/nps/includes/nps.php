@@ -171,15 +171,25 @@ function get_newsletter_form() { ?>
     </div> <?php
 }
 
-function get_bottom_footer($logo = 'ck_logo_white.png') { ?>
+function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 'ck_logo_white.png') { ?>
     <div class="site-footer-bottom">
         <div class="container">
             <div class="site-footer-inner">
                 <div class="row">
                     <div class="col-sm-3 col-xs-6 logo">
-                        <?php if ($logo) { ?>
-                            <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri().'/includes/img/'.$logo; ?>" /></a>
-                        <?php } ?>
+                        <div class="row">
+                            <div class="col-xs-12 top">
+                                <?php if ($top_logo) { ?>
+                                    <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri().'/includes/img/'.$top_logo; ?>" /></a>
+                                <?php } ?>
+                            </div>
+                            <div class="col-xs-12 bottom">
+                                <?php if ($bottom_logo) { ?>
+                                    <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri().'/includes/img/'.$bottom_logo; ?>" /></a>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="col-sm-3 col-xs-6 footer-sidebar1 fsidebar">
                     <?php

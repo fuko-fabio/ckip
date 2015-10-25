@@ -247,9 +247,10 @@
     margin-right: 30px;
 }
 .site-footer .partners .item img {
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    /*filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: grayscale(100%);
     filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+    -webkit-filter: grayscale(100%); /* Google Chrome & Safari 6+ */
 }
 
 .site-footer .partners .item img:hover {
@@ -259,7 +260,7 @@
 
 .site-footer .partners .item-static img {
     height: 60px;
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: grayscale(100%);
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
 }
@@ -325,6 +326,9 @@
 .site-footer .site-footer-inner .logo {
   padding-top: 20px;
   text-align: center;
+}
+.site-footer .site-footer-inner .logo .bottom {
+    margin-top: 40px;
 }
 
 .site-header-image {
