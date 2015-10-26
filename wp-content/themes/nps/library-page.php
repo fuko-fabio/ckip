@@ -6,9 +6,6 @@ Template Name: Biblioteka strona główna
 
 <?php get_header('library'); ?>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/library-page.js"></script>
-
-
 <div class="row library-top">
     <?php get_library_hours('col-xs-12 hidden-sm hidden-md hidden-lg'); ?>
 

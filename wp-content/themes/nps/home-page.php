@@ -41,7 +41,7 @@ Template Name: Strona główna
                 <span class="preview touch-show"><?php the_excerpt(); ?></span>
                 <a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
             </div>
-      </div>
+        </div>
     <?php
       endwhile;
       else : ?>

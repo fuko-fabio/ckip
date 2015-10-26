@@ -6,7 +6,6 @@ Template Name: CKiP strona główna
 
 <?php get_header('ckip'); ?>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/ckip-page.js"></script>
 <a href="<?php echo get_category_link( get_theme_mod('ck_category', '0') ); ?>" class="section-heading">
     <h3 class="home-head"><?php _e( 'News', 'nps' ); ?><span class="pull-right"><?php _e( 'See all', 'nps' ); ?> <i class="fa fa-chevron-right"></i></span></h3>
 </a>

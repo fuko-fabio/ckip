@@ -32,7 +32,6 @@ jQuery(document).ready(function() {
         initBlockBtn('cinema', cinemaBlock);
 
         jQuery('.fill-box').fillBox(true, isTouchDevice);
-        handeTouchScreen();
     }
 
     initPostsSwitcher();

@@ -6,8 +6,6 @@ Template Name: Marathon Home Page
 
 <?php get_header('marathon'); ?>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/marathon-page.js"></script>
-
 <div class="row marathon-top">
     <div class="col-md-4 col-xs-12">
         <a href="http://www.pulsarsport.pl/zapisy/portal/zawody.php?zawody=641">

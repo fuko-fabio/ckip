@@ -1212,3 +1212,37 @@ a.url {
         display: none
     }
 }
+.tribe-events-list-widget .events-widget-post,
+.widget-nps-recent-posts .widget-nps-recent-post {
+    margin-bottom: 15px
+}
+
+.tribe-events-list-widget .events-widget-post .content,
+.widget-nps-recent-posts .widget-nps-recent-post {
+    cursor: pointer;
+}
+
+.tribe-events-list-widget .events-widget-post .title,
+.widget-nps-recent-posts .widget-nps-recent-post .post-title {
+    background: rgba(0, 0, 0, 0.7);
+    color: #eee;
+    font-family: "Track";
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 5px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 100px
+}
+
+.tribe-events-list-widget .events-widget-post .duration,
+.widget-nps-recent-posts .widget-nps-recent-post .post-date {
+    background: rgba(0, 0, 0, 0.7);
+    color: #eee;
+    font-family: "Track";
+    font-size: 10px;
+    margin: 0;
+    padding: 8px 5px;
+    text-align: left;
+    width: 100%;
+}

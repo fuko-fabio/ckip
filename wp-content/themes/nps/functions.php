@@ -76,6 +76,8 @@ add_action( 'after_setup_theme', 'nps_setup' );
  * Register widgetized area and update sidebar with default widgets
  */
 function nps_widgets_init() {
+    register_widget('WP_Widget_NPS_Recent_Posts');
+    
     register_sidebar( array(
         'name'          => __( 'Top menu bar', 'nps' ),
         'id'            => 'top-bar',
@@ -270,3 +272,6 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
  * Load woocommerce functions file.
  */
 require get_template_directory() . '/includes/nps.php';
+
+require get_template_directory() . '/includes/nps_recent_posts_widget.php';
+
