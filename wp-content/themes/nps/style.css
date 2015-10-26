@@ -40,9 +40,6 @@ Credits:
 
 /* This is a small security for too long strings titles */
 
-@import url( includes/css/search.css );
-@import url( includes/css/nps.css );
-
 body {
     word-wrap: break-word;
 }
