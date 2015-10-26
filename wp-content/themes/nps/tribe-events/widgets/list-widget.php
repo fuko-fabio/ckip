@@ -48,6 +48,7 @@ if ( $posts ) : ?>
     <p class="events-widget-link">
         <a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf( __( 'View All %s', 'the-events-calendar' ), $events_label_plural ); ?> <i class="fa fa-chevron-right"></i></a>
     </p>
+    <hr class="separator">
 
 <?php
 // No events were found.

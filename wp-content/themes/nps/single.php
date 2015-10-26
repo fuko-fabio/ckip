@@ -12,7 +12,7 @@ if (have_posts()) {
         foreach( $categories as $category ) {
             $id = $category->cat_ID;
             if ($id == get_theme_mod('ck_category', '0')) {
-                $hn = 'ck';
+                $hn = 'ckip';
                 break;
             } else if ($id == get_theme_mod('library_category', '0') || $id == get_theme_mod('library_books_category', '0')) {
                 $hn = 'library';
