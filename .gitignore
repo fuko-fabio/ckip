@@ -76,7 +76,7 @@ wp-content/plugins/yith-woocommerce-social-login/*
 wp-content/plugins/photo-gallery/*
 wp-content/plugins/cookie-law-info/*
 wp-content/plugins/slider-image/*
-
+wp-content/plugins/the-events-calendar-category-colors/*
 
 # ignore specific themes
 wp-content/themes/twenty*/

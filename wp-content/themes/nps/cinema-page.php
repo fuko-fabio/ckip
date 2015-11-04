@@ -8,7 +8,7 @@ Template Name: Kino strona główna
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/includes/js/cinema-page.js"></script>
 
-<a href="<?php echo get_home_url().'/events'; ?>" class="section-heading">
+<a href="<?php echo get_home_url().'/'.Tribe__Events__Main::instance()->getOption( 'eventsSlug', 'events' ); ?>" class="section-heading">
     <h3 class="home-head"><?php _e( 'Movies', 'nps' ); ?><span class="pull-right"><?php _e( 'See all', 'nps' ); ?> <i class="fa fa-chevron-right"></i></span></h3>
 </a>
 <div class="row block-events">
@@ -31,7 +31,7 @@ Template Name: Kino strona główna
           array(
               'taxonomy' => 'tribe_events_cat',
               'field' => 'slug',
-              'terms' => 'kino',
+              'terms' => get_theme_mod('cinema_event_category', 'unknown'),
               'operator' => 'IN'
           ),
       )

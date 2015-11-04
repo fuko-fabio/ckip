@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _tk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-26 19:22+0100\n"
-"PO-Revision-Date: 2015-10-25 23:27+0100\n"
+"PO-Revision-Date: 2015-11-04 23:17+0100\n"
 "Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -545,3 +545,36 @@ msgstr "Brak biletów w sprzedaży."
 
 msgid "Return To Events"
 msgstr "Powrót do wydarzeń"
+
+msgid "Workshops"
+msgstr "Zajęcia"
+
+msgid "There are no workshops."
+msgstr "Brak nadchodzących zajęć."
+
+msgid "Root pages"
+msgstr "Główne podstrony"
+
+msgid "Home Slide"
+msgstr "Slider na stronie głównej"
+
+msgid "Marathon results"
+msgstr "Wyniki maratonu"
+
+msgid "Home page slider ID"
+msgstr "ID slidera dla strony głównej"
+
+msgid "Root events categories"
+msgstr "Główne kategorie dla wydarzeń"
+
+msgid "CKiP events category"
+msgstr "Kategoria wydarzeń CKiP"
+
+msgid "Library events category"
+msgstr "Kategoria wydarzeń biblioteki"
+
+msgid "Cinema events category"
+msgstr "Kategoria wydarzeń kina"
+
+msgid "CKiP workshops category"
+msgstr "Kategoria zajęć CKiP"

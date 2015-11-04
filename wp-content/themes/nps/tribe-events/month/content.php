@@ -28,8 +28,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'tribe_events_before_header' ) ?>
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
 
-		<!-- Header Navigation -->
-		<?php tribe_get_template_part( 'month/nav' ); ?>
+	<!-- Header Navigation -->
+	<?php tribe_get_template_part( 'month/nav' ); ?>
 
 	</div>
 	<!-- #tribe-events-header -->
