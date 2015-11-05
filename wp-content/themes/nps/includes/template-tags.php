@@ -198,14 +198,7 @@ function nps_posted_on() {
 		$time_string .= __(', updated on ', 'nps') . $time_string_update;
 	} 
 	
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'nps' ),
-		$time_string,
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'nps' ), get_the_author() ) ),
-			esc_html( get_the_author() )
-		)
-	);
+	printf( '<span class="posted-on">'.__( 'Posted on', 'nps' ).' '.$time_string.'</span>');
 }
 endif;
 

@@ -275,5 +275,7 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
  */
 require get_template_directory() . '/includes/nps.php';
 
+require get_template_directory() . '/includes/calendar.php';
+
 require get_template_directory() . '/includes/nps_recent_posts_widget.php';
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _tk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-26 19:22+0100\n"
-"PO-Revision-Date: 2015-11-04 23:17+0100\n"
+"PO-Revision-Date: 2015-11-05 20:53+0100\n"
 "Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -295,15 +295,6 @@ msgstr "Twój komentarz oczekuje na zatwierdzenie."
 #: includes/template-tags.php:210
 msgid ", updated on "
 msgstr ", zaktualizowano "
-
-#: includes/template-tags.php:213
-#, php-format
-msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
-msgstr ""
-"<span class=\"posted-on\">Opublikowano %1$s</span><span class=\"byline\"> "
-"przez %2$s</span>"
 
 #: includes/template-tags.php:217
 #, php-format

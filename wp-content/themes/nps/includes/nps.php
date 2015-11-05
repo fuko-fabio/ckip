@@ -119,7 +119,7 @@ function get_before_body() { ?>
 }
 
 
-function get_category_posts($theme_cat_config_name, $msg, $count = 4) {
+function get_category_posts($theme_cat_config_name, $msg, $count = 8) {
     $cat = get_theme_mod($theme_cat_config_name, '0');
     if ($cat != '0') :
         query_posts(array(
