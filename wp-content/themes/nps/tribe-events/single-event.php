@@ -25,7 +25,7 @@ $event_id = get_the_ID();
 
     <div class="desc">
         <?php the_title( '<h3 class="tribe-event-title hidden-sm hidden-md hidden-lg">', '</h3>' ); ?>
-        <?php echo get_the_post_thumbnail($event_id, 'post-thumbnail'); ?>
+        <?php echo get_the_post_thumbnail($event_id, 'post-thumbnail', array('class' => 'main-thumbnail')); ?>
         <?php the_title( '<h3 class="tribe-event-title hidden-xs">', '</h3>' ); ?>
         <div class="tribe-event-main-info">
             <?php echo tribe_events_event_schedule_details( $event_id, '<span class="tribe-events-term">', '</span>' ); ?>
