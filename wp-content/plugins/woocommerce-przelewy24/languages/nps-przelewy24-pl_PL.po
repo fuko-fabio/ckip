@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NPS woocommerce Przelewy 24\n"
 "POT-Creation-Date: 2015-11-09 22:22+0100\n"
-"PO-Revision-Date: 2015-11-09 22:23+0100\n"
+"PO-Revision-Date: 2015-11-09 22:40+0100\n"
 "Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language-Team: Norbert Pabian <norbert.pabian@gmail.com>\n"
 "Language: Polski\n"
@@ -10,167 +10,175 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: __;gettext;gettext_noop\n"
-"X-Poedit-Basepath: ../\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: woocommerce-przelewy24.php:36
 msgid "Settings"
-msgstr ""
+msgstr "Ustawienia"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:46
 #, php-format
 msgid "Validation error: Przelewy24 returned error code: %d"
-msgstr ""
+msgstr "Błąd walidacji: Serwis Przelewy24 zwrócił kod błędu %d"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:53
 #, php-format
 msgid "Validation error: Unable to find order by session ID %s"
-msgstr ""
+msgstr "Błąd walidacji: Nie można odnaleźć zamówienia dla ID sesji %s"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:60
 msgid "Validation error: Missing sesion ID."
-msgstr ""
+msgstr "Błąd walidacji: Brak ID sesji"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:94
 msgid "Payment complete"
-msgstr ""
+msgstr "Płatność zakończona"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:99
 #, php-format
 msgid "Validation error: Unable to verify transaction. %s"
-msgstr ""
+msgstr "Błąd walidacji: Nie można zweryfikować transakcji %s"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:137
 #, php-format
 msgid "Validation error: Przelewy24 sign do not match (code %s)."
-msgstr ""
+msgstr "Błąd walidacji: Niepoprawny podpis Przelewy24 (kod %s)"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:152
 #, php-format
 msgid "Validation error: Przelewy24 currencies do not match (code %s)."
-msgstr ""
+msgstr "Błąd walidacji: Błędne waluty (kod %s)"
 
 #: includes/class-wc-gateway-przelewy24-notification-handler.php:167
 #, php-format
 msgid "Validation error: Przelewy24 amounts do not match (gross %s)."
-msgstr ""
+msgstr "Błąd walidacji: Niepoprawne wartości zamówienia (wartość %s)"
 
 #: includes/class-wc-gateway-przelewy24.php:17
 #: includes/class-wc-gateway-przelewy24.php:19
 msgid "Przelewy 24"
-msgstr ""
+msgstr "Przelewy 24"
 
 #: includes/class-wc-gateway-przelewy24.php:18
 msgid "Przelewy 24 Payment Gateway Plug-in for WooCommerce"
-msgstr ""
+msgstr "Bramka płatności Przelewy 24 dla WooCommerce"
 
 #: includes/class-wc-gateway-przelewy24.php:57
 msgid "Enable / Disable"
-msgstr ""
+msgstr "Włącz / Wyłącz"
 
 #: includes/class-wc-gateway-przelewy24.php:58
 msgid "Enable this payment gateway"
-msgstr ""
+msgstr "Włącz tą bramkę płatności"
 
 #: includes/class-wc-gateway-przelewy24.php:63
 msgid "Title"
-msgstr ""
+msgstr "Tytuł"
 
 #: includes/class-wc-gateway-przelewy24.php:65
 msgid "Payment title the customer will see during the checkout process."
-msgstr ""
+msgstr "Tytuł płatności jaki klient zobaczy podczas procesu zakupu."
 
 #: includes/class-wc-gateway-przelewy24.php:66
 msgid "Przelewy24"
-msgstr ""
+msgstr "Przelewy24"
 
 #: includes/class-wc-gateway-przelewy24.php:69
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #: includes/class-wc-gateway-przelewy24.php:71
 msgid "Payment description the customer will see during the checkout process."
-msgstr ""
+msgstr "Opis płatności jaki klient zobaczy podczas procesu zakupu"
 
 #: includes/class-wc-gateway-przelewy24.php:72
 msgid "Pay securely using Przelewy24."
-msgstr ""
+msgstr "Płać bezpiecznie z Przelewy24"
 
 #: includes/class-wc-gateway-przelewy24.php:76
 msgid "Merchant ID"
-msgstr ""
+msgstr "ID klienta"
 
 #: includes/class-wc-gateway-przelewy24.php:78
 msgid ""
 "This is the merchant ID provided by Przelewy24 when you signed up for an "
 "account."
 msgstr ""
+"To jest ID klienta nadawane przez Przelewy24 podczas procesu rejestracji "
+"konta."
 
 #: includes/class-wc-gateway-przelewy24.php:81
 msgid "CRC Key"
-msgstr ""
+msgstr "Klucz CRC"
 
 #: includes/class-wc-gateway-przelewy24.php:83
 msgid ""
 "This is the CRC Key provided by Przelewy24 when you signed up for an account."
 msgstr ""
+"Klucz CRC dostarczany przez Przelewy24. Klucz możesz znaleźć na swoim koncie "
+"Przelewy24"
 
 #: includes/class-wc-gateway-przelewy24.php:86
 msgid "Payment service admin email"
-msgstr ""
+msgstr "Adres e-mail administratora bramką płatności"
 
 #: includes/class-wc-gateway-przelewy24.php:88
 msgid ""
 "Email address to payment service administrator. All errors will be reported "
 "to this email."
 msgstr ""
+"Adres e-mail administratora płatności. Wszystkie błędy płatności będą "
+"zgłaszane pod ten adres."
 
 #: includes/class-wc-gateway-przelewy24.php:89
 msgid "admin@example.com"
-msgstr ""
+msgstr "admin@example.com"
 
 #: includes/class-wc-gateway-przelewy24.php:92
 msgid "Test Mode"
-msgstr ""
+msgstr "Tryb testowy"
 
 #: includes/class-wc-gateway-przelewy24.php:93
 msgid "Enable Test Mode"
-msgstr ""
+msgstr "Włącz tryb testowy"
 
 #: includes/class-wc-gateway-przelewy24.php:95
 msgid "Place the payment gateway in test mode."
-msgstr ""
+msgstr "Włącza tryb testowy dla tej bramki płatności."
 
 #: includes/class-wc-gateway-przelewy24.php:99
 msgid "Test error code"
-msgstr ""
+msgstr "Testowy kod błędu"
 
 #: includes/class-wc-gateway-przelewy24.php:101
 msgid "Special przelewy24 error code which allows to test error response."
-msgstr ""
+msgstr "Specjalny kod błędu który pozwala przetestować obsługę błędów."
 
 #: includes/class-wc-gateway-przelewy24.php:111
 msgid "Awaiting Przelewy24 payment"
-msgstr ""
+msgstr "Oczekiwanie na płatność w Przelewy24"
 
 #: includes/class-wc-gateway-przelewy24.php:119
 msgid "Przelewy24 payment registered. Awaiting for payment"
 msgstr ""
+"Płatność zarejestrowana w systemie Przelewy24. Oczekiwanie na płatność."
 
 #: includes/class-wc-gateway-przelewy24.php:176
 msgid ""
 "We are currently experiencing problems trying to connect to this payment "
 "gateway. Sorry for the inconvenience."
 msgstr ""
+"Wystąpił problem z systemem płatności. Przepraszamy za niedogodności i "
+"prosimy spróbować ponownie."
 
 #: includes/class-wc-gateway-przelewy24.php:182
 msgid "Przelewy24 Response was empty. Sorry for the inconvenience."
 msgstr ""
+"Niepoprawna odpowiedź z serwisu Przelewy24. Przepraszamy za niedogodności i "
+"prosimy spróbować ponownie."
 
 #: includes/class-wc-gateway-przelewy24.php:216
 msgid "Error reporting from Przelewy24 gateway."
-msgstr ""
+msgstr "Raport błędu z systemu płatności Przelewy24"
 
 #: includes/class-wc-gateway-przelewy24.php:225
 #, php-format
@@ -180,9 +188,13 @@ msgid ""
 "certificate and that you are <a href=\"%s\">forcing the checkout pages to be "
 "secured.</a>"
 msgstr ""
+"<strong>%s</strong>jest włączony i WooCommerce nie wymusza komunikacji "
+"poprzez SSL dla strony zamówień. Proszę się upewnić, że dostarczyłeś "
+"poprawny certyfikat SSL oraz komunikacja poprzez<a href=\"%s\">SSL została "
+"wymuszona.</a>"
 
 #: includes/class-wc-gateway-przelewy24-request.php:98
 #: includes/class-wc-gateway-przelewy24-request.php:178
 #, php-format
 msgid "Shipping via %s"
-msgstr ""
+msgstr "Wysyłka przez %s"

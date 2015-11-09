@@ -878,11 +878,20 @@
     border-color: #e32b50;
 }
 
-.tribe-single-event .event-img {
-    height: 500px;
-    margin-top: 20px;
+.tribe-single-event .desc img {
+    width: 50%;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
+@media (max-width: 767px) {
+    .tribe-single-event .desc img {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+}
 .tribe-single-event .tribe-event-title {
     text-transform: uppercase;
     color: #E32B50;
@@ -1315,6 +1324,10 @@ a.url {
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 12px;
+}
+
+.nps-workshops .row.seven-cols {
+    margin: 0;
 }
 
 .nps-workshops .workshops-calendar-week .col-sm-1 {

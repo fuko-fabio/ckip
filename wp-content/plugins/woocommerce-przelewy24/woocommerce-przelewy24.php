@@ -15,6 +15,8 @@ function nps_przelewy24_init() {
     // so do nothing
     if ( ! class_exists( 'WC_Payment_Gateway' ) ) return;
 
+    load_plugin_textdomain( 'nps-przelewy24', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
+
     // If we made it this far, then include our Gateway Class
     include_once( 'includes/class-wc-gateway-przelewy24.php' );
  

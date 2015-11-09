@@ -22,28 +22,23 @@ $event_id = get_the_ID();
 ?>
 <div class="tribe-single-event">
     <?php tribe_events_the_notices() ?>
-    
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="event-img">
-                <?php echo get_the_post_thumbnail($event_id, 'post-thumbnail', array('class' => 'fill-box')); ?>
-            </div>
+
+    <div class="desc">
+        <?php the_title( '<h3 class="tribe-event-title hidden-sm hidden-md hidden-lg">', '</h3>' ); ?>
+        <?php echo get_the_post_thumbnail($event_id, 'post-thumbnail'); ?>
+        <?php the_title( '<h3 class="tribe-event-title hidden-xs">', '</h3>' ); ?>
+        <div class="tribe-event-main-info">
+            <?php echo tribe_events_event_schedule_details( $event_id, '<span class="tribe-events-term">', '</span>' ); ?>
+             <span class="tribe-events-cost">
+             <?php if ( tribe_get_cost() ) : ?>
+                 <?php echo tribe_get_cost( null, true ) ?>
+            <?php endif; ?>
+            </span>
         </div>
-        <div class="col-sm-6">
-            <?php the_title( '<h3 class="tribe-event-title">', '</h3>' ); ?>
-            <div class="tribe-event-main-info">
-                <?php echo tribe_events_event_schedule_details( $event_id, '<span class="tribe-events-term">', '</span>' ); ?>
-                 <span class="tribe-events-cost">
-                <?php if ( tribe_get_cost() ) : ?>
-                   <?php echo tribe_get_cost( null, true ) ?>
-                <?php endif; ?>
-                </span>
-            </div>
-            <?php while ( have_posts() ) :  the_post(); ?>
-                <?php the_content(); ?>
-            <?php endwhile; ?>
-            <?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
-        </div>
+        <?php while ( have_posts() ) :  the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; ?>
+        <?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
     </div>
     <?php while ( have_posts() ) :  the_post(); ?>
         <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>

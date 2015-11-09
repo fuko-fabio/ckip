@@ -7,7 +7,12 @@ Template Name: CKiP zajęcia
 <?php get_header('ckip'); ?>
 <div class="nps-workshops">
     <h3 class="home-head"><?php _e( 'Workshops', 'nps' ); ?></h3>
-    
+
+    <?php while ( have_posts() ) : the_post(); ?>
+        <?php get_template_part( 'content', 'custom-single' ); ?>
+        <hr class="separator"/>
+    <?php endwhile; // end of the loop. ?>
+
     <?php 
         $date = $_GET['date'];
         if (empty($date)) {
