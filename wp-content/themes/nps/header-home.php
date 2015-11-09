@@ -20,11 +20,13 @@ echo get_template_part('head');
         </div>
     </div><!-- .container -->
     <div class="site-header-image">
+    <?php if ( !wp_is_mobile() ) { ?>
         <div class="container">
             <div class="row">
             <?php echo do_shortcode("[huge_it_slider id='".get_theme_mod('home_slider_id', '1')."']"); ?>
             </div>
         </div>
+    <?php } ?>
     </div>
 </header><!-- #masthead -->
 

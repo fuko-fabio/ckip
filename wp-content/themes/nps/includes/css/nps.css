@@ -326,6 +326,10 @@
   padding-top: 20px;
   text-align: center;
 }
+.site-footer .site-footer-inner .logo .top img {
+    max-width: 50%;
+}
+
 .site-footer .site-footer-inner .logo .bottom {
     margin-top: 40px;
 }
@@ -1278,4 +1282,87 @@ a.url {
   .seven-cols .col-lg-1 {
     width: 14.285714285714285714285714285714%;
   }
+}
+
+.nps-workshops .nav {
+    text-align: center;
+}
+
+.nps-workshops .btn-prev {
+    float: left;
+}
+
+.nps-workshops .btn-next {
+    float: right;
+}
+
+.nps-workshops .nav a {
+    font-size: 18px;
+    font-weight: bold;
+}
+.nps-workshops h2 {
+    font-family: 'Track';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.nps-workshops .workshops-calendar-heading div {
+    background: #333333;
+    color: #EEEEEE;
+    padding: 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.nps-workshops .workshops-calendar-week .col-sm-1 {
+    padding: 0;
+}
+
+.nps-workshops .workshops-calendar-week .day-number {
+    padding: 6px 9px;
+    line-height: 1.2;
+    color: #333333;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    font-weight: 700;
+}
+.nps-workshops .workshops-calendar-week .today .day-number {
+    color: #EEEEEE;
+    background-color: #E32B50;
+}
+.nps-workshops .workshops-calendar-week .past .day-number,
+.nps-workshops .workshops-calendar-week .past.workshops-calendar-day a {
+    color: #999;
+}
+.nps-workshops .workshops-calendar-week .workshops-calendar-day,
+.nps-workshops .workshops-calendar-week .workshops-calendar-day-np {
+    height: 110px;
+    padding: 0 0 .5em;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-left: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.nps-workshops .workshops-calendar-week .workshops-calendar-day:last-of-type,
+.nps-workshops .workshops-calendar-week .workshops-calendar-day-np:last-of-type {
+    border-right: 1px solid #bbb;
+}
+
+.nps-workshops .workshops-calendar-week .workshops-calendar-day a {
+    line-height: 1.25;
+    font-size: 13px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0;
+    display: block;
+    padding: 5px;
+    color: #333;
 }

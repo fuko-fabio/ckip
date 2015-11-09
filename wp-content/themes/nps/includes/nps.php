@@ -171,7 +171,7 @@ function get_newsletter_form() { ?>
     </div> <?php
 }
 
-function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 'ck_logo_black.png') { ?>
+function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 'ck_logo_white.png') { ?>
     <div class="site-footer-bottom">
         <div class="container">
             <div class="site-footer-inner">

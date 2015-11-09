@@ -5,21 +5,21 @@ Template Name: CKiP zajęcia
 ?>
 
 <?php get_header('ckip'); ?>
-
-<h3 class="home-head"><?php _e( 'Workshops', 'nps' ); ?></h3>
-
-<?php 
-    $date = $_GET['date'];
-    if (empty($date)) {
-        $date = date('Y-m');
-    }
-?>
-<a href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("-1 month", strtotime($date))))); ?>"><?php _e('Previous', 'nps'); ?></a>
-
-<a href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("+1 month", strtotime($date))))); ?>"><?php _e('Next', 'nps'); ?></a>
-<?php
-    echo '<h2>'.date_i18n('F Y', strtotime($date)).'</h2>';
-    echo workshops_calendar($date);
-?>
-
+<div class="nps-workshops">
+    <h3 class="home-head"><?php _e( 'Workshops', 'nps' ); ?></h3>
+    
+    <?php 
+        $date = $_GET['date'];
+        if (empty($date)) {
+            $date = date('Y-m');
+        }
+    ?>
+    <div class="nav">
+        <a class="btn-prev" href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("-1 month", strtotime($date))))); ?>"><i class="fa fa-chevron-left"></i> <?php echo date_i18n('F', strtotime($date.' -1 month')); ?></a>
+        <a class="btn-next" href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("+1 month", strtotime($date))))); ?>"><?php echo date_i18n('F', strtotime($date.' +1 month')); ?> <i class="fa fa-chevron-right"></i></a>
+        <h2><?php echo date_i18n('F Y', strtotime($date)) ?></h2>
+    </div>
+    
+    <?php echo workshops_calendar($date); ?>
+</div>
 <?php get_footer(); ?>
