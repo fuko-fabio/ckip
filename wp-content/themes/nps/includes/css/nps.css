@@ -1261,38 +1261,6 @@ a.url {
     width: 100%;
 }
 
-@media (max-width: 767px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1  {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-  }
-}
-
-@media (min-width: 992px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-  }
-}
-
 .nps-workshops .nav {
     text-align: center;
 }
@@ -1315,67 +1283,135 @@ a.url {
     font-weight: 400;
 }
 
-.nps-workshops .workshops-calendar-heading div {
+
+.nps-workshops table {
+    border-collapse: collapse;
+    font-size: 12px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.nps-workshops tr {
+    display: table-row;
+}
+
+.nps-workshops thead td {
     background: #333333;
     color: #EEEEEE;
     padding: 8px 0;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
     font-weight: bold;
-    font-size: 12px;
 }
 
-.nps-workshops .row.seven-cols {
-    margin: 0;
-}
-
-.nps-workshops .workshops-calendar-week .col-sm-1 {
-    padding: 0;
-}
-
-.nps-workshops .workshops-calendar-week .day-number {
-    padding: 6px 9px;
-    line-height: 1.2;
-    color: #333333;
-    font-size: 16px;
-    background-color: #f5f5f5;
-    font-weight: 700;
-}
-.nps-workshops .workshops-calendar-week .today .day-number {
-    color: #EEEEEE;
-    background-color: #E32B50;
-}
-.nps-workshops .workshops-calendar-week .past .day-number,
-.nps-workshops .workshops-calendar-week .past.workshops-calendar-day a {
-    color: #999;
-}
-.nps-workshops .workshops-calendar-week .workshops-calendar-day,
-.nps-workshops .workshops-calendar-week .workshops-calendar-day-np {
-    height: 110px;
+.nps-workshops tbody td {
+    vertical-align: top;
     padding: 0 0 .5em;
     font-size: 12px;
-    box-sizing: border-box;
-    border-left: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
+    border: 1px solid #bbb;
 }
 
-.nps-workshops .workshops-calendar-week .workshops-calendar-day:last-of-type,
-.nps-workshops .workshops-calendar-week .workshops-calendar-day-np:last-of-type {
-    border-right: 1px solid #bbb;
+.nps-workshops tbody td div {
+    display: block;
+    min-height: 110px;
 }
 
-.nps-workshops .workshops-calendar-week .workshops-calendar-day a {
+.nps-workshops tbody td a {
     line-height: 1.25;
     font-size: 13px;
     overflow: hidden;
     font-family: sans-serif;
-    font-weight: 700;
     text-transform: none;
     margin: 0;
     padding: 0;
     letter-spacing: 0;
     display: block;
     padding: 5px;
-    color: #333;
+    color: #eee;
+}
+.nps-workshops tbody td a p {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.nps-workshops tbody td a span {
+    display: block;
+    padding: 7px;
+}
+
+.nps-workshops tbody td a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.nps-workshops tbody td span.number {
+    padding: 6px 9px;
+    line-height: 1.2;
+    color: #333333;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    font-weight: 700;
+    display: block;
+}
+.nps-workshops tbody td span.number span {
+    margin-left: 3px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.nps-workshops tbody td.today span {
+    color: #EEEEEE;
+    background-color: #E32B50;
+}
+
+.nps-workshops tbody td.past span,
+.nps-workshops tbody td.past a {
+    color: #AAA;
+}
+
+.nps-workshops tbody td a span.default {
+    background-color: #777;
+}
+
+.nps-workshops tbody td a span.cat-blue {
+    background: #6271b3;
+}
+
+.nps-workshops tbody td a span.cat-violet {
+    background: #a778bb;
+}
+
+.nps-workshops tbody td a span.cat-red {
+    background: #b52c2d;
+}
+
+.nps-workshops tbody td a span.cat-green {
+    background: #79883f;
+}
+
+.nps-workshops tbody td a span.cat-yellow {
+    background: #d29c01;
+}
+
+.nps-workshops tbody td a span.cat-pink {
+    background: #c5616b;
+}
+
+
+@media (max-width: 767px) {
+    .nps-workshops thead,
+    .nps-workshops tr .empty {
+        display: none;
+    }
+
+    .nps-workshops table,
+    .nps-workshops tbody,
+    .nps-workshops td,
+    .nps-workshops tr {
+        display: block;
+    }
+
+    .nps-workshops tbody td div {
+        min-height: 0;
+    }
 }

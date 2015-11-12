@@ -24,7 +24,12 @@ Template Name: CKiP zajęcia
         <a class="btn-next" href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("+1 month", strtotime($date))))); ?>"><?php echo date_i18n('F', strtotime($date.' +1 month')); ?> <i class="fa fa-chevron-right"></i></a>
         <h2><?php echo date_i18n('F Y', strtotime($date)) ?></h2>
     </div>
-    
+
     <?php echo workshops_calendar($date); ?>
+    <div class="nav">
+        <a class="btn-prev" href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("-1 month", strtotime($date))))); ?>"><i class="fa fa-chevron-left"></i> <?php echo date_i18n('F', strtotime($date.' -1 month')); ?></a>
+        <a class="btn-next" href="<?php echo add_query_arg(array('date' => date('Y-m', strtotime("+1 month", strtotime($date))))); ?>"><?php echo date_i18n('F', strtotime($date.' +1 month')); ?> <i class="fa fa-chevron-right"></i></a>
+        <h2><?php echo date_i18n('F Y', strtotime($date)) ?></h2>
+    </div>
 </div>
 <?php get_footer(); ?>

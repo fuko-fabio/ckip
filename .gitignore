@@ -77,6 +77,7 @@ wp-content/plugins/photo-gallery/*
 wp-content/plugins/cookie-law-info/*
 wp-content/plugins/slider-image/*
 wp-content/plugins/the-events-calendar-category-colors/*
+wp-content/plugins/events-calendar-pro/*
 
 # ignore specific themes
 wp-content/themes/twenty*/
