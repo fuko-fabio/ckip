@@ -857,6 +857,13 @@
     max-width: 450px;
     margin-top: 130px;
 }
+
+@media (max-width: 767px) {
+    .site-header .overlay-header img.ckip-logo {
+        max-width: 200px;
+    }
+}
+
 .site-header .ckip-overlay {
 }
 
@@ -1341,7 +1348,7 @@ a.url {
 
 .nps-workshops tbody td a:hover {
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .nps-workshops tbody td span.number {
@@ -1366,7 +1373,8 @@ a.url {
 
 .nps-workshops tbody td.past span,
 .nps-workshops tbody td.past a {
-    color: #AAA;
+    color: #CCC;
+    opacity: 0.7;
 }
 
 .nps-workshops tbody td a span.default {
@@ -1374,27 +1382,27 @@ a.url {
 }
 
 .nps-workshops tbody td a span.cat-blue {
-    background: #6271b3;
+    background: #2E3192;
 }
 
 .nps-workshops tbody td a span.cat-violet {
-    background: #a778bb;
+    background: #440E62;
 }
 
-.nps-workshops tbody td a span.cat-red {
-    background: #b52c2d;
+.nps-workshops tbody td a span.cat-cyan {
+    background: #00A99D;
 }
 
 .nps-workshops tbody td a span.cat-green {
-    background: #79883f;
+    background: #8DC63F;
 }
 
-.nps-workshops tbody td a span.cat-yellow {
-    background: #d29c01;
+.nps-workshops tbody td a span.cat-red {
+    background: #ED1C24;
 }
 
 .nps-workshops tbody td a span.cat-pink {
-    background: #c5616b;
+    background: #ED145B;
 }
 
 
