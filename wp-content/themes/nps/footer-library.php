@@ -20,8 +20,8 @@
            </div>
            
            <div class="col-xs-4 col-sm-2 static-item">
-               <a href="http://czasdzieci.pl" target="_blank">
-                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/czas_dzieci.png" />
+               <a href="http://www.mkidn.gov.pl" target="_blank">
+                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/mkidn.png" />
                </a>
            </div>
            <div class="col-xs-4 col-sm-2 static-item">
@@ -37,11 +37,6 @@
            <div class="col-xs-4 col-sm-2 static-item">
                <a href="#" target="_blank">
                    <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/narodowy_program_rozwoju_czyt.png" />
-               </a>
-           </div>
-           <div class="col-xs-4 col-sm-2 static-item">
-               <a href="http://bookto.pl" target="_blank">
-                   <img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bookto.png" />
                </a>
            </div>
            <div class="col-xs-4 col-sm-2 static-item">

@@ -41,10 +41,7 @@
                     <a href="http://www.bn.org.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bn.png" /></a>
                 </div>
                 <div class="item">
-                    <a href="http://bookto.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/bookto.png" /></a>
-                </div>
-                <div class="item">
-                    <a href="https://wolnelektury.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/wolnelektury.png" /></a>
+                    <a href="http://www.mkidn.gov.pl" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/mkidn.png" /></a>
                 </div>
                 <div class="item">
                     <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/partners/narodowy_program_rozwoju_czyt.png" /></a>
