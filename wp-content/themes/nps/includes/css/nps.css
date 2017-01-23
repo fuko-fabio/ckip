@@ -177,7 +177,8 @@
     color: #eee;
 }
 
-.site-header-opts .widget .nav .menu-item a:hover {
+.site-header-opts .widget .nav .menu-item a:hover,
+.site-header-opts .widget .nav .menu-item a:focus {
     background: none;
     color: #e32b50;
 }
