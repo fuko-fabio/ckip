@@ -29,6 +29,7 @@ echo get_template_part('head');
                 </div>
             </div>
             <?php get_library_hours('hidden-xs'); ?>
+            <?php get_page_hits('library-page-hits'); ?>
         </div>
     </div>
     </div>

@@ -15,6 +15,7 @@ echo get_template_part('head');
     <div class="site-header-opts">
         <div class="container">
             <?php
+            	get_page_hits('home-page-hits');
                 get_main_user_bar();
             ?>
         </div>

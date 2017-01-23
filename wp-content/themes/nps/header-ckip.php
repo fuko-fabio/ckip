@@ -28,6 +28,7 @@ echo get_template_part('head');
                 <img class="ckip-logo" src="<?php echo esc_url(get_template_directory_uri().'/includes/img/ck_logo_white.png'); ?>" />
                 </div>
             </div>
+            <?php get_page_hits('ckip-page-hits'); ?>
         </div>
     </div>
 </header><!-- #masthead -->

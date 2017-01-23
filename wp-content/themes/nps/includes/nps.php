@@ -164,7 +164,7 @@ function get_newsletter_form() { ?>
                 <span><?php _e( 'Submit', 'nps' ); ?> </span><?php _e( 'your email to get updates from us.', 'nps' ); ?>
             </div>
             <div class="actions">
-                <input class="newsletter-email" type="email" name="ne" placeholder="my.email@example.com" required>
+                <input class="newsletter-email" type="email" name="ne" placeholder="<?php _e( 'my.email@example.com', 'nps' ); ?>" required>
                 <input class="newsletter-submit" type="submit" value="<?php _e( 'Subscribe!', 'nps' ); ?>"/>
             </div>
         </form>
@@ -219,7 +219,7 @@ function get_bottom_footer($top_logo = 'library_logo_white.png', $bottom_logo = 
                     </div>
                 
                     <div class="col-sm-4">
-                        <a target="_blank" href="http://npsoftware.pl" title="nps software" class="author"><span class="cname">nps</span><span class="csoftware"> software</span></a>
+                        <a target="_blank" href="http://npsoftware.eu" title="nps software" class="author"><span class="cname">nps</span><span class="csoftware"> software</span></a>
                     </div>
                 </div>
             </div>
@@ -259,4 +259,13 @@ function get_library_hours($class = '') {?>
             </div>
         </div>
     </div><?php
+}
+
+function get_page_hits($class = '') {
+	if (function_exists( 'wp_statistics_pages' )) {?>
+		<div class="page-hits <?php echo $class; ?>">
+			<?php printf( __( 'Page hits: %s', 'nps' ),  wp_statistics_pages( 'total', get_page_uri( get_the_ID() ), get_the_ID() )); ?>
+		</div>
+	<?php 
+	}
 }

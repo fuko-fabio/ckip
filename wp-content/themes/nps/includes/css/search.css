@@ -4,6 +4,7 @@
     font-size: 28px;
     color: #eee;
     padding: 0 10px 0 0;
+    margin: 0;
 }
 .search-btn:hover {
     color: #e32b50;

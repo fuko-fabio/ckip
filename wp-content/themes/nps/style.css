@@ -173,6 +173,10 @@ display: block;
 .dropdown-submenu:active>a:after{border-left-color:#ffffff;}
 .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
+.navbar-nav .dropdown-menu {
+	padding: 0;
+}
+
 
 /* Here some needed widget styles
  * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
@@ -298,6 +302,7 @@ display: block;
         -webkit-flex-direction: row;
     }
 }
+
 .navbar .nav .menu-item {
     list-style: none;
     -webkit-flex: 1 0 0;
@@ -318,23 +323,36 @@ display: block;
     background: #fff;
     font-family: "Track";
     background-color: #FFFFFF;
+    height: 100%;
 }
+
 @media (max-width: 992px) {
     .navbar .nav .menu-item a {
         font-size: 12px;
     }
 }
+
 @media (max-width: 768px) {
     .navbar .nav .menu-item a {
         font-size: 16px;
         background-color: #121212;
         color: #EEEEEE;
     }
-    .navbar .nav .menu-item a:hover {
+    .navbar .nav .menu-item a:hover,
+    .navbar .nav .menu-item a:focus {
         background: #121212;
         color: #e32b50;
     }
 }
+
+@media (max-width: 768px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		background: #121212;
+        color: #e32b50;
+	}
+}
+
 .navbar .nav .main-ckip a {
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("includes/img/menu_ckip.jpg") no-repeat center center;
     -webkit-background-size: cover;

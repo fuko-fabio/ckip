@@ -120,7 +120,6 @@
 
 .site-header-opts .user-nav {
     float: right;
-    margin-top: 5px;
 }
 .site-header-opts .user-nav a img {
     height: 35px;
@@ -129,7 +128,7 @@
 .site-header-opts .user-nav a {
     color: #eee;
     font-size: 28px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .site-header-opts .user-nav a:hover {
     color: #e32b50;
@@ -276,7 +275,7 @@
 
 .site-footer .site-footer-inner {
     width: 100%;
-    padding: 15px;
+    padding: 15px 15px 35px 15px;
 }
 
 .site-footer .site-footer-inner .fsidebar h3 {
@@ -336,7 +335,7 @@
 }
 
 .site-header-image {
-    padding-top: 45px;
+    padding-top: 40px;
 }
 
 .site-header-image .container {
@@ -345,6 +344,23 @@
 .site-header-image .container .site-header-inner {
   height: 350px;
 }
+
+.site-header .home-page-hits {
+	float: left;
+    color: #eee;
+    padding-top: 9px;
+}
+
+.site-header .library-page-hits,
+.site-header .ckip-page-hits {
+	position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
 .site-header-image .library-hours {
     width: 350px;
     background: rgba(0, 0, 0, 0.6);
@@ -1182,53 +1198,12 @@ a.url {
 }
 
 .slicknav_menu {
-    background: none;
-    position: absolute;
-    z-index: 99999;
-    padding: 0px;
-}
-
-.slicknav_btn {
-    float: left;
-    margin: 5px;
-}
-
-.slicknav_menu a {
-    font-family: "Track";
-}
-.slicknav_menu .slicknav_menutxt {
-    line-height: 20px;
-}
-
-.slicknav_nav {
-    background: rgba(0,0,0,0.8);
-}
-
-.slicknav_nav .slicknav_row, .slicknav_nav a {
-    padding: 10px;
-}
-
-.slicknav_menu a:hover,
-.slicknav_menu a:hover span {
-    background: none;
-    color: #E32B50;
-}
-
-.slicknav_menu a:hover,
-.slicknav_menu a:hover span {
-    background: none;
-    color: #E32B50;
-}
-.slicknav_menu  a:hover .slicknav_icon-bar {
-    background: #E32B50;
-}
-
-.slicknav_menu {
     display: none;
 }
 @media (max-width: 992px) {
     .slicknav_menu {
         display: block;
+        width: 100%;
     }
     .sticky-menu {
         display: none
