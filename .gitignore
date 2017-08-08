@@ -25,6 +25,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
+*.orig
  
 # ignore log files and databases
 *.log
@@ -78,6 +79,14 @@ wp-content/plugins/cookie-law-info/*
 wp-content/plugins/slider-image/*
 wp-content/plugins/the-events-calendar-category-colors/*
 wp-content/plugins/events-calendar-pro/*
+wp-content/plugins/admin-menu-editor/*
+wp-content/plugins/advanced-post-manager/*
+wp-content/plugins/automatic-subdomains/*
+wp-content/plugins/backupwordpress/*
+wp-content/plugins/event-tickets-plus/*
+wp-content/plugins/event-tickets/*
+wp-content/plugins/wordpress-importer/*
+wp-content/plugins/wp-statistics/*
 
 # ignore specific themes
 wp-content/themes/twenty*/

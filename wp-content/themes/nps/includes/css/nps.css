@@ -393,7 +393,7 @@
     text-transform: uppercase;
     text-align: center;
     color: #eee;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .library-hours .footer {
     font-size: 12px;
@@ -408,7 +408,7 @@
 .library-hours .day {
     background-color: #e32b50;
     text-align: center;
-    margin: 0 -25px 15px 25px;
+    margin: 0 -25px 10px 25px;
 }
 
 .library-hours .hour {
