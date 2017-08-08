@@ -33,7 +33,7 @@ function get_main_user_bar($context = '') {
             <?php if ($context == 'ckip') {?>
                 <a href="http://bip.malopolska.pl/ckipwmichalowicach/Article/id,11332.html"><img src="<?php echo get_template_directory_uri().'/includes/img/bip_icon.png' ?>" /></a>
                 <a href="https://www.facebook.com/centrumkulturyipromocji"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.youtube.com/channel/UCP7JemMUisMOiyNWirDEbXg"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://www.youtube.com/channel/UC8Ti8XjchGelcihb-fKCtiw"><i class="fa fa-youtube-play"></i></a>
             <?php } else if ($context == 'library') {?>
                 <a href="http://bip.malopolska.pl/bpwmichalowicach/Article/id,11299.html"><img src="<?php echo get_template_directory_uri().'/includes/img/bip_icon.png' ?>" /></a>
                 <a href="https://www.facebook.com/pages/Biblioteka-Publiczna-Gminy-Micha%C5%82owice/1651147045115439"><i class="fa fa-facebook"></i></a>
@@ -256,6 +256,13 @@ function get_library_hours($class = '') {?>
             <div class="row">
                 <div class="col-xs-6 day"><?php _e( 'Saturday', 'nps' ); ?></div>
                 <div class="col-xs-6 hour">08:00 - 16:00</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 day"><?php _e( 'Saturday', 'nps' ); ?></div>
+                <div class="col-xs-6 hour">08:00 - 16:00</div>
+            </div>
+            <div class="row footer">
+                W czasie przerw świątecznych i wakacyjnych godziny otwarcia ulegają zmianie. Bieżące informacje o zmianach znajdują się w aktualnościach.
             </div>
         </div>
     </div><?php

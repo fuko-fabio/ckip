@@ -130,6 +130,9 @@
     font-size: 28px;
     margin-right: 5px;
 }
+.site-header-opts .user-nav a:last-of-type {
+    margin-right: 0;
+}
 .site-header-opts .user-nav a:hover {
     color: #e32b50;
 }
@@ -370,7 +373,7 @@
     background-size: cover; 
     padding: 5px;
     position: absolute;
-    top: 30px;
+    top: 0px;
     right: 0px;
 }
 
@@ -391,6 +394,11 @@
     text-align: center;
     color: #eee;
     margin-bottom: 15px;
+}
+.library-hours .footer {
+    font-size: 12px;
+    padding: 0 24px 24px;
+    text-transform: none;
 }
 .library-hours .content {
     font-size: 18px;
@@ -797,6 +805,7 @@
 .block-posts .post .preview,
 .block-events .post .preview {
     display: none;
+    min-height: 100px;
 }
 
 .block-posts .post .preview p,
@@ -1398,4 +1407,22 @@ a.url {
     .nps-workshops tbody td div {
         min-height: 0;
     }
+}
+
+.page-hits {
+    position: absolute;
+}
+
+.ckip-page-hits {
+    bottom: 10px;
+    color: #eee;
+}
+
+.home-page-hits {
+    top: 10px;
+    color: #eee;
+}
+
+.library-page-hits {
+    bottom: 10px;
 }

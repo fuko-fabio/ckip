@@ -23,7 +23,7 @@ function workshops_calendar($date) {
         'red',
         'green',
         'pink',
-        'yellow',
+        'cyan',
         'violet');
 
     $calendar.= '<thead><tr>';

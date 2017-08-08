@@ -31,7 +31,7 @@ Template Name: Strona główna
           array(
               'taxonomy' => 'tribe_events_cat',
               'field' => 'slug',
-              'terms' => get_theme_mod('ckip_workshops_category', 'unknown'),
+              'terms' => array(get_theme_mod('ckip_workshops_category', 'unknown'), get_theme_mod('cinema_event_category', 'unknown')),
               'operator' => 'NOT IN'
           ),
       )

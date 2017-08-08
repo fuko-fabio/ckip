@@ -158,7 +158,8 @@ function nps_scripts() {
     //wp_enqueue_script( 'nps-sticky', get_template_directory_uri() . '/includes/js/sticky.js', array('jquery') );
     wp_enqueue_script( 'nps-slick', get_template_directory_uri() . '/includes/resources/slick/slick.js', array('jquery') );
 
-    wp_enqueue_script( 'nps-sticky-nav', get_template_directory_uri() . '/includes/js/sticky-navbar.min.js', array('jquery') );
+    //wp_enqueue_script( 'nps-sticky-nav', get_template_directory_uri() . '/includes/js/sticky-navbar.min.js', array('jquery') );
+    wp_enqueue_script( 'nps-sticky-nav', get_template_directory_uri() . '/includes/js/jquery.stickyNavbar.js', array('jquery') );
     wp_enqueue_style( 'nps-sticky-nav', get_template_directory_uri() . '/includes/css/animate.min.css' );
 
     wp_enqueue_style( 'nps-slick', get_template_directory_uri() . '/includes/resources/slick/slick.css' );
@@ -181,9 +182,9 @@ function nps_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'nps-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
-    wp_enqueue_style( 'nps-extended-style', get_template_directory_uri().'/includes/css/nps.css', array(), '1.1.3' );
+    wp_enqueue_style( 'nps-extended-style', get_template_directory_uri().'/includes/css/nps.css', array(), '1.2.5' );
     wp_enqueue_style( 'nps-search-style', get_template_directory_uri().'/includes/css/search.css', array(), '1.0.2' );
-    wp_enqueue_style( 'nps-style', get_stylesheet_uri(), array(), '1.0.3'  );
+    wp_enqueue_style( 'nps-style', get_stylesheet_uri(), array(), '1.1.0'  );
 }
 add_action( 'wp_enqueue_scripts', 'nps_scripts', 15 );
 
@@ -240,6 +241,22 @@ function virtual_order_payment_complete_order_status( $order_status, $order_id )
   return $order_status;
 }
 
+add_action( 'pre_get_posts', 'exclude_events_category' );
+
+function exclude_events_category( $query ) {
+    if ( $query->query_vars['eventDisplay'] == 'month' && $query->query_vars['post_type'] == TribeEvents::POSTTYPE && !is_tax(TribeEvents::TAXONOMY) && empty( $query->query_vars['suppress_filters'] ) ) {
+        $query->set( 'tax_query', array(
+            array(
+                'taxonomy' => TribeEvents::TAXONOMY,
+                'field' => 'slug',
+                'terms' => array(get_theme_mod('ckip_workshops_category', 'unknown'), get_theme_mod('cinema_event_category', 'unknown')),
+                'operator' => 'NOT IN'
+            )
+            )
+        );
+    }
+    return $query;
+}
 /**
  * Implement the Custom Header feature.
  */

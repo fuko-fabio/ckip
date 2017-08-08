@@ -8,7 +8,7 @@ Template Name: Marathon Home Page
 
 <div class="row marathon-top">
     <div class="col-md-4 col-xs-12">
-        <a href="http://www.pulsarsport.pl/zapisy/portal/zawody.php?zawody=641">
+        <a href="<?php echo get_theme_mod('marathon_registration_page', '#') ?>">
             <span class="col-xs-12 form">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Application form', 'nps' ); ?></span>

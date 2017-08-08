@@ -45,7 +45,8 @@ function nps_customize_pages( $wp_customize ) {
     $wp_customize->add_setting('rac_page', array());
     $wp_customize->add_setting('wie_page', array());
     $wp_customize->add_setting('mr_page', array());
-    $wp_customize->add_setting('mm_page', array());
+    $wp_customize->add_setting('library_catalogue', array());
+    $wp_customize->add_setting('marathon_registration_page', array());
     $wp_customize->add_section('root_pages_section' , array(
         'title' => __('Root pages','nps'),
     ));
@@ -82,6 +83,18 @@ function nps_customize_pages( $wp_customize ) {
       'settings'   => 'mm_page',
       'type'       => 'select',
       'choices'    => $pages
+    ));
+    $wp_customize->add_control('root_library_catalogue', array(
+      'label'      => __('Library catalogue URL', 'nps'),
+      'section'    => 'root_pages_section',
+      'settings'   => 'library_catalogue',
+      'type'       => 'text'
+    ));
+    $wp_customize->add_control('root_marathon_registration_page', array(
+        'label'      => __('Marathon registration URL', 'nps'),
+        'section'    => 'root_pages_section',
+        'settings'   => 'marathon_registration_page',
+        'type'       => 'text'
     ));
 }
 

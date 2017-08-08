@@ -10,7 +10,7 @@ Template Name: Biblioteka strona główna
     <?php get_library_hours('col-xs-12 hidden-sm hidden-md hidden-lg'); ?>
 
     <div class="col-xs-12 hidden-md hidden-lg">
-        <a href="http://80.55.179.139/cgi-bin/libraopac.dll">
+        <a href="<?php echo get_theme_mod('library_catalogue', '#')?>">
             <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
@@ -27,7 +27,7 @@ Template Name: Biblioteka strona główna
         </a>
     </div>
     <div class="col-md-6 hidden-xs hidden-sm">
-        <a href="http://80.55.179.139/cgi-bin/libraopac.dll">
+        <a href="<?php echo get_theme_mod('library_catalogue', '#')?>">
             <span class="col-xs-12 catalogue">
                 <span class="icon"></span>
                 <span class="name"><?php _e( 'Online library catalogue', 'nps' ); ?></span>
