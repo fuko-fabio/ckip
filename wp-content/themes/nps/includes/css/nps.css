@@ -1,4 +1,4 @@
-@import url(http:/\/fonts.googleapis.com/css?family=Quicksand:300);
+@import url(https:/\/fonts.googleapis.com/css?family=Quicksand:300);
 
 @font-face {
   font-family: 'Danube';
@@ -120,6 +120,7 @@
 
 .site-header-opts .user-nav {
     float: right;
+    margin-top: 5px;
 }
 .site-header-opts .user-nav a img {
     height: 35px;
@@ -338,7 +339,7 @@
 }
 
 .site-header-image {
-    padding-top: 40px;
+    padding-top: 45px;
 }
 
 .site-header-image .container {
@@ -1221,6 +1222,48 @@ a.url {
 
 .woocommerce-checkout #payment {
     background-color: #fff;
+}
+
+.slicknav_menu {
+    background: none;
+    position: absolute;
+    z-index: 99999;
+    padding: 0px;
+}
+
+.slicknav_btn {
+    float: left;
+    margin: 5px;
+}
+
+.slicknav_menu a {
+    font-family: "Track";
+}
+.slicknav_menu .slicknav_menutxt {
+    line-height: 20px;
+}
+
+.slicknav_nav {
+    background: rgba(0,0,0,0.8);
+}
+
+.slicknav_nav .slicknav_row, .slicknav_nav a {
+    padding: 10px;
+}
+
+.slicknav_menu a:hover,
+.slicknav_menu a:hover span {
+    background: none;
+    color: #E32B50;
+}
+
+.slicknav_menu a:hover,
+.slicknav_menu a:hover span {
+    background: none;
+    color: #E32B50;
+}
+.slicknav_menu  a:hover .slicknav_icon-bar {
+    background: #E32B50;
 }
 
 .slicknav_menu {
