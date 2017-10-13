@@ -1179,6 +1179,10 @@ a.url {
     text-transform: none;
 }
 
+.woocommerce .cart input.button[disabled] {
+    background-color: #ebe9eb;
+}
+
 .woocommerce .cart .button:hover,
 .woocommerce .cart input.button:hover,
 .woocommerce #respond input#submit:hover,
@@ -1188,6 +1192,19 @@ a.url {
     background-color: #555;
     border: 1px solid #555;
     color: #eee;
+}
+
+.woocommerce-message:before {
+    display: none;
+}
+
+.woocommerce-message {
+    background: none;
+    color: #21759B;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #21759B;
+    border-radius: 4px;
 }
 
 .alert-danger,
