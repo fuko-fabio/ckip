@@ -63,7 +63,9 @@ function workshops_calendar($date) {
         $calendar.= '">';
         /* add in the day number */
         $calendar.= '<div><span class="number">'.$list_day.'<span>'.date_i18n('D', $loop_day_timestamp).'</span></span>';
-        $calendar.= workshops_events_list($year.'-'.$month.'-'.$list_day, $events_colors);
+        if ($loop_day_timestamp >= $today_timestamp) {
+            $calendar .= workshops_events_list($year . '-' . $month . '-' . $list_day, $events_colors);
+        }
         $calendar.= '</div></td>';
         if($running_day == 7):
             $calendar.= '</tr>';

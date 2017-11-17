@@ -257,10 +257,6 @@ function get_library_hours($class = '') {?>
                 <div class="col-xs-6 day"><?php _e( 'Saturday', 'nps' ); ?></div>
                 <div class="col-xs-6 hour">08:00 - 16:00</div>
             </div>
-            <div class="row">
-                <div class="col-xs-6 day"><?php _e( 'Saturday', 'nps' ); ?></div>
-                <div class="col-xs-6 hour">08:00 - 16:00</div>
-            </div>
             <div class="row footer">
                 W czasie przerw świątecznych i wakacyjnych godziny otwarcia ulegają zmianie. Bieżące informacje o zmianach znajdują się w aktualnościach.
             </div>
