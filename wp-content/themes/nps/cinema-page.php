@@ -45,7 +45,7 @@ Template Name: Kino strona główna
                     <div class="ellipsis"><?php the_title(); ?></div>
                     <div><?php echo tribe_get_start_date(); ?></div>
                 </div>
-                <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>
+                <?php echo get_the_post_thumbnail(get_the_ID(), array(450, 450), array('class' => 'fill-box')) ?>
                 <span class="preview touch-show"><?php the_excerpt(); ?></span>
                 <a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
             </div>

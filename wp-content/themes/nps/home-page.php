@@ -45,7 +45,7 @@ Template Name: Strona główna
                     <div class="ellipsis"><?php the_title(); ?></div>
                     <div><?php echo tribe_get_start_date(); ?></div>
                 </div>
-                <?php echo get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', array('class' => 'fill-box')) ?>
+                <?php echo get_the_post_thumbnail(get_the_ID(), array(450, 450), array('class' => 'fill-box')) ?>
                 <span class="preview touch-show"><?php the_excerpt(); ?></span>
                 <a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="btn btn-default touch-show"><?php _e( 'See more', 'nps' ); ?></a>
             </div>
@@ -95,7 +95,7 @@ Template Name: Strona główna
     <span class="pull-right posts-main-btn"><i class="fa fa-chevron-left"></i> <?php _e( 'Back', 'nps' ); ?></span>
 </h3>
 <div class="row block-posts block-ckip" style="display: none;">
-    <?php get_category_posts('ck_category', __( 'No posts about culture center.', 'nps' ) ) ?>
+    <?php get_category_posts('ck_category', __( 'No posts about culture center.', 'nps' ), 4 ) ?>
 </div>
 
 <h3 class="home-head posts-cat-title posts-title-library" style="display: none;"><?php _e( 'Library', 'nps' ); ?>
@@ -105,7 +105,7 @@ Template Name: Strona główna
     <span class="pull-right posts-main-btn"><i class="fa fa-chevron-left"></i> <?php _e( 'Back', 'nps' ); ?></span>
 </h3>
 <div class="row block-posts block-library" style="display: none;">
-    <?php get_category_posts('library_category', __( 'No posts about library.', 'nps' ) ) ?>
+    <?php get_category_posts('library_category', __( 'No posts about library.', 'nps' ), 4 ) ?>
 </div>
 
 <h3 class="home-head posts-cat-title posts-title-cinema" style="display: none;"><?php _e( 'Cinema', 'nps' ); ?>
@@ -115,7 +115,7 @@ Template Name: Strona główna
     <span class="pull-right posts-main-btn"><i class="fa fa-chevron-left"></i> <?php _e( 'Back', 'nps' ); ?></span>
 </h3>
 <div class="row block-posts block-cinema" style="display: none;">
-    <?php get_category_posts('cinema_category', __( 'No posts about cinema.', 'nps' ) ) ?>
+    <?php get_category_posts('cinema_category', __( 'No posts about cinema.', 'nps' ), 4 ) ?>
 </div>
 
 <h3 class="home-head posts-cat-title posts-title-marathon" style="display: none;"><?php _e( 'Marathon', 'nps' ); ?>
@@ -125,7 +125,7 @@ Template Name: Strona główna
     <span class="pull-right posts-main-btn"><i class="fa fa-chevron-left"></i> <?php _e( 'Back', 'nps' ); ?></span>
 </h3>
 <div class="row block-posts block-marathon" style="display: none;">
-    <?php get_category_posts('marathon_category', __( 'No posts about marathon.', 'nps' ) ) ?>
+    <?php get_category_posts('marathon_category', __( 'No posts about marathon.', 'nps' ), 4 ) ?>
 </div>
 
 <hr class="separator"/>
