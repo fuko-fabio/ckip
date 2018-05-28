@@ -184,7 +184,7 @@ function nps_scripts() {
 	}
     wp_enqueue_style( 'nps-extended-style', get_template_directory_uri().'/includes/css/nps.css', array(), '1.2.10' );
     wp_enqueue_style( 'nps-search-style', get_template_directory_uri().'/includes/css/search.css', array(), '1.0.2' );
-    wp_enqueue_style( 'nps-style', get_stylesheet_uri(), array(), '1.2.0'  );
+    wp_enqueue_style( 'nps-style', get_stylesheet_uri(), array(), '1.2.2'  );
 }
 add_action( 'wp_enqueue_scripts', 'nps_scripts', 15 );
 

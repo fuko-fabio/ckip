@@ -572,3 +572,19 @@ input, button, select, textarea {
   margin-right: 10px;
   outline: none;
 }
+
+.woocommerce form .form-row label {
+  line-height: 1;
+}
+
+.woocommerce form .form-row label > span {
+  padding-left: 18px;
+}
+
+.woocommerce form .form-row label > span:last-of-type {
+  padding-left: 0;
+}
+
+.woocommerce form .form-row .input-checkbox {
+  margin: 4px 0 0;
+}
