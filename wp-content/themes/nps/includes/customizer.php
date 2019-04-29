@@ -70,6 +70,13 @@ function nps_customize_pages( $wp_customize ) {
       'type'       => 'select',
       'choices'    => $pages
     ));
+    $wp_customize->add_control('root_library_catalogue', array(
+        'label'      => __('Library catalogue URL', 'nps'),
+        'section'    => 'root_pages_section',
+        'settings'   => 'library_catalogue',
+        'type'       => 'text'
+    ));
+
     $wp_customize->add_control('root_page_mr', array(
       'label'      => __('Marathon results', 'nps'),
       'section'    => 'root_pages_section',
@@ -84,17 +91,32 @@ function nps_customize_pages( $wp_customize ) {
       'type'       => 'select',
       'choices'    => $pages
     ));
-    $wp_customize->add_control('root_library_catalogue', array(
-      'label'      => __('Library catalogue URL', 'nps'),
-      'section'    => 'root_pages_section',
-      'settings'   => 'library_catalogue',
-      'type'       => 'text'
-    ));
     $wp_customize->add_control('root_marathon_registration_page', array(
         'label'      => __('Marathon registration URL', 'nps'),
         'section'    => 'root_pages_section',
         'settings'   => 'marathon_registration_page',
         'type'       => 'text'
+    ));
+
+    $wp_customize->add_control('root_run_registration_page', array(
+        'label'      => __('Run marathon registration URL', 'nps'),
+        'section'    => 'root_pages_section',
+        'settings'   => 'run_registration_page',
+        'type'       => 'text'
+    ));
+    $wp_customize->add_control('root_run_map_page', array(
+        'label'      => __('Run marathon map', 'nps'),
+        'section'    => 'root_pages_section',
+        'settings'   => 'run_map_page',
+        'type'       => 'select',
+        'choices'    => $pages
+    ));
+    $wp_customize->add_control('root_run_results_page', array(
+        'label'      => __('Run marathon results', 'nps'),
+        'section'    => 'root_pages_section',
+        'settings'   => 'run_results_page',
+        'type'       => 'select',
+        'choices'    => $pages
     ));
 }
 
@@ -103,6 +125,7 @@ function nps_customize_categories( $wp_customize ) {
     $wp_customize->add_setting('library_category', array());
     $wp_customize->add_setting('library_books_category', array());
     $wp_customize->add_setting('marathon_category', array());
+    $wp_customize->add_setting('run_category', array());
     $wp_customize->add_setting('cinema_category', array());
     $wp_customize->add_section('root_categories_section' , array(
         'title' => __('Root posts categories','nps'),
@@ -140,6 +163,13 @@ function nps_customize_categories( $wp_customize ) {
       'settings'   => 'marathon_category',
       'type'       => 'select',
       'choices'    => $categories
+    ));
+    $wp_customize->add_control('root_category_run', array(
+        'label'      => __('Run Marathon category', 'nps'),
+        'section'    => 'root_categories_section',
+        'settings'   => 'run_category',
+        'type'       => 'select',
+        'choices'    => $categories
     ));
     $wp_customize->add_control('root_category_cinema', array(
       'label'      => __('Cinema category', 'nps'),
