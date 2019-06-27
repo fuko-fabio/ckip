@@ -403,6 +403,15 @@ display: block;
     color: #eee;
 }
 
+.navbar .nav .main-mlyntrail a {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("includes/img/menu_run.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #eee;
+}
+
 .navbar .nav .main-ckip a:hover {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("includes/img/menu_ckip.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -441,6 +450,15 @@ display: block;
 
 .navbar .nav .main-marathon a:hover {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("includes/img/menu_marathon.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #eee;
+}
+
+.navbar .nav .main-mlyntrail a:hover {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("includes/img/menu_run.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -544,6 +562,27 @@ display: block;
 }
 .navbar .nav a:hover .marathon {
     background: url("includes/img/bike_pink.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+.navbar .nav .mlyntrail {
+    background: url("includes/img/run_white.png") no-repeat center center;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.navbar .nav a:hover .mlyntrail {
+    background: url("includes/img/run_pink.png") no-repeat center center;
     display: block;
     width: 60px;
     height: 60px;

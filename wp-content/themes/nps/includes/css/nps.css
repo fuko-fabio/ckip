@@ -120,7 +120,7 @@
 
 .site-header-opts .user-nav {
     float: right;
-    margin-top: 5px;
+    margin: 5px 0;
 }
 .site-header-opts .user-nav a img {
     height: 35px;
@@ -178,6 +178,7 @@
     font-family: "Track";
     font-size: 12px;
     color: #eee;
+    padding: 15px 15px 15px 0;
 }
 
 .site-header-opts .widget .nav .menu-item a:hover,
@@ -339,7 +340,7 @@
 }
 
 .site-header-image {
-    padding-top: 45px;
+    padding-top: 72px;
 }
 
 .site-header-image .container {
