@@ -596,6 +596,25 @@
     text-align: center;
 }
 
+.marathon-top .children-form {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/children-form.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 250px;
+    text-align: center;
+}
+.marathon-top a:hover .form {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/children-form.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 250px;
+    text-align: center;
+}
+
 .marathon-top .map {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../img/map.png") no-repeat center center;
     -webkit-background-size: cover;
@@ -605,6 +624,7 @@
     height: 250px;
     text-align: center;
 }
+
 .marathon-top a:hover .map {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/map.png") no-repeat center center;
     -webkit-background-size: cover;
@@ -657,6 +677,28 @@
 }
 
 .marathon-top a:hover .form .icon {
+    background: url("../img/register_pink.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.marathon-top a .children-form .icon {
+    background: url("../img/register_white.png") no-repeat center center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.marathon-top a:hover .children-form .icon {
     background: url("../img/register_pink.png") no-repeat center center;
     display: block;
     width: 100px;

@@ -7,7 +7,7 @@ Template Name: Biegi strona domowa
 <?php get_header('run'); ?>
 
 <div class="row marathon-top">
-    <div class="col-md-4 col-xs-12">
+    <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="<?php echo get_theme_mod('run_registration_page', '#') ?>">
             <span class="col-xs-12 form">
                 <span class="icon"></span>
@@ -15,7 +15,15 @@ Template Name: Biegi strona domowa
             </span>
         </a>
     </div>
-    <div class="col-md-4 col-xs-12">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <a href="<?php echo get_theme_mod('run_children_registration_page', '#') ?>">
+            <span class="col-xs-12 children-form">
+                <span class="icon"></span>
+                <span class="name"><?php _e( 'Zapisy dla dzieci', 'nps' ); ?></span>
+            </span>
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="<?php echo get_page_link( get_theme_mod('run_map_page', '0') )?>">
             <span class="col-xs-12 map">
                 <span class="icon"></span>
@@ -23,7 +31,7 @@ Template Name: Biegi strona domowa
             </span>
         </a>
     </div>
-    <div class="col-md-4 col-xs-12">
+    <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="<?php echo get_page_link( get_theme_mod('run_results_page', '0') )?>">
             <span class="col-xs-12 scores">
                 <span class="icon"></span>

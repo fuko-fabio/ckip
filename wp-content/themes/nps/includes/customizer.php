@@ -47,6 +47,11 @@ function nps_customize_pages( $wp_customize ) {
     $wp_customize->add_setting('mr_page', array());
     $wp_customize->add_setting('library_catalogue', array());
     $wp_customize->add_setting('marathon_registration_page', array());
+    $wp_customize->add_setting('run_registration_page', array());
+    $wp_customize->add_setting('run_map_page', array());
+    $wp_customize->add_setting('run_results_page', array());
+    $wp_customize->add_setting('run_children_registration_page', array());
+
     $wp_customize->add_section('root_pages_section' , array(
         'title' => __('Root pages','nps'),
     ));
@@ -117,6 +122,12 @@ function nps_customize_pages( $wp_customize ) {
         'settings'   => 'run_results_page',
         'type'       => 'select',
         'choices'    => $pages
+    ));
+    $wp_customize->add_control('root_run_children_registration_page', array(
+        'label'      => __('Children run marathon registration URL', 'nps'),
+        'section'    => 'root_pages_section',
+        'settings'   => 'run_children_registration_page',
+        'type'       => 'text'
     ));
 }
 
